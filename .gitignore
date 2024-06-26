@@ -24,6 +24,7 @@ project.xcworkspace
 
 # Gradle
 /build/
+/android/app/build/
 /android/app/.cxx/
 /android/app/gradle/
 /android/app/gradlew
@@ -51,8 +52,7 @@ buck-out
 .gradle
 local.properties
 *.iml
-/android/*
-!/android/README.md
+/build/*
 
 # Node
 /node_modules/
