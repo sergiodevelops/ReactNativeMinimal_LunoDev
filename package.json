@@ -1,0 +1,20 @@
+{
+  "name": "ReactNativeMinimal_LunoDev",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/runtime": "^7.24.7",
+    "@react-native/metro-config": "^0.74.84",
+    "metro": "^0.80.9",
+    "metro-core": "^0.80.9"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-native": "0.74.2",
+    "react-native-eject": "^0.2.0"
+  }
+}

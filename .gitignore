@@ -1,0 +1,147 @@
+# Xcode
+!**/*.xcodeproj
+!**/*.pbxproj
+!**/*.xcworkspacedata
+!**/*.xcsettings
+!**/*.xcscheme
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+**/.xcode.env.local
+
+# Gradle
+/build/
+/android/app/.cxx/
+/android/app/gradle/
+/android/app/gradlew
+/android/app/gradlew.bat
+
+# Buck
+.buckd
+buck-out
+/.lsp.buckd
+/.lsp-buck-out
+/ReactAndroid/src/main/jni/prebuilt/lib/
+/ReactAndroid/src/main/gen
+/.cpplsp.buckd
+
+# Android Studio
+.project
+.settings
+.classpath
+
+# Watchman
+.watchmanconfig
+
+# Android
+.idea
+.gradle
+local.properties
+*.iml
+/android/*
+!/android/README.md
+
+# Node
+/node_modules/
+*.log
+.nvm
+package-lock.json
+
+# OS X
+.DS_Store
+
+# Test generated files
+*.js.meta
+
+/coverage
+/third-party
+
+# Test Reports
+/reports
+
+# Stack Dumps generated when programs crash (Ex. bash.exe.stackdump on Win)
+*.stackdump
+
+# Root dir shouldn't have Xcode project
+/*.xcodeproj
+
+# ReactCommon subdir shouldn't have Xcode project
+/ReactCommon/**/*.xcodeproj
+
+# Libs that shouldn't have Xcode project
+/Libraries/FBLazyVector/**/*.xcodeproj
+/Libraries/Required/**/*.xcodeproj
+/React/CoreModules/**/*.xcodeproj
+/React/FBReactNativeSpec/**/*.xcodeproj
+/react-native-codegen/**/*.xcodeproj
+/**/*.xcodeproj
+
+# Ruby Gems (Bundler)
+/vendor
+/template/vendor
+/packages/helloworld/vendor
+.ruby-version
+/**/.ruby-version
+vendor/
+
+# iOS / CocoaPods
+/template/ios/build/
+/ios/app/build/
+/template/ios/Pods/
+/template/ios/Podfile.lock
+/packages/helloworld/ios/build/
+/packages/helloworld/ios/Pods/
+/packages/helloworld/ios/Podfile.lock
+/Gemfile.lock
+/packages/**/RCTLegacyInteropComponents.mm
+
+# Ignore RNTester specific Pods, but keep the __offline_mirrors__ here.
+/Pods/*
+!/Pods/__offline_mirrors_hermes__
+!/Pods/__offline_mirrors_jsc__
+
+# @react-native/codegen
+/NativeModuleExample/ScreenshotManagerSpec*
+/**/RCTThirdPartyFabricComponentsProvider.*
+
+# @react-native/codegen-typescript-test
+/react-native-codegen-typescript-test/lib
+
+# Additional SDKs
+/sdks/download
+/sdks/hermes
+/sdks/hermesc
+/sdks/hermes-engine/hermes-engine-from-local-source-dir.tar.gz
+
+# Visual Studio Code
+/.vscode
+
+# Visual Studio
+.vs
+
+# Android memory profiler files
+*.hprof
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
+# CircleCI
+.circleci/generated_config.yml
+
+# My rules
+/.idea/
+/*.bkp
+/*.BKP
