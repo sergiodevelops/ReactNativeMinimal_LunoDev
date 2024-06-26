@@ -12,9 +12,10 @@ const webOutputPath = path.resolve(rootPath, 'docs');
 const entrypointFile = path.resolve(rootPath, 'index.web.js');
 const htmlFile = path.resolve(webPublicPath, 'index.html');
 const webAppFile = path.resolve(webSrcPath, 'App.jsx');
+const babelConfigFile = path.resolve(rootPath, 'babel.config.js');
 
 
-const { presets, plugins } = require(`${rootPath}/babel.config.js`);
+const { presets, plugins } = require(babelConfigFile);
 const compileNodeModules = [
     // Add every react-native package that needs compiling
     // 'react-native-gesture-handler',

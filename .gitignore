@@ -48,7 +48,6 @@ buck-out
 .watchmanconfig
 
 # Android
-.idea
 .gradle
 local.properties
 *.iml
@@ -98,13 +97,13 @@ package-lock.json
 vendor/
 
 # iOS / CocoaPods
-/template/ios/build/
+/ios/build/
 /ios/app/build/
 /template/ios/Pods/
 /template/ios/Podfile.lock
-/packages/helloworld/ios/build/
-/packages/helloworld/ios/Pods/
-/packages/helloworld/ios/Podfile.lock
+/ios/build/
+/ios/Pods/
+/ios/Podfile.lock
 /Gemfile.lock
 /packages/**/RCTLegacyInteropComponents.mm
 
