@@ -4,18 +4,21 @@ import {Text, TextInput, View} from 'react-native';
 
 const PizzaTranslator = () => {
     const [text, setText] = useState('');
+
+
     return (
         <View style={{padding: 10}}>
             <TextInput
-                style={{height: 40}}
+                style={{height: 40, color: 'white'}}
                 placeholder="Type here to translate!"
                 onChangeText={newText => setText(newText)}
                 defaultValue={text}
             />
-            <Text style={{padding: 10, fontSize: 42}}>
+            <Text
+                style={{padding: 10, fontSize: 20, color: 'white'}}>
                 {text
                     .split(' ')
-                    .map(word => word && '🍕')
+                    .map(word => word && `"${word}"`)
                     .join(' ')}
             </Text>
         </View>

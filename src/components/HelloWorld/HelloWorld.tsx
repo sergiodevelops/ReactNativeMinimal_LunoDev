@@ -1,6 +1,7 @@
 import React from "react";
 import {ScrollView, Text, View} from "react-native";
 import styles from "./HelloWorld.styles";
+import PizzaWordTraslate from "../PizzaWordTraslate/PizzaWordTraslate";
 
 
 export default function HelloWorld(){
@@ -23,6 +24,7 @@ export default function HelloWorld(){
 
     return (
         <ScrollView style={{backgroundColor: "blue"}}>
+            <PizzaWordTraslate/>
             <View style={container}>
                 {mockedList.map((item: number, index: number) => (
                     <Text
@@ -30,7 +32,7 @@ export default function HelloWorld(){
                         key={index}
                         style={hello}
                     >
-                        {`Hello World!! ${item} ${index}`}
+                        {`Hello World ${item} ${index}`}
                     </Text>
                 ))}
             </View>
