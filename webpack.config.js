@@ -1,9 +1,9 @@
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const rootPath = path.resolve(__dirname);
-const webPath = path.resolve(rootPath, 'web/public/index.html');
+const webPath = path.resolve(rootPath, 'web');
 const webSrcPath = path.resolve(webPath, 'src');
 const webComponentsPath = path.resolve(webSrcPath, 'components');
 const webPublicPath = path.resolve(webPath, 'public');
@@ -13,6 +13,18 @@ const entrypointFile = path.resolve(rootPath, 'index.web.js');
 const htmlFile = path.resolve(webPublicPath, 'index.html');
 const webAppFile = path.resolve(webSrcPath, 'App.jsx');
 const babelConfigFile = path.resolve(rootPath, 'babel.config.js');
+
+
+console.log(
+    '\nentrypointFile ',entrypointFile,
+    '\nhtmlFile ',htmlFile,
+    '\nwebAppFile ',webAppFile,
+    '\nbabelConfigFile ',babelConfigFile,
+    '\nwebPublicPath ',webPublicPath,
+    '\nwebOutputPath ',webOutputPath,
+)
+
+
 
 
 const { presets, plugins } = require(babelConfigFile);
@@ -60,7 +72,7 @@ const imageLoaderConfiguration = {
 };
 
 const tsLoaderConfiguration = {
-    test: /\.(ts)x?$/,
+    test: /\.(js|ts)x?$/,
     exclude: /node_modules|\.d\.ts$/, // this line as well
     use: {
         loader: 'ts-loader',
@@ -73,18 +85,16 @@ const tsLoaderConfiguration = {
 };
 
 module.exports = {
-    entry: {
-        app: path.join(__dirname, "index.web.js"),
-    },
+    entry: entrypointFile,
     output: {
         path: webOutputPath,
         publicPath: webPublicPath,
-        filename: "rnw.bundle.js",
+        filename: "bundle.js",
     },
     resolve: {
-        extensions: [".web.tsx", ".web.ts", ".tsx", ".ts", ".web.js", ".js"],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
-            "react-native$": "react-native-web",
+            'react-native$': 'react-native-web',
         },
     },
     module: {
@@ -93,15 +103,25 @@ module.exports = {
             imageLoaderConfiguration,
             svgLoaderConfiguration,
             tsLoaderConfiguration,
+            {
+                test: /\.(ts|tsx)$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(htmlFile),
+            template: htmlFile,
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.DefinePlugin({
-            __DEV__: JSON.stringify(true),
-        }),
+        // new webpack.HotModuleReplacementPlugin(),
+        // new webpack.DefinePlugin({
+        //     __DEV__: JSON.stringify(true),
+        // }),
     ],
 }

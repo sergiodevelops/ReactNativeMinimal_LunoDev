@@ -144,3 +144,4 @@ vendor/
 /.idea/
 /*.bkp
 /*.BKP
+/yarn.lock

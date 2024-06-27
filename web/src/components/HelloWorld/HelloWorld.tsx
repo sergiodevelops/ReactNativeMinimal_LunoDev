@@ -6,7 +6,7 @@ import styles from "./HelloWorld.styles";
 export default function HelloWorld(){
     const {
         container,
-        hello
+        hello,
     } = styles;
 
 
@@ -16,15 +16,21 @@ export default function HelloWorld(){
     );
 
 
+    function handleOnPress() {
+        alert("me soltaste");
+    }
+
+
     return (
         <ScrollView style={{backgroundColor: "blue"}}>
             <View style={container}>
-                {mockedList.map((item, index) => (
+                {mockedList.map((item: number, index: number) => (
                     <Text
-                        onPress={()=>alert("me soltaste")}
+                        onPress={handleOnPress}
                         key={index}
-                        style={hello}>
-                        HELLO WORLD !! {item} {index}
+                        style={hello}
+                    >
+                        {`Hello World!! ${item} ${index}`}
                     </Text>
                 ))}
             </View>
