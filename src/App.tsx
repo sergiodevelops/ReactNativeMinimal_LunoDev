@@ -8,8 +8,8 @@ const App = () => {
         <SafeAreaView>
             <StatusBar barStyle="dark-content"/>
             <View>
-                <Text style={{fontSize: 28, color: "blue"}}>My first RN Minimal App</Text>
-                <Text style={{fontSize: 24}}>by <Text>LUNO⚛Dev</Text></Text>
+                <Text>React Native and Web Minimal App</Text>
+                <Text>by <Text>LUNO⚛Dev</Text></Text>
             </View>
             <HelloWorld/>
         </SafeAreaView>

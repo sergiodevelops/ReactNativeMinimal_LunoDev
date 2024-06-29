@@ -23,7 +23,7 @@ export default function HelloWorld(){
 
 
     return (
-        <ScrollView style={{backgroundColor: "blue"}}>
+        <ScrollView>
             <PizzaWordTraslate/>
             <View style={container}>
                 {mockedList.map((item: number, index: number) => (
