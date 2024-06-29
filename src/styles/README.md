@@ -53,6 +53,8 @@ MODIFIER - Describe a state, action (or behavior) or appearance
 src/styles/ 
 │
 ├── contactForm/
+│         ├── contactForm.ts
+          │
 │         ├── __button/
 │         │         ├── contactForm__button.ts
 │         │         └── _disabled/
@@ -60,12 +62,15 @@ src/styles/
 │         └── __input
 │             └── contactForm__input.ts
 ├── mainView/
+          ├── mainView.ts
+          │
           ├── __button/
           │         └── mainView__button.ts
           ├── __input/
           │         └── mainView__input.ts
-          ├── mainView.ts
           └── _theme/
               ├── mainView_themeDark.ts
               └── mainView_themeLight.ts
 ```
+
+![structure folder for styles](./docs/structureForStyles.png "structure of folders for styles")
