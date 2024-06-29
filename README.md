@@ -1,8 +1,8 @@
-# ReactNativeMinimal
-by **LunoDev**
+# ReactNativeMinimal_LunoDev
+by **LUNO⚛Dev**
 
 ```
-React Native with Minimal configurations by LunoDev
+React Native with Minimal configurations by LUNO⚛Dev
 ```
 
 ## System Info (dev environment)

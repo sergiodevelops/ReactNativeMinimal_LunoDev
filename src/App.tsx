@@ -3,7 +3,7 @@ import {SafeAreaView, StatusBar, Text, View} from 'react-native';
 import HelloWorld from "./components/HelloWorld/HelloWorld";
 
 
-export default function App() {
+const App = () => {
     return (
         <SafeAreaView>
             <StatusBar barStyle="dark-content"/>
@@ -15,3 +15,6 @@ export default function App() {
         </SafeAreaView>
     );
 };
+
+
+export default App;

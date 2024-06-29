@@ -1,7 +1,7 @@
 import React from "react";
 import {ScrollView, Text, View} from "react-native";
 import styles from "./HelloWorld.styles";
-import PizzaWordTraslate from "../PizzaWordTraslate/PizzaWordTraslate";
+import PizzaWordTraslate from "../PizzaWordTraslate/PizzaWordTraslate.web";
 
 
 export default function HelloWorld(){
