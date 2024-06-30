@@ -1,5 +1,6 @@
 {
   "name": "ReactNativeMinimal_LunoDev",
+  "packageManager": "yarn@1.22.19",
   "browserslist": "> 0.25%, not dead",
   "author": "LUNO⚛Dev",
   "license": "MIT",
