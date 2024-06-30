@@ -7,12 +7,11 @@
 ##  Use in JavaScript / TypeScript files
 
 ### CSS (BEM notation) --> "kebab-case"
-block__element_modifier-value
-
-or
-
-block__element--modifier-value
 ```
+block__element_modifier-value
+or
+block__element--modifier-value
+
 BLOCK - Component of code functionally independent component of the page
 * block-name <-- block name
 .post-card {}
@@ -25,15 +24,15 @@ MODIFIER - Describe a state, action (or behavior) or appearance
 .post-card__button--download {}
 .contact-form__button_enabled {}
 .contact-form__button--enabled {}
-* --mod-name_with-value-name <-- modifier key-value
+* --mod-name_with-value-name <-- modifier (key$value)
 .post-card__button_size-sm {}
 .post-card__button--size-sm {}
 ```
 
 ### TS/JS (my BEM notation)--> "camelCase"
-blockName__elementName_modifierNameValueName
-
 ```
+blockName__elementName_modifierName$ValueName
+
 BLOCK - Component of code functionally independent component of the page
 * block-name <-- block (name space)
 .postCard {}
@@ -44,7 +43,7 @@ MODIFIER - Describe a state, action (or behavior) or appearance
 * --mod-name <-- modifier name
 .postCard__button_download {}
 .contactForm__button_disabled {}
-* --mod-name_with-value-name <-- modifier key-value
+* --mod-name_with-value-name <-- modifier (key$value)
 .postCard__button_sizeSm {}
 ```
 
@@ -54,12 +53,16 @@ src/styles/
 │
 ├── contactForm/
 │         ├── contactForm.ts
-          │
+│         │
 │         ├── __button/
 │         │         ├── contactForm__button.ts
-│         │         └── _disabled/
-│         │             └── contactForm__button_disabled.ts
-│         └── __input
+│         │         │
+│         │         ├── _disabled/
+│         │         │   └── contactForm__button_disabled.ts
+│         │         └── _size$md/
+│         │             └── contactForm__button_size$md.ts
+│         └── __input/
+│             │
 │             └── contactForm__input.ts
 ├── mainView/
           ├── mainView.ts
