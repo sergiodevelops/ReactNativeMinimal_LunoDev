@@ -4,50 +4,64 @@
 - [BEM website 2](https://en.bem.info/methodology/quick-start/)
 - [BEM website 3](https://www.geeksforgeeks.org/understanding-the-css-bem-convention/)
 
-##  Use in JavaScript / TypeScript files
-
-### CSS (BEM notation) --> "kebab-case"
+## CSS (BEM notation) --> "kebab-case"
 ```
-block__element_modifier-value
+* variant 1
+block1__element1_modifier-value 
+block1__element2_modifier-value 
 or
-block__element--modifier-value
-
-BLOCK - Component of code functionally independent component of the page
+* variant 2
+block1__element1--modifier-value 
+block1__element2--modifier-value
+```
+### BLOCK - Component of code functionally independent component of the page
+```
 * block-name <-- block name
 .post-card {}
-ELEMENT - Component of code functionally dependent on its parent block
-* __elem-name <-- element name
+```
+### ELEMENT - Component of code functionally dependent on its parent block
+```
+* __elem-name <-- element name "__"
 .post-card__button {}
-MODIFIER - Describe a state, action (or behavior) or appearance  
-* --mod-name <-- modifier name
+```
+### MODIFIER - Describe a state, action (or behavior) or appearance  
+```
+* --mod-name <-- modifier
 .post-card__button_download {}
 .post-card__button--download {}
 .contact-form__button_enabled {}
 .contact-form__button--enabled {}
-* --mod-name_with-value-name <-- modifier (key$value)
-.post-card__button_size-sm {}
-.post-card__button--size-sm {}
+* --mod-name_value-name <-- modifierValue (type key-value)
+* --mod-name_value-name <-- modifierValue (type key-value)
+.post-card__button_size-sm {} "_"
+.post-card__button--size-sm {} "--"
 ```
 
-### TS/JS (my BEM notation)--> "camelCase"
+## TS/JS (BEM notation)--> "camelCase"
 ```
-blockName__elementName_modifierName$ValueName
-
-BLOCK - Component of code functionally independent component of the page
+blockName1__elementName1_modifierNameValueName
+blockName1__elementName2_modifierNameValueName
+```
+### BLOCK - Component of code functionally independent component of the page
+```
 * block-name <-- block (name space)
 .postCard {}
-ELEMENT - Component of code functionally dependent on its parent block
-* __elem-name <-- element (role into the block)
+```
+### ELEMENT - Component of code functionally dependent on its parent block
+```
+* __elem-name <-- element (role into the block) "__"
 .postCard__button {}
-MODIFIER - Describe a state, action (or behavior) or appearance  
-* --mod-name <-- modifier name
+```
+### MODIFIER - Describe a state, action (or behavior) or appearance  
+```
+* _modName <-- modifier "_modKey"
 .postCard__button_download {}
 .contactForm__button_disabled {}
-* --mod-name_with-value-name <-- modifier (key$value)
-.postCard__button_sizeSm {}
+* _modNameValueName <-- modifierValue (type keyValue) "_modKeyValue"
+.postCard__button_sizeSm {} <-- size (key) = "medium" (value)
 ```
 
-### Structure directories example
+## Structure directories example
 ```
 src/styles/ 
 │
