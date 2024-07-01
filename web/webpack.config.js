@@ -10,14 +10,16 @@ const webDistOutputPath = path.resolve(rootPath, 'docs');
 const webDistOutputFileName = 'bundle.js';
 
 const webPath = path.resolve(rootPath, 'web');
-const entrypointFilePach = path.resolve(webPath, 'index.web.ts');
 const webPublicPath = path.resolve(webPath, 'public');
 const htmlTemplateFilePath = path.resolve(webPublicPath, 'index.html');
 
 const srcPath = path.resolve(rootPath, 'src');
+const entrypointFilePach = path.resolve(srcPath, 'index.web.tsx');
+const appPath = path.resolve(srcPath, 'app');
 const componentsPath = path.resolve(srcPath, 'components');
-const webAppFilePath = path.resolve(srcPath, 'App.tsx');
+
 const babelConfigFilePath = path.resolve(rootPath, 'babel.config.js');
+const appFilePath = path.resolve(appPath, 'App.tsx');
 
 const htmlFileName = 'index.html';
 
@@ -26,7 +28,7 @@ console.log(
     '\nentrypointFilePach ', entrypointFilePach,
     '\nhtmlFileName ', htmlFileName,
     '\nhtmlTemplateFilePath ', htmlTemplateFilePath,
-    '\nwebAppFilePath ', webAppFilePath,
+    '\nappFilePath ', appFilePath,
     '\nbabelConfigFilePath ', babelConfigFilePath,
     '\nwebPublicPath ', webPublicPath,
     '\nwebDistOutputPath ', webDistOutputPath,
@@ -43,7 +45,7 @@ const babelLoaderConfiguration = {
     // Add every directory that needs to be compiled by Babel during the build.
     include: [
         entrypointFilePach, // Entry file to your application
-        webAppFilePath, // Updated to .(js|ts)x? files
+        appFilePath, // Updated to .(js|ts)x? files
         srcPath, // source code path
         componentsPath, // source code components path
         ...compileNodeModules,

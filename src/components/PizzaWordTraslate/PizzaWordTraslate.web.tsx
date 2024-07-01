@@ -1,24 +1,31 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Platform} from "react-native";
 
 
-export default function PizzaTranslator(){
+export default function PizzaTranslator() {
+
     const [text, setText] = useState<string>('');
 
 
+    const handleOnChangeInputText = (ev: React.ChangeEvent<HTMLInputElement>) => {
+        setText(ev.target.value);
+    }
+
+
     return (
-        <View style={{padding: 10}}>
-            <TextInput
-                placeholder="Type here to translate!"
-                onChangeText={newText => setText(newText)}
+        Platform.OS === 'web' &&
+        <div>
+            <input
+                type={'text'}
+                placeholder={"Type here to translate!"}
+                onChange={handleOnChangeInputText}
                 defaultValue={text}
             />
-            <Text>
                 {text
                     .split(' ')
-                    .map(word => word && `"${word}"`)
-                    .join(' ')}
-            </Text>
-        </View>
+                    .map((word, index) => word && <p key={`${word}${index}`}>{`${word}`}</p>)
+                    // .join(' ')
+                    }
+        </div>
     );
-};
+}

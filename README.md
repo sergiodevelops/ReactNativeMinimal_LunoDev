@@ -43,4 +43,37 @@ INFO    | Android emulator version 34.2.15.0 (build_id 11906825) (CL:N/A)
 ERROR   | No AVD specified. Use '@foo' or '-avd foo' to launch a virtual device named 'foo'
 ```
 
+## Install dependencies and run 
 
+```bash
+# with YARN
+yarn
+```
+```bash
+# or with NPM
+npm install
+```
+
+## Run for development 
+
+### Run for Android or iOS platform
+
+```bash
+# with YARN
+yarn start
+```
+```bash
+# or with NPM
+npm run start
+```
+
+### Run for Web server platform
+
+```bash
+# with YARN
+yarn web
+```
+```bash
+# or with NPM
+npm run web
+```

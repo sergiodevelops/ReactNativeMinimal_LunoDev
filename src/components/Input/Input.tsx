@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
-import styles from './Input.styles';
+import styles from '../../styles/mainView/__textField/Input.styles';
 
 
 export default function Input(){

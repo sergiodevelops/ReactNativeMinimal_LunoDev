@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, View, Platform} from 'react-native';
 
 
-const PizzaTranslator = () => {
+export default function PizzaTranslator() {
+
     const [text, setText] = useState('');
 
 
     return (
+        Platform.OS === 'android' &&
         <View style={{padding: 10}}>
             <TextInput
                 placeholder="Type here to translate!"
@@ -21,7 +23,4 @@ const PizzaTranslator = () => {
             </Text>
         </View>
     );
-};
-
-
-export default PizzaTranslator;
+}
