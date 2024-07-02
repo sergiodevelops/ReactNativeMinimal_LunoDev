@@ -1,5 +1,5 @@
 import { AppRegistry, Platform } from 'react-native';
-import {name as appKey2, webAppRootId} from '../src/app/appData.json';
+import {name as appKey2, webAppRootId} from './app/myApp.json';
 import App from "../src/app/App";
 
 

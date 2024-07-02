@@ -1,6 +1,6 @@
 import {AppRegistry, Platform} from 'react-native';
 import App from './app/App';
-import {name as appKey} from './app/appData.json';
+import {name as appKey} from './app/myApp.json';
 
 
 if (Platform.OS !== 'web') {

@@ -1,1 +1,1 @@
-import './src/index.mobile';
+import '/src/index.mobile';

@@ -62,6 +62,9 @@
     "web:ssr": "webpack serve --mode=development --config src/web/ssr.webpack.config.js --hot --open",
     "web2:ssr": "ts-node ./src/server/index.tsx",
 
-    "tsc": "tsc --noEmit -p ./"
+    "tsc": "tsc --noEmit -p ./",
+
+    "bundle:android": "react-native bundle --platform android --dev false --entry-file index.ts --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
+    "build": "(cd android/ && ./gradlew assembleDebug)"
   }
 }

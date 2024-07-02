@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 import RandomList from "../components/HelloWorld/RandomList";
 import MainView from "../styles/mainView/MainView"
@@ -8,9 +8,10 @@ import useStyleThemeStore from "../hooks/useStyleThemeStore";
 import {Provider} from "react-redux";
 import {store} from "./store";
 import WindowDimensions from "../components/tools/WindowDimensions/WindowDimensions";
+import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 
 
-const AppWithoutStore = () => {
+export const AppWithoutStore = () => {
     const {currentStyleTheme, toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore()
     const {
         mainView,
@@ -51,5 +52,21 @@ const AppWithoutStore = () => {
 
 
 export default function App(){
-    return (<Provider store={store} children={<AppWithoutStore/>}/>)
+    const [isClient, setIsClient] = React.useState(false);
+
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+
+    return (
+        <ErrorBoundary>
+            {isClient ?
+                <Provider
+                    store={store}
+                    children={<AppWithoutStore/>}
+                /> : <h1>{'Prerendered'}</h1>}
+        </ErrorBoundary>
+    )
 }
