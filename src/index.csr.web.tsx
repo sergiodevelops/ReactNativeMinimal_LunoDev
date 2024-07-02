@@ -1,14 +1,13 @@
+// index.csr.web.ts
 import { AppRegistry, Platform } from 'react-native';
-import {name as appKey2, webAppRootId} from './app/myApp.json';
 import App from "../src/app/App";
+import {name as appKey, webAppRootId} from './app/myApp.json';
 
 
-AppRegistry.registerComponent(appKey2,() => App);
-
-
+AppRegistry.registerComponent(appKey,() => App);
 const rootTag = document.getElementById(webAppRootId);
 if(Platform.OS === 'web') {
-    AppRegistry.runApplication(appKey2, {
+    AppRegistry.runApplication(appKey, {
         initialProps: {},
         rootTag,
     });

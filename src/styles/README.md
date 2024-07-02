@@ -90,4 +90,4 @@ src/styles/
               └── mainView_themeLight.ts
 ```
 
-![structure folder for styles](./docs/structureForStyles.png "structure of folders for styles")
+![structure folder for styles](structureForStyles.png "structure of folders for styles")

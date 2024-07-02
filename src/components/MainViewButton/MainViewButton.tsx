@@ -1,6 +1,6 @@
 import React, {ReactNode} from "react";
-import MainView__button from "../../styles/mainView/__button/MainView__button";
-import {Button, Pressable} from "react-native";
+import MainView__button from "../../styles/ts/mainView/__button/MainView__button";
+import {Pressable} from "react-native";
 import {getStylesFromTheme} from "../../utils/styles";
 import useStyleThemeStore from "../../hooks/useStyleThemeStore";
 

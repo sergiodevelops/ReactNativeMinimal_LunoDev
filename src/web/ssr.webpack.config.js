@@ -42,6 +42,8 @@ const compileNodeModules = [
     // Add every react-native package that needs compiling
     // 'react-native-gesture-handler',
 ].map((moduleName) => path.resolve(rootPath, `node_modules/${moduleName}`));
+
+
 const babelLoaderConfiguration = {
     test: /\.(js|ts)x?$/, // Updated to include .jsx
     // Add every directory that needs to be compiled by Babel during the build.
@@ -61,7 +63,6 @@ const babelLoaderConfiguration = {
         },
     },
 };
-
 const svgLoaderConfiguration = {
     test: /\.svg$/,
     use: [
@@ -70,7 +71,6 @@ const svgLoaderConfiguration = {
         },
     ],
 };
-
 const imageLoaderConfiguration = {
     test: /\.(gif|jpe?g|png|svg)$/,
     use: {
@@ -80,6 +80,17 @@ const imageLoaderConfiguration = {
             esModule: false,
         },
     },
+};
+const stylesCssAndSassLoaderConfiguration = {
+    test: /\.s[ac]ss$/i,
+    use: [
+        // crea il tag 'style nel DOM in cui iniziare il codice
+        'style-loader',
+        // Converte il codice css in moduo commonJs per poterlo importare
+        'css-loader',
+        // Compila codice Sass in css
+        'sass-loader'
+    ]
 };
 
 
@@ -94,8 +105,8 @@ module.exports = {
     },
     resolve: {
         extensions: [
-            '.web.js', '.web.jsx', '.js', '.jsx',
-            '.web.ts', '.web.tsx', '.ts', '.tsx',
+            '.js', '.jsx',
+            '.ssr.web.tsx', '.ts', '.tsx',
         ],
         alias: {
             'react-native$': 'react-native-web'
@@ -111,16 +122,10 @@ module.exports = {
     },
     module: {
         rules: [
+            stylesCssAndSassLoaderConfiguration,
             babelLoaderConfiguration,
             imageLoaderConfiguration,
             svgLoaderConfiguration,
-            {
-                test: /\.(js)x?$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                },
-            },
         ],
     },
     plugins: [
