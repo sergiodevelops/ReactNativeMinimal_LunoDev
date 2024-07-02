@@ -4,19 +4,22 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const webpack = require("webpack");
 
+// rootPath is a project root directory and is
+// very important reference for the next paths definitions
+const rootPath = path.resolve(__dirname, '../../');
 
-const rootPath = path.resolve(__dirname, '../');
 const webDistOutputPath = path.resolve(rootPath, 'docs');
 const webDistOutputFileName = 'bundle.js';
 
-const webPath = path.resolve(rootPath, 'web');
-const webPublicPath = path.resolve(webPath, 'public');
-const htmlTemplateFilePath = path.resolve(webPublicPath, 'index.html');
-
 const srcPath = path.resolve(rootPath, 'src');
-const entrypointFilePach = path.resolve(srcPath, 'index.web.tsx');
+const entrypointFilePach = path.resolve(srcPath, 'index.ssr.web.tsx');
+const entrypointFilePach = path.resolve(srcPath, 'index.csr.web.tsx');
 const appPath = path.resolve(srcPath, 'app');
 const componentsPath = path.resolve(srcPath, 'components');
+
+const webPath = path.resolve(srcPath, 'web');
+const webPublicPath = path.resolve(webPath, 'public');
+const htmlTemplateFilePath = path.resolve(webPublicPath, 'index.html');
 
 const babelConfigFilePath = path.resolve(rootPath, 'babel.config.js');
 const appFilePath = path.resolve(appPath, 'App.tsx');
