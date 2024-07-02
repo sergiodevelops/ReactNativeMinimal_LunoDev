@@ -141,7 +141,6 @@ vendor/
 .circleci/generated_config.yml
 
 # My rules
-.idea/
 *.bkp
 *.BKP
 yarn.lock
