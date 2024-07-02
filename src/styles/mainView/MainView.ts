@@ -1,7 +1,8 @@
 import {StyleSheet, Dimensions, TransformsStyle} from 'react-native';
 
 
-const halfWindowsHeight = Dimensions.get('window').height
+const halfWindowsHeight = Dimensions.get('window').height;
+const halfWindowsWidth = Dimensions.get('window').width;
 
 
 const MainView = StyleSheet.create({
@@ -10,7 +11,7 @@ const MainView = StyleSheet.create({
         // "-ms-user-select": 'none', /* IE 10 and IE 11 */
         userSelect: 'none', /* Standard syntax */
         minHeight: halfWindowsHeight,
-        padding: `${3}%`,
+        minWidth: halfWindowsWidth,
     },
     mainView_darkTheme: {
         color: "white",

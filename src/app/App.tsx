@@ -7,6 +7,7 @@ import {MainViewButton} from "../components/MainViewButton/MainViewButton";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
 import {Provider} from "react-redux";
 import {store} from "./store";
+import WindowDimensions from "../components/tools/WindowDimensions/WindowDimensions";
 
 
 const AppWithoutStore = () => {
@@ -28,18 +29,21 @@ const AppWithoutStore = () => {
                     mainView_darkTheme
                 ),
             }}>
-                <MainViewButton
-                    content={<p>{`${currentIconStyleTheme}`}</p>}
-                    onClick={toogleStyleTheme}
-                />
+                <WindowDimensions/>
+                <div style={{padding: "2rem"}}>
+                    <MainViewButton
+                        content={<p>{`${currentIconStyleTheme}`}</p>}
+                        onClick={toogleStyleTheme}
+                    />
 
-                <StatusBar barStyle={"dark-content"}/>
-                <div>
-                    <h1>{`Minimal React (Native & Web) App`}</h1>
-                    <h2>{`by `}<strong>{`LUNO⚛Dev`}</strong></h2>
-                    <p>Hola soy un P con el contenido de la pag</p>
+                    <StatusBar barStyle={"dark-content"}/>
+                    <div>
+                        <h1>{`Minimal React (Native & Web) App`}</h1>
+                        <h2>{`by `}<strong>{`LUNO⚛Dev`}</strong></h2>
+                        <p>Hola soy un P con el contenido de la pag</p>
+                    </div>
+                    <RandomList/>
                 </div>
-                <RandomList/>
             </div>
         </SafeAreaView>
     );
