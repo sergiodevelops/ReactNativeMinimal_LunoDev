@@ -12,7 +12,7 @@ const webDistOutputPath = path.resolve(rootPath, 'docs');
 const webDistOutputFileName = 'bundle.js';
 
 const srcPath = path.resolve(rootPath, 'src');
-const entrypointFilePach = path.resolve(srcPath, 'index.csr.web.tsx');
+const entrypointFilePach = path.resolve(srcPath, 'index.ssr.web.tsx');
 const appPath = path.resolve(srcPath, 'app');
 const componentsPath = path.resolve(srcPath, 'components');
 

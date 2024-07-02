@@ -5,12 +5,11 @@ import MainView from "../styles/mainView/MainView"
 import {getStylesFromTheme} from "../utils/styles";
 import {MainViewButton} from "../components/MainViewButton/MainViewButton";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
+import {Provider} from "react-redux";
+import {store} from "./store";
 
-// import ArrayPrototype from "./others/exercises/arrayPrototype";
-// import FunctionalProgramming from "./others/exercises/functionalProgramming";
 
-
-const App = () => {
+const AppWithoutStore = () => {
     const {currentStyleTheme, toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore()
     const {
         mainView,
@@ -47,4 +46,6 @@ const App = () => {
 };
 
 
-export default App;
+export default function App(){
+    return (<Provider store={store} children={<AppWithoutStore/>}/>)
+}

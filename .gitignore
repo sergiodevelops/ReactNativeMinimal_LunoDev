@@ -144,3 +144,4 @@ vendor/
 *.bkp
 *.BKP
 yarn.lock
+/*.env

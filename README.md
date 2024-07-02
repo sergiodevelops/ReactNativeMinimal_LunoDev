@@ -71,9 +71,15 @@ npm run start
 
 ```bash
 # with YARN
-yarn web
+yarn client:web # client web server
+yarn client:mobile # iOS/android
 ```
 ```bash
 # or with NPM
-npm run web
+npm run client:web
 ```
+    "client:web": "webpack serve --mode=development --config ./web/webpack.config.js --hot --open",
+    "client:mobile": "node node_modules/react-native/local-cli/cli.js start",
+    "server:ssr": "ts-node ./src/server/index.tsx",
+    "check:tsc": "tsc --noEmit -p ./",
+    "client:web:dev": "webpack-dev-server --mode development --config ./web/webpack.config.js --hot --open"

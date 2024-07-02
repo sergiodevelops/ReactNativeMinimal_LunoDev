@@ -54,10 +54,14 @@
     ]
   },
   "scripts": {
-    "client:web": "webpack serve --mode=development --config ./web/webpack.config.js --hot --open",
-    "client:mobile": "node node_modules/react-native/local-cli/cli.js start",
-    "server:ssr": "ts-node ./src/server/index.tsx",
-    "check:tsc": "tsc --noEmit -p ./",
-    "client:web:dev": "webpack-dev-server --mode development --config ./web/webpack.config.js --hot --open"
+    "mobile": "node node_modules/react-native/local-cli/cli.js start",
+
+    "web:csr": "webpack serve --mode=development --config src/web/csr.webpack.config.js --hot --open",
+    "web2:csr": "webpack-dev-server --mode development --config src/web/csr.webpack.config.js --hot --open",
+
+    "web:ssr": "webpack serve --mode=development --config src/web/ssr.webpack.config.js --hot --open",
+    "web2:ssr": "ts-node ./src/server/index.tsx",
+
+    "tsc": "tsc --noEmit -p ./"
   }
 }
