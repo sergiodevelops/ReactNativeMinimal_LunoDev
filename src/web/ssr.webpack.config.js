@@ -48,10 +48,9 @@ const babelLoaderConfiguration = {
     test: /\.(js|ts)x?$/, // Updated to include .jsx
     // Add every directory that needs to be compiled by Babel during the build.
     include: [
-        entrypointFilePach, // Entry file to your application
-        appFilePath, // Updated to .(js|ts)x? files
+        entrypointFilePach, // Entry file to your application path
+        appFilePath, // Updated to .(js|ts)x? files path
         srcPath, // source code path
-        componentsPath, // source code components path
         ...compileNodeModules,
     ],
     use: {
@@ -81,6 +80,7 @@ const imageLoaderConfiguration = {
         },
     },
 };
+// TODO fix this problem
 const stylesCssAndSassLoaderConfiguration = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -118,11 +118,10 @@ module.exports = {
         },
         compress: true,
         historyApiFallback: true,
-        port: 8585,
+        port: 8083,
     },
     module: {
         rules: [
-            stylesCssAndSassLoaderConfiguration,
             babelLoaderConfiguration,
             imageLoaderConfiguration,
             svgLoaderConfiguration,

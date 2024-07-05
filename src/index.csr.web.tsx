@@ -1,12 +1,13 @@
-// index.csr.web.ts
-import { AppRegistry, Platform } from 'react-native';
-import App from "../src/app/App";
+// index.csr.web.ts (native or web csr)
 import {name as appKey, webAppRootId} from './app/myApp.json';
+import {AppRegistry, Platform} from 'react-native';
+import WebApp from "./app/WebApp";
 
 
-AppRegistry.registerComponent(appKey,() => App);
-const rootTag = document.getElementById(webAppRootId);
 if(Platform.OS === 'web') {
+    console.log('Platform web "CSR" MODE is loaded');
+    AppRegistry.registerComponent(appKey, () => WebApp);
+    const rootTag = document.getElementById(webAppRootId);
     AppRegistry.runApplication(appKey, {
         initialProps: {},
         rootTag,

@@ -141,5 +141,5 @@ vendor/
 # My rules
 *.bkp
 *.BKP
-yarn.lock
+yarn.lock.bkp
 /*.env

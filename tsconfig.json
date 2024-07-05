@@ -1,7 +1,6 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -29,10 +28,4 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src/"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
 }
