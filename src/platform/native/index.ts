@@ -1,7 +1,7 @@
 // index.tsx (native)
-import {name as appKey} from '../../app/myApp.json';
+import {name as appKey} from '../../app/app.json';
 import { AppRegistry } from 'react-native';
-import App from "../../app/App";
+import Index from "../../app";
 
 
-AppRegistry.registerComponent(appKey, () => App);
+AppRegistry.registerComponent(appKey, () => Index);

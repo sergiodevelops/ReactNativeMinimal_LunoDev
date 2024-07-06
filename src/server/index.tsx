@@ -3,7 +3,7 @@ import fs from "fs";
 import express from "express";
 import React from "react";
 import {renderToString} from "react-dom/server";
-import App from "../app/App";
+import Index from "../app";
 
 
 const rootPath = path.resolve(__dirname, '../../');
@@ -35,7 +35,7 @@ app.get("/", async (
         return res.send(
             data.replace(
                 '<div id="app-root"></div>',
-                `<div id="app-root">${renderToString(<App />)}</div>`
+                `<div id="app-root">${renderToString(<Index />)}</div>`
             )
         );
     });
