@@ -3,13 +3,12 @@ import fs from "fs";
 import express from "express";
 import React from "react";
 import {renderToString} from "react-dom/server";
-import NativeApp from "../app/NativeApp";
+import App from "../app/App";
 
 
 const rootPath = path.resolve(__dirname, '../../');
-const srcPath = path.resolve(rootPath, 'src');
-const webPath = path.resolve(rootPath, 'web');
-const webPublicPath = path.resolve(webPath, 'public');
+const webPath = path.resolve(rootPath, 'platform/web');
+const webPublicPath = path.resolve(rootPath, 'public');
 const webPublicTemplateFile = path.resolve(webPath, 'index.html');
 const PORT = process.env.PORT || 7575;
 
@@ -36,7 +35,7 @@ app.get("/", async (
         return res.send(
             data.replace(
                 '<div id="app-root"></div>',
-                `<div id="app-root">${renderToString(<NativeApp />)}</div>`
+                `<div id="app-root">${renderToString(<App />)}</div>`
             )
         );
     });

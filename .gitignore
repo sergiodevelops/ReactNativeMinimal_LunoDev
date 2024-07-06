@@ -138,8 +138,11 @@ vendor/
 # CircleCI
 .circleci/generated_config.yml
 
+# yarn files
+.yarn/cache/
+.yarn/install-state.gz
+
 # My rules
 *.bkp
 *.BKP
-yarn.lock.bkp
 /*.env

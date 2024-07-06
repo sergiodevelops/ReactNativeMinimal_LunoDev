@@ -1,2 +1,2 @@
 // import default tsx for native entrypoint
-import './src/index';
+import './src/platform/native';

@@ -4,8 +4,8 @@
   "scripts": {
     "native": "node node_modules/react-native/local-cli/cli.js start",
     "native:reset:cache": "react-native start --reset-cache",
-    "csr": "webpack serve --mode=development --config src/web/csr.webpack.config.js --hot --open",
-    "ssr": "webpack serve --mode=development --config src/web/ssr.webpack.config.js --hot --open",
+    "csr": "webpack serve --mode=development --config web/csr/webpack.config.js --hot --open",
+    "ssr": "webpack serve --mode=development --config web/ssr/webpack.config.js --hot --open",
     "tsc": "tsc --noEmit -p ./",
     "build": "(cd android/ && ./gradlew assembleDebug)",
     "bundle:android": "react-native bundle --platform android --dev false --entry-file index.ts --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
@@ -27,9 +27,12 @@
     "tosource": "^2.0.0-alpha.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
     "@babel/plugin-transform-private-methods": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@babel/runtime": "^7.24.7",
     "@react-native/metro-config": "^0.74.84",
     "@reduxjs/toolkit": "^2.2.5",

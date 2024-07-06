@@ -1,4 +1,5 @@
 import React from "react";
+import {Text, View} from 'react-native';
 
 
 export default function RandomList(){
@@ -10,13 +11,11 @@ export default function RandomList(){
 
 
     return (
-        <div>
-            {mockedList.map((item: number, index: number) => (
-                <p
-                    key={`${item}-${index}`}
-                    children={`Hello World ${item} ${index}`}
-                />
-            ))}
-        </div>
+        <View>
+            <Text>
+                {/*{mockedList.map((item: number, index: number) => (`Hello World ${item} ${index}`))}*/}
+            </Text>
+
+        </View>
     );
 };

@@ -5,57 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/debug.keystore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/index.android.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/index.android.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/reactnativeminimal_lunodev/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/reactnativeminimal_lunodev/MainApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/rn_edit_text_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.xcode.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/AppDelegate.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/PrivacyInfo.xcprivacy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDev/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDevTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeMinimal_LunoDevTests/ReactNativeMinimal_LunoDevTests.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.csr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.csr.web.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ssr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ssr.web.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/NativeApp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/NativeApp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.csr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.csr.web.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ssr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.ssr.web.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/mainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/mainView/MainView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/csr.webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/csr.webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/public/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/ssr.webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/ssr.webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +55,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/RNWebDaZero&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/web&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -103,8 +69,11 @@
     &quot;npm.csr.executor&quot;: &quot;Run&quot;,
     &quot;npm.mobile.executor&quot;: &quot;Run&quot;,
     &quot;npm.native.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native:reset:cache.executor&quot;: &quot;Run&quot;,
+    &quot;npm.reset.executor&quot;: &quot;Run&quot;,
     &quot;npm.server:ssr.executor&quot;: &quot;Run&quot;,
     &quot;npm.server:ssr2.executor&quot;: &quot;Run&quot;,
+    &quot;npm.ssr.executor&quot;: &quot;Run&quot;,
     &quot;npm.start $Sourcepath$.executor&quot;: &quot;Run&quot;,
     &quot;npm.start --verbose.executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
@@ -119,18 +88,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/web" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/styles/scss" />
       <recent name="$PROJECT_DIR$/src/styles/scss/mainView" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/configs/android" />
-      <recent name="$PROJECT_DIR$/android" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/web" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/styles/ts" />
-      <recent name="$PROJECT_DIR$/src/components/tools/WindowDimensions" />
-      <recent name="$PROJECT_DIR$/src/styles/mainView/__textField" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
@@ -187,6 +156,43 @@
       </envs>
       <method v="2" />
     </configuration>
+    <configuration name="native:reset:cache" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="native:reset:cache" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs>
+        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="reset" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="reset" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs>
+        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="ssr" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ssr" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="tsc" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -198,24 +204,15 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="web:ssr" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="web:ssr" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
-      <package-manager value="yarn" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="npm.build" />
       <item itemvalue="npm.bundle:android" />
       <item itemvalue="npm.csr" />
       <item itemvalue="npm.native" />
+      <item itemvalue="npm.reset" />
+      <item itemvalue="npm.native:reset:cache" />
       <item itemvalue="npm.tsc" />
-      <item itemvalue="npm.web:ssr" />
+      <item itemvalue="npm.ssr" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -257,6 +254,9 @@
       <workItem from="1720023531998" duration="34835000" />
       <workItem from="1720119718809" duration="288000" />
       <workItem from="1720174717518" duration="1962000" />
+      <workItem from="1720192894242" duration="7666000" />
+      <workItem from="1720248871424" duration="8501000" />
+      <workItem from="1720259762985" duration="661000" />
     </task>
     <servers />
   </component>

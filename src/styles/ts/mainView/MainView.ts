@@ -7,11 +7,10 @@ const halfWindowsWidth = Dimensions.get('window').width;
 
 const MainView = StyleSheet.create({
     mainView: {
-        // "-webkit-user-select": 'none', /* Safari */
-        // "-ms-user-select": 'none', /* IE 10 and IE 11 */
+        padding: 10,
         userSelect: 'none', /* Standard syntax */
-        minHeight: halfWindowsHeight,
-        minWidth: halfWindowsWidth,
+        height: halfWindowsHeight,
+        width: halfWindowsWidth,
     },
     mainView_darkTheme: {
         color: "white",

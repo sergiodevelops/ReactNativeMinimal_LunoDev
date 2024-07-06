@@ -1,5 +1,4 @@
-// web/webpack.config.js
-
+// @rootProject/web/ssr.webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const webpack = require("webpack");
@@ -9,21 +8,22 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const rootPath = path.resolve(__dirname, '../../');
 
 const webDistOutputPath = path.resolve(rootPath, 'docs');
-const webDistOutputFileName = 'bundle.js';
 
 const srcPath = path.resolve(rootPath, 'src');
-const entrypointFilePach = path.resolve(srcPath, 'index.ssr.web.tsx');
 const appPath = path.resolve(srcPath, 'app');
-const componentsPath = path.resolve(srcPath, 'components');
-
-const webPath = path.resolve(srcPath, 'web');
-const webPublicPath = path.resolve(webPath, 'public');
-const htmlTemplateFilePath = path.resolve(webPublicPath, 'index.html');
-
-const babelConfigFilePath = path.resolve(rootPath, 'babel.config.js');
 const appFilePath = path.resolve(appPath, 'App.tsx');
 
+const platformPath = path.resolve(srcPath, 'platform');
+const webPath = path.resolve(platformPath, 'web');
+const templatePath = path.resolve(webPath, 'template');
+const entrypointFilePach = path.resolve(webPath, 'ssr/index.tsx');
+const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
+// const babelConfigFilePath = path.resolve(webPath, 'babel.config.js');
+
+const publicPath = path.resolve(rootPath, 'public');
 const htmlFileName = 'index.html';
+const webDistOutputFileName = 'bundle.js';
+const reactNativeUncompiledFilesPath = path.resolve(rootPath, 'node_modules/react-native-uncompiled')
 
 
 console.log(
@@ -31,38 +31,39 @@ console.log(
     '\nhtmlFileName ', htmlFileName,
     '\nhtmlTemplateFilePath ', htmlTemplateFilePath,
     '\nappFilePath ', appFilePath,
-    '\nbabelConfigFilePath ', babelConfigFilePath,
-    '\nwebPublicPath ', webPublicPath,
+    '\npublicPath ', publicPath,
     '\nwebDistOutputPath ', webDistOutputPath,
 )
 
 
-const {presets, plugins} = require(babelConfigFilePath);
+/*const {presets, plugins} = require(babelConfigFilePath);
 const compileNodeModules = [
     // Add every react-native package that needs compiling
     // 'react-native-gesture-handler',
-].map((moduleName) => path.resolve(rootPath, `node_modules/${moduleName}`));
+].map((moduleName) => path.resolve(rootPath, `node_modules/${moduleName}`));*/
 
 
-const babelLoaderConfiguration = {
+const babelLoaderModRules = {
     test: /\.(js|ts)x?$/, // Updated to include .jsx
     // Add every directory that needs to be compiled by Babel during the build.
     include: [
         entrypointFilePach, // Entry file to your application path
-        appFilePath, // Updated to .(js|ts)x? files path
+        // appFilePath, // Updated to .(js|ts)x? files path
         srcPath, // source code path
-        ...compileNodeModules,
+        // ...compileNodeModules,
     ],
     use: {
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
             cacheDirectory: true,
-            presets,
-            plugins,
+            // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
+            presets: ['module:metro-react-native-babel-preset'],
+            // Re-write paths to import only the modules needed by the app
+            plugins: ['react-native-web']
         },
     },
 };
-const svgLoaderConfiguration = {
+const svgLoaderModRules = {
     test: /\.svg$/,
     use: [
         {
@@ -70,7 +71,7 @@ const svgLoaderConfiguration = {
         },
     ],
 };
-const imageLoaderConfiguration = {
+const imgLoaderModRules = {
     test: /\.(gif|jpe?g|png|svg)$/,
     use: {
         loader: "url-loader",
@@ -103,6 +104,13 @@ module.exports = {
         publicPath: "/",
         filename: webDistOutputFileName,
     },
+    module: {
+        rules: [
+            babelLoaderModRules,
+            imgLoaderModRules,
+            svgLoaderModRules,
+        ],
+    },
     resolve: {
         extensions: [
             '.js', '.jsx',
@@ -114,18 +122,11 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: webPublicPath,
+            directory: publicPath,
         },
         compress: true,
         historyApiFallback: true,
         port: 8083,
-    },
-    module: {
-        rules: [
-            babelLoaderConfiguration,
-            imageLoaderConfiguration,
-            svgLoaderConfiguration,
-        ],
     },
     plugins: [
         new HtmlWebpackPlugin({

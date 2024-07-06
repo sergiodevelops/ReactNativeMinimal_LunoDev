@@ -4,7 +4,7 @@ import {store} from "./store";
 import NativeApp from "./NativeApp";
 
 
-export default function WebApp(){
+export default function App(){
     return (
         <Provider
             store={store}
