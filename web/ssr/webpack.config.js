@@ -81,7 +81,8 @@ const imgLoaderModRules = {
         },
     },
 };
-// TODO fix this problem
+
+// TODO fix this problem CSS LOADER
 const stylesCssAndSassLoaderConfiguration = {
     test: /\.s[ac]ss$/i,
     use: [
