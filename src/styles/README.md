@@ -89,5 +89,29 @@ src/styles/
               ├── mainView_themeDark.ts
               └── mainView_themeLight.ts
 ```
+[BEM Structure](https://en.bem.info/methodology/filestructure/#nested)
+- This is the classic file structure approach for BEM projects:
+- Each block corresponds to a single directory. 
+- The code of modifiers and elements is stored in separate files. 
+- The files of modifiers and elements are stored in separate directories. 
+- The block directory is the root directory for the subdirectories of its elements and modifiers. 
+- Names of element directories begin with a double underscore (__). 
+- Names of modifier directories begin with a single underscore (_).
+```
+
+project 
+    common.blocks/                            # Redefinition level with blocks 
+        input/                                # Directory for the input block 
+            _type/                            # Directory for the input_type modifier 
+                input_type_search.css         # CSS implementation of the input_type modifier 
+            __clear/                          # Directory for the input__clear element 
+                _visible/                     # Directory for the input__clear_visible modifier 
+                    input__clear_visible.css  # CSS implementation of the input__clear_visible modifier 
+                input__clear.css              # CSS implementation of the input__clear element
+                input__clear.js               # JavaScript implementation of the input__clear element 
+        input.css                             # CSS implementation of the input block 
+        input.js                              # JavaScript implementation of the input block
+```
+
 
 ![structure folder for styles](structureForStyles.png "structure of folders for styles")

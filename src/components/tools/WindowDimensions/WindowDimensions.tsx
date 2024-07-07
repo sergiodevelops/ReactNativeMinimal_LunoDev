@@ -2,7 +2,7 @@
 import {Text, View, Dimensions} from "react-native";
 import {getStylesFromTheme} from "../../../utils/styles";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
-import MainView from "../../../styles/ts/mainView/MainView";
+import MainView from "../../../styles/ts/MainView/MainView";
 
 
 export default function WindowDimensions() {

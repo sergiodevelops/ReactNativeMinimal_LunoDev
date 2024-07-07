@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import RandomList from "../components/HelloWorld/RandomList";
-import MainView from "../styles/ts/mainView/MainView"
+import MainView from "../styles/ts/MainView/MainView"
 import {getStylesFromTheme} from "../utils/styles";
 import {MainViewButton} from "../components/MainViewButton/MainViewButton";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
