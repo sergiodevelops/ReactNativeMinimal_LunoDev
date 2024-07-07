@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/index.native.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/linux/.bash_profile" beforeDir="false" afterPath="$PROJECT_DIR$/configs/linux/.bash_profile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tools/WindowDimensions/WindowDimensions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.native.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/platform/native/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/native/index.native.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/platform/web/csr/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/web/csr/index.web.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/platform/web/ssr/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/web/ssr/index.web.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/csr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/csr/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ssr/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +241,7 @@
       <workItem from="1720174717518" duration="1962000" />
       <workItem from="1720192894242" duration="7666000" />
       <workItem from="1720248871424" duration="8501000" />
-      <workItem from="1720259762985" duration="41349000" />
+      <workItem from="1720259762985" duration="42921000" />
     </task>
     <servers />
   </component>
