@@ -1,4 +1,4 @@
-// index.ssr.web.ts (native or web csr)
+// index.web.tsx (web - SSR)
 import {name as appKey, webAppRootId} from '../../../app/app.json';
 import {AppRegistry, Platform} from 'react-native';
 import {hydrateRoot} from 'react-dom/client';

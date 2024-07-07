@@ -16,7 +16,7 @@ const appFilePath = path.resolve(appPath, 'App.tsx');
 const platformPath = path.resolve(srcPath, 'platform');
 const webPath = path.resolve(platformPath, 'web');
 const templatePath = path.resolve(webPath, 'template');
-const entrypointFilePach = path.resolve(webPath, 'ssr/index.tsx');
+const entrypointFilePach = path.resolve(webPath, 'ssr/index.web.tsx');
 const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
 // const babelConfigFilePath = path.resolve(webPath, 'babel.config.js');
 
@@ -113,10 +113,16 @@ module.exports = {
         ],
     },
     resolve: {
+        // https://necolas.github.io/react-native-web/docs/multi-platform/
+        // If you're working on a multi-platform React Native app, web-specific
+        // module implementations should be written in files using the extension
+        // Example: `.web.tsx`.
         extensions: [
-            '.js', '.jsx',
-            '.ssr.web.tsx', '.ts', '.tsx',
+            '.web.tsx', '.web.ts', '.tsx', '.ts',
+            '.web.jsx', '.web.js', '.jsx', '.js',
+            '.json',
         ],
+        // This will only alias the exact import "react-native"
         alias: {
             'react-native$': 'react-native-web'
         },

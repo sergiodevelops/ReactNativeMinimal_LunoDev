@@ -16,7 +16,7 @@ const appFilePath = path.resolve(appPath, 'App.tsx');
 const platformPath = path.resolve(srcPath, 'platform');
 const webPath = path.resolve(platformPath, 'web');
 const templatePath = path.resolve(webPath, 'template');
-const entrypointFilePach = path.resolve(webPath, 'csr/index.ts');
+const entrypointFilePach = path.resolve(webPath, 'csr/index.web.ts');
 const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
 // const babelConfigFilePath = path.resolve(webPath, 'babel.config.js');
 
@@ -119,12 +119,8 @@ module.exports = {
         // module implementations should be written in files using the extension
         // `.web.js`.
         extensions: [
-            '.js', '.jsx', '.web.js', '.web.jsx',
-            '.ts', '.tsx', '.web.ts', '.web.tsx',
-            '.csr.web.tsx', '.ssr.web.tsx',
-            '.ios.tsx', '.android.tsx',
-            '.ios.jsx', '.android.jsx',
-            '.ios.js', '.android.js',
+            '.web.tsx', '.web.ts', '.tsx', '.ts',
+            '.web.jsx', '.web.js', '.jsx', '.js',
             '.json',
         ],
         // This will only alias the exact import "react-native"

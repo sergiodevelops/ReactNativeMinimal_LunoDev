@@ -5,9 +5,10 @@ import MainView from "../styles/ts/MainView/MainView"
 import {getStylesFromTheme} from "../utils/styles";
 import {MainViewButton} from "../components/MainViewButton/MainViewButton";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
-import WindowDimensions from "../components/tools/WindowDimensions/WindowDimensions";
-// TODO fix scss sass loader files error
-// import styles from '../styles/scss/mainView/MainView.module.scss'
+import WindowDimensions from "../components/utils/WindowDimensions/WindowDimensions.native";
+import WindowDimensionsWeb from "../components/utils/WindowDimensions/WindowDimensions.web";
+import ReactNativeComponentWrapper from "../components/utils/PlatformWrapper/PlatformWrapper";
+import {isWeb} from "../utils/platform";
 
 
 export default function App() {
@@ -21,43 +22,42 @@ export default function App() {
 
     return (
         <SafeAreaView>
-                    <View style={{
-                        ...mainView,
-                        ...getStylesFromTheme(
+            <View style={{
+                ...mainView,
+                ...getStylesFromTheme(
+                    currentStyleTheme,
+                    mainView_lightTheme,
+                    mainView_darkTheme
+                ),
+            }}>
+                {isWeb() ?
+                    <WindowDimensionsWeb/> :
+                    <WindowDimensions/>}
+                <View>
+                    <MainViewButton
+                        content={<Text>{`${currentIconStyleTheme}`}</Text>}
+                        onClick={toogleStyleTheme}
+                    />
+                    <View>
+                        <Text style={[getStylesFromTheme(
                             currentStyleTheme,
                             mainView_lightTheme,
                             mainView_darkTheme
-                        ),
-                    }}>
-                        <WindowDimensions />
-                        {/*<div style={styles["test-de-fede"]}></div>*/}
-                        <View>
-                            <MainViewButton
-                                content={<Text>{`${currentIconStyleTheme}`}</Text>}
-                                onClick={toogleStyleTheme}
-                            />
-
-                            {/*<StatusBar barStyle={"dark-content"}/>*/}
-                            <View>
-                                <Text style={[getStylesFromTheme(
-                                    currentStyleTheme,
-                                    mainView_lightTheme,
-                                    mainView_darkTheme
-                                )]}>{`Minimal React (Native & Web) App`}</Text>
-                                <Text style={[getStylesFromTheme(
-                                    currentStyleTheme,
-                                    mainView_lightTheme,
-                                    mainView_darkTheme
-                                )]}>{`by `}<Text>{`LUNO⚛Dev`}</Text></Text>
-                                <Text style={[getStylesFromTheme(
-                                    currentStyleTheme,
-                                    mainView_lightTheme,
-                                    mainView_darkTheme
-                                )]}>Hola soy un P con el contenido de la pag</Text>
-                            </View>
-                            <RandomList/>
-                        </View>
+                        )]}>{`Minimal React (Native & Web) App`}</Text>
+                        <Text style={[getStylesFromTheme(
+                            currentStyleTheme,
+                            mainView_lightTheme,
+                            mainView_darkTheme
+                        )]}>{`by `}<Text>{`LUNO⚛Dev`}</Text></Text>
+                        <Text style={[getStylesFromTheme(
+                            currentStyleTheme,
+                            mainView_lightTheme,
+                            mainView_darkTheme
+                        )]}>Hola soy un P con el contenido de la pag</Text>
                     </View>
+                    <RandomList/>
+                </View>
+            </View>
         </SafeAreaView>
     );
 };
