@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.native.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/NativeApp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/NativeApp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.csr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.csr.web.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ssr.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.ssr.web.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/mainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/mainView/MainView.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/csr.webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/csr.webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/public/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/ssr.webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/ssr.webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/linux/.bash_profile" beforeDir="false" afterPath="$PROJECT_DIR$/configs/linux/.bash_profile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tools/WindowDimensions/WindowDimensions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.native.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platform/native/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/native/index.native.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platform/web/csr/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/web/csr/index.web.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platform/web/ssr/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/web/ssr/index.web.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/csr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/csr/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ssr/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,60 +47,96 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.bundle:android.executor&quot;: &quot;Run&quot;,
-    &quot;npm.check:tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native:reset:cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.reset.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr2.executor&quot;: &quot;Run&quot;,
-    &quot;npm.ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start $Sourcepath$.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start --verbose.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/components/utils/WindowDimensions",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "npm.build.executor": "Run",
+    "npm.bundle:android.executor": "Run",
+    "npm.check:tsc.executor": "Run",
+    "npm.client:mobile.executor": "Run",
+    "npm.client:web.executor": "Run",
+    "npm.csr.executor": "Run",
+    "npm.mobile.executor": "Run",
+    "npm.native.executor": "Run",
+    "npm.native:reset:cache.executor": "Run",
+    "npm.reset.executor": "Run",
+    "npm.server:ssr.executor": "Run",
+    "npm.server:ssr2.executor": "Run",
+    "npm.ssr.executor": "Run",
+    "npm.start $Sourcepath$.executor": "Run",
+    "npm.start --verbose.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.tsc.executor": "Run",
+    "npm.web.executor": "Run",
+    "npm.web:csr.executor": "Run",
+    "npm.web:ssr.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/web" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/styles/scss" />
-      <recent name="$PROJECT_DIR$/src/styles/scss/mainView" />
+      <recent name="$PROJECT_DIR$/src/components/utils/WindowDimensions" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
+      <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/web" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/styles/ts" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
+      <recent name="$PROJECT_DIR$/src/platform" />
+      <recent name="$PROJECT_DIR$/web/ssr" />
+      <recent name="$PROJECT_DIR$/web/csr" />
+      <recent name="$PROJECT_DIR$/src/web/template" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.csr">
+  <component name="RunManager" selected="npm.check tsc">
+    <configuration name="1_native_android" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="native" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs>
+        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="2_web_csr" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="csr" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="3_web_ssr" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ssr" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -132,31 +163,18 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="csr" type="js.build_tools.npm">
+    <configuration name="check tsc" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="csr" />
+        <script value="tsc" />
       </scripts>
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
       <package-manager value="yarn" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="native" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="native" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
-      <package-manager value="yarn" />
-      <envs>
-        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
-      </envs>
-      <method v="2" />
-    </configuration>
-    <configuration name="native:reset:cache" type="js.build_tools.npm">
+    <configuration name="native_reset" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -182,37 +200,15 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="ssr" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ssr" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
-      <package-manager value="yarn" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="tsc" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="tsc" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
-      <package-manager value="yarn" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="npm.build" />
       <item itemvalue="npm.bundle:android" />
-      <item itemvalue="npm.csr" />
-      <item itemvalue="npm.native" />
+      <item itemvalue="npm.2_web_csr" />
+      <item itemvalue="npm.1_native_android" />
       <item itemvalue="npm.reset" />
-      <item itemvalue="npm.native:reset:cache" />
-      <item itemvalue="npm.tsc" />
-      <item itemvalue="npm.ssr" />
+      <item itemvalue="npm.native_reset" />
+      <item itemvalue="npm.check tsc" />
+      <item itemvalue="npm.3_web_ssr" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -256,7 +252,7 @@
       <workItem from="1720174717518" duration="1962000" />
       <workItem from="1720192894242" duration="7666000" />
       <workItem from="1720248871424" duration="8501000" />
-      <workItem from="1720259762985" duration="661000" />
+      <workItem from="1720259762985" duration="41349000" />
     </task>
     <servers />
   </component>
