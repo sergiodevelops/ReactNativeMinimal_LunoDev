@@ -10,8 +10,8 @@ const Paragraph = (props: HTMLAttributes<HTMLParagraphElement> & StyleProp<TextS
     const {mainView__text} = MainView__text();
 
     const paragraphStyles = {
-        ...mainView__text,
         ...props.style,
+        ...mainView__text,
     }
 
     return (isWeb() ?

@@ -10,9 +10,9 @@ const MainView__button_disabled = () => {
         StyleSheet.create({
             mainView__button_disabled: {
                 cursor: 'auto',
-                color: currentStyleTheme === 'light' ? '#605e5e' : '#a9a7a7',
-                backgroundColor: currentStyleTheme === 'light' ? '#a9a7a7' : '#605e5e',
-                borderColor: currentStyleTheme === 'light' ? '#605e5e' : '#a9a7a7',
+                color: currentStyleTheme === 'light' ? '#605e5e' : '#b4b1b1',
+                backgroundColor: currentStyleTheme === 'light' ? '#b4b1b1' : '#605e5e',
+                borderColor: currentStyleTheme === 'light' ? '#605e5e' : '#b4b1b1',
             },
         })
     );

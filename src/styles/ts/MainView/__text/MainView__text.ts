@@ -12,8 +12,7 @@ const MainView__text = () => {
     return (
         StyleSheet.create({
             mainView__text: {
-                fontSize: 20,
-                color: currentStyleTheme === 'light' ? colorLight : colorDark,
+                fontSize: 20, //TODO fare atenzione qui
             },
             mainView__text_bold: {
                 fontWeight: "bold",
