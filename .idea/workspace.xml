@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__text/MainView__text.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ErrorBoundary/ErrorBoundary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/ErrorBoundary/ErrorBoundary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.web.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,61 +50,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/components/utils/WindowDimensions&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.bundle:android.executor&quot;: &quot;Run&quot;,
-    &quot;npm.check:tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native:reset:cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.reset.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr2.executor&quot;: &quot;Run&quot;,
-    &quot;npm.ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start $Sourcepath$.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start --verbose.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView/__button",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "npm.1_native_android.executor": "Run",
+    "npm.2_web_csr.executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.bundle:android.executor": "Run",
+    "npm.check:tsc.executor": "Run",
+    "npm.client:mobile.executor": "Run",
+    "npm.client:web.executor": "Run",
+    "npm.csr.executor": "Run",
+    "npm.mobile.executor": "Run",
+    "npm.native.executor": "Run",
+    "npm.native:reset:cache.executor": "Run",
+    "npm.reset.executor": "Run",
+    "npm.server:ssr.executor": "Run",
+    "npm.server:ssr2.executor": "Run",
+    "npm.ssr.executor": "Run",
+    "npm.start $Sourcepath$.executor": "Run",
+    "npm.start --verbose.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.tsc.executor": "Run",
+    "npm.web.executor": "Run",
+    "npm.web:csr.executor": "Run",
+    "npm.web:ssr.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/utils/WindowDimensions" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__text" />
+      <recent name="$PROJECT_DIR$/src/components/utils/WindowDimensions" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled" />
       <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
-      <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/semantic" />
+      <recent name="$PROJECT_DIR$/src/components/utils" />
       <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
       <recent name="$PROJECT_DIR$/src/platform" />
       <recent name="$PROJECT_DIR$/web/ssr" />
-      <recent name="$PROJECT_DIR$/web/csr" />
-      <recent name="$PROJECT_DIR$/src/web/template" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.check tsc">
+  <component name="RunManager" selected="npm.1_native_android">
     <configuration name="1_native_android" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -190,14 +206,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.1_native_android" />
-      <item itemvalue="npm.2_web_csr" />
-      <item itemvalue="npm.3_web_ssr" />
       <item itemvalue="npm.build" />
       <item itemvalue="npm.bundle:android" />
-      <item itemvalue="npm.check tsc" />
-      <item itemvalue="npm.native_reset" />
+      <item itemvalue="npm.2_web_csr" />
+      <item itemvalue="npm.1_native_android" />
       <item itemvalue="npm.reset" />
+      <item itemvalue="npm.native_reset" />
+      <item itemvalue="npm.check tsc" />
+      <item itemvalue="npm.3_web_ssr" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -242,6 +258,9 @@
       <workItem from="1720192894242" duration="7666000" />
       <workItem from="1720248871424" duration="8501000" />
       <workItem from="1720259762985" duration="42921000" />
+      <workItem from="1720371114488" duration="8919000" />
+      <workItem from="1720384555174" duration="13254000" />
+      <workItem from="1720438631715" duration="22687000" />
     </task>
     <servers />
   </component>

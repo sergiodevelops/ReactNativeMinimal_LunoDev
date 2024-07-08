@@ -1,43 +1,90 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
-import RandomList from "../components/HelloWorld/RandomList";
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 import MainView from "../styles/ts/MainView/MainView"
-import {getStylesFromTheme} from "../utils/styles";
-import {MainViewButton} from "../components/MainViewButton/MainViewButton";
+import {Button} from "../components/semantic/Button/Button";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
-import WindowDimensions from "../components/utils/WindowDimensions/WindowDimensions.native";
-import WindowDimensionsWeb from "../components/utils/WindowDimensions/WindowDimensions.web";
-import ReactNativeComponentWrapper from "../components/utils/PlatformWrapper/PlatformWrapper";
-import {isWeb} from "../utils/platform";
+import Paragraph from "../components/semantic/Paragraph/Paragraph";
+import Heading from "../components/semantic/Heading/Heading";
+import mainView__text from "../styles/ts/MainView/__text/MainView__text";
+import MainView__text from "../styles/ts/MainView/__text/MainView__text";
 
 
 export default function App() {
-    const {currentStyleTheme, toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore()
+    const {
+        toogleStyleTheme,
+        currentIconStyleTheme,
+    } = useStyleThemeStore();
     const {
         mainView,
-        mainView_lightTheme,
-        mainView_darkTheme,
-    } = MainView;
+        mainView__container,
+    } = MainView();
 
 
+    // example for add semantic for DOM web platform output rendering
     return (
         <SafeAreaView>
-            <View style={{
-                ...mainView,
-                ...getStylesFromTheme(
-                    currentStyleTheme,
-                    mainView_lightTheme,
-                    mainView_darkTheme
-                ),
-            }}>
-                {isWeb() ?
+            <ScrollView
+                role={"main"}
+                style={[
+                    mainView,
+                    mainView__container,
+                ]}
+            >
+                <View role={"main"}>
+                    <Paragraph>
+                        {`This is a <main/> (web) and <View/> (native)`}
+                    </Paragraph>
+                </View>
+                <Paragraph>{`This is a <p/> (web) and <Text/> (native)`}</Paragraph>
+                <Button
+                    type={"accept"}
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme 1 ${currentIconStyleTheme}`}
+                />
+                <Button
+                    type={"decline"}
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme 2 ${currentIconStyleTheme}`}
+                />
+                <Button
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme 3 ${currentIconStyleTheme}`}
+                />
+                <Button
+                    disabled
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme 4 ${currentIconStyleTheme}`}
+                />
+                <Heading
+                    variant={"h1"}
+                    children={`This is a <h1/> (web) and <Text/> (native)`}
+                />
+                <Heading
+                    variant={"h2"}
+                    children={`This is a <h2/> (web) and <Text/> (native)`}
+                />
+                <Heading
+                    variant={"h3"}
+                    children={`This is a <h3/> (web) and <Text/> (native)`}
+                />
+                <Heading
+                    variant={"h4"}
+                    children={`This is a <h4/> (web) and <Text/> (native)`}
+                />
+                <Heading
+                    variant={"h5"}
+                    children={`This is a <h5/> (web) and <Text/> (native)`}
+                />
+                <Heading
+                    variant={"h6"}
+                    children={`This is a <h6/> (web) and <Text/> (native)`}
+                />
+
+                {/*{isWeb() ?
                     <WindowDimensionsWeb/> :
-                    <WindowDimensions/>}
-                <View>
-                    <MainViewButton
-                        content={<Text>{`${currentIconStyleTheme}`}</Text>}
-                        onClick={toogleStyleTheme}
-                    />
+                    <WindowDimensions/>}*/}
+                {/*<View>
+
                     <View>
                         <Text style={[getStylesFromTheme(
                             currentStyleTheme,
@@ -55,9 +102,8 @@ export default function App() {
                             mainView_darkTheme
                         )]}>Hola soy un P con el contenido de la pag</Text>
                     </View>
-                    <RandomList/>
-                </View>
-            </View>
+                </View>*/}
+            </ScrollView>
         </SafeAreaView>
     );
 };

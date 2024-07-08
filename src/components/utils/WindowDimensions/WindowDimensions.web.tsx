@@ -1,31 +1,30 @@
-// import useWindowSize from "../../../hooks/useWindowSize";
-import {Dimensions} from "react-native";
 import {getStylesFromTheme} from "../../../utils/styles";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import MainView from "../../../styles/ts/MainView/MainView";
+import {useWindowDimensions} from "react-native";
 
 
 export default function WindowDimensions() {
+    const size = useWindowDimensions();
     // const size = useWindowSize();
     const {currentStyleTheme} = useStyleThemeStore()
 
-    const halfWindowsHeight = Dimensions.get('window').height;
-    const halfWindowsWidth = Dimensions.get('window').width;
-
     const {
+        mainView,
+        mainView__container,
         mainView_lightTheme,
         mainView_darkTheme,
     } = MainView;
 
 
     return (
-        <main>
-            <p style={getStylesFromTheme(
-                currentStyleTheme,
-                mainView_lightTheme,
-                mainView_darkTheme
-            )}>
-                {`width ${halfWindowsWidth}px / height ${halfWindowsHeight}px`}
+        <main style={getStylesFromTheme(
+            currentStyleTheme,
+            mainView_lightTheme,
+            mainView_darkTheme)}>
+            <p>
+                {/*{`width ${size.width}px / height ${size.height}px`}*/}
+                {`width ${size.width}px / height ${size.height}px`}
             </p>
         </main>
     );

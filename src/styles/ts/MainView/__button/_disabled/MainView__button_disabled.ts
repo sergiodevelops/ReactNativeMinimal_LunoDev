@@ -1,21 +1,22 @@
 import {StyleSheet} from 'react-native';
+import useStyleThemeStore from "../../../../../hooks/useStyleThemeStore";
 
 
-const MainView__button = StyleSheet.create({
-    mainView__button: {
-        width: '100%',
-        backgroundColor: 'transparent',
-        padding: `${2}%`,
-    },
-    mainView__button_darkTheme: {
-        backgroundColor: '#232323',
-        padding: `${1}%`,
-    },
-    mainView__button_lightTheme: {
-        backgroundColor: '#6f92ff',
-        padding: `${1}%`,
-    },
-});
+const MainView__button_disabled = () => {
+    const {currentStyleTheme} = useStyleThemeStore();
 
 
-export default MainView__button;
+    return (
+        StyleSheet.create({
+            mainView__button_disabled: {
+                cursor: 'auto',
+                color: currentStyleTheme === 'light' ? '#605e5e' : '#a9a7a7',
+                backgroundColor: currentStyleTheme === 'light' ? '#a9a7a7' : '#605e5e',
+                borderColor: currentStyleTheme === 'light' ? '#605e5e' : '#a9a7a7',
+            },
+        })
+    );
+};
+
+
+export default MainView__button_disabled;

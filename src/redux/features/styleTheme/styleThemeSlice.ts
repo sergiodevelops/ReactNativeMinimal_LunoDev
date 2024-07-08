@@ -6,7 +6,7 @@ interface StyleThemeState {
     value: 'light' | 'dark';
 }
 const initialState: StyleThemeState = {
-    value: 'light',
+    value: 'dark',
 }
 
 

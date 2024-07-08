@@ -1,26 +1,30 @@
-import {StyleSheet, Dimensions, TransformsStyle} from 'react-native';
+import {StyleSheet, useWindowDimensions} from 'react-native';
+import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 
 
-const halfWindowsHeight = Dimensions.get('window').height;
-const halfWindowsWidth = Dimensions.get('window').width;
+const MainView = () => {
+    const {width, height} = useWindowDimensions();
+    const {currentStyleTheme} = useStyleThemeStore();
+
+    const backgroundColorDark = '#2d2d2d';
+    const backgroundColorLight = 'white';
 
 
-const MainView = StyleSheet.create({
-    mainView: {
-        padding: 10,
-        userSelect: 'none', /* Standard syntax */
-        height: halfWindowsHeight,
-        width: halfWindowsWidth,
-    },
-    mainView_darkTheme: {
-        color: "white",
-        backgroundColor: "#181818",
-    },
-    mainView_lightTheme: {
-        color: "black",
-        backgroundColor: "white",
-    },
-});
+    return (
+        StyleSheet.create({
+            mainView: {
+                color: currentStyleTheme === 'light' ? '#000000' : 'white',
+                backgroundColor:  currentStyleTheme === 'dark' ? '#2d2d2d' : 'white',
+                userSelect: 'none',
+                height: height,
+                // width: width,
+            },
+            mainView__container: {
+                padding: 10,
+            },
+        })
+    );
+};
 
 
 export default MainView;
