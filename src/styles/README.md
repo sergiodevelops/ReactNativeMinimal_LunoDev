@@ -114,6 +114,6 @@ project
 ```
 
 
-![structure folder for styles](structureForStyles.png "structure of folders for styles")
+![documentation/structure folder for styles](documentation/structureForStyles.png "structure of folders for styles")
 
 <-- [**Go to main "README.md"**](../../README.md)

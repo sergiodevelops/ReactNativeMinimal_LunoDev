@@ -1,6 +1,6 @@
 import React, {ReactNode} from "react";
 import MainView__button from "../../../styles/ts/MainView/__button/MainView__button";
-import {Pressable, PressableProps, TextProps} from "react-native";
+import {Pressable, PressableProps} from "react-native";
 import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import MainView__button_disabled from "../../../styles/ts/MainView/__button/_disabled/MainView__button_disabled";

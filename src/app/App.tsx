@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 import MainView from "../styles/ts/MainView/MainView"
 import {Button} from "../components/semantic/Button/Button";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
@@ -28,6 +28,7 @@ export default function App() {
                     mainView__container,
                 ]}
             >
+                <Heading children={`React Native & Web (CSR & SSR) & Semantic`}/>
                 <View role={"main"}>
                     <Paragraph>
                         {`This is a <main/> (web) and <View/> (native)`}

@@ -1,8 +1,10 @@
-# ReactNativeMinimal_LunoDev
-by **LUNO⚛Dev**
+<h1 style="color: red; text-align: center; margin: 0; padding: 0;">React Native & Web Semantic (CSR & SSR)</h1>
+<h2 style="text-align: center; margin: 0; padding: 0;">by <strong style="color: blue">LUNO⚛Dev</strong></h2>
+
+![React Native and Web Semantic with CSR & SSR tecniches](documentation/il-mio-primo-dark-them-with-react-native_2024-07-09.gif "React Native & Web Semantic (CSR & SSR)")
 
 ```
-React Native with Minimal configurations by LUNO⚛Dev
+ReactNativeMinimal_LunoDev
 ```
 
 ## System Info (dev environment)

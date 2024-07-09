@@ -12,6 +12,7 @@ const MainView__heading = () => {
     return (
         StyleSheet.create({
             mainView__heading: {
+                textAlign: "center",
                 fontWeight: "bold",
                 color: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
