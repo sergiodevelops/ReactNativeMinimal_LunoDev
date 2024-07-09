@@ -1,7 +1,6 @@
 // @rootProject/web/ssr.webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const webpack = require("webpack");
 
 // rootPath is a project root directory and is
 // very important reference for the next paths definitions
@@ -18,13 +17,11 @@ const webPath = path.resolve(platformPath, 'web');
 const templatePath = path.resolve(webPath, 'template');
 const entrypointFilePach = path.resolve(webPath, 'ssr/index.web.tsx');
 const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
-// const babelConfigFilePath = path.resolve(webPath, 'babel.config.js');
 
 const publicPath = path.resolve(rootPath, 'public');
 const htmlFileName = 'index.html';
 const webDistOutputFileName = 'bundle.js';
 const reactNativeUncompiledFilesPath = path.resolve(rootPath, 'node_modules/react-native-uncompiled')
-
 
 console.log(
     '\nentrypointFilePach ', entrypointFilePach,
@@ -33,14 +30,7 @@ console.log(
     '\nappFilePath ', appFilePath,
     '\npublicPath ', publicPath,
     '\nwebDistOutputPath ', webDistOutputPath,
-)
-
-
-/*const {presets, plugins} = require(babelConfigFilePath);
-const compileNodeModules = [
-    // Add every react-native package that needs compiling
-    // 'react-native-gesture-handler',
-].map((moduleName) => path.resolve(rootPath, `node_modules/${moduleName}`));*/
+);
 
 
 const babelLoaderModRules = {
@@ -48,9 +38,8 @@ const babelLoaderModRules = {
     // Add every directory that needs to be compiled by Babel during the build.
     include: [
         entrypointFilePach, // Entry file to your application path
-        // appFilePath, // Updated to .(js|ts)x? files path
         srcPath, // source code path
-        // ...compileNodeModules,
+        reactNativeUncompiledFilesPath, // react-native-uncompiled files: https://necolas.github.io/react-native-web/docs/multi-platform/
     ],
     use: {
         loader: 'babel-loader',
@@ -63,6 +52,7 @@ const babelLoaderModRules = {
         },
     },
 };
+
 const svgLoaderModRules = {
     test: /\.svg$/,
     use: [
@@ -71,6 +61,7 @@ const svgLoaderModRules = {
         },
     ],
 };
+
 const imgLoaderModRules = {
     test: /\.(gif|jpe?g|png|svg)$/,
     use: {
@@ -82,7 +73,6 @@ const imgLoaderModRules = {
     },
 };
 
-// TODO fix this problem CSS LOADER
 const stylesCssAndSassLoaderConfiguration = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -100,18 +90,14 @@ module.exports = {
     entry: {
         app: entrypointFilePach,
     },
+
     output: {
+        clean: true,
         path: webDistOutputPath,
-        publicPath: "/",
         filename: webDistOutputFileName,
+        // publicPath: "/",
     },
-    module: {
-        rules: [
-            babelLoaderModRules,
-            imgLoaderModRules,
-            svgLoaderModRules,
-        ],
-    },
+
     resolve: {
         // https://necolas.github.io/react-native-web/docs/multi-platform/
         // If you're working on a multi-platform React Native app, web-specific
@@ -127,6 +113,7 @@ module.exports = {
             'react-native$': 'react-native-web'
         },
     },
+
     devServer: {
         static: {
             directory: publicPath,
@@ -134,14 +121,23 @@ module.exports = {
         compress: true,
         historyApiFallback: true,
         port: 8083,
+        open: true,
+        hot: true, // true by default +v4.0.0 webpack version
+
     },
+
+    module: {
+        rules: [
+            babelLoaderModRules,
+            imgLoaderModRules,
+            svgLoaderModRules,
+        ],
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Output Management',
             template: htmlTemplateFilePath,
         }),
-        // new webpack.HotModuleReplacementPlugin(),
-        // new webpack.DefinePlugin({
-        //     __DEV__: JSON.stringify(true),
-        // }),
     ],
 }

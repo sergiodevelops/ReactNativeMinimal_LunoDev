@@ -7,18 +7,78 @@ import Paragraph from "../components/semantic/Paragraph/Paragraph";
 import Heading from "../components/semantic/Heading/Heading";
 
 
-export default function App() {
+function MySemantic() {
     const {
         toogleStyleTheme,
         currentIconStyleTheme,
     } = useStyleThemeStore();
+
+
+    return (
+        <View role={"main"}>
+            <Paragraph children={`<main/> (WEB) / <View/> (NATIVE)`}/>
+            <Heading children={`React Native & Web (CSR & SSR) & Semantic`}/>
+            <Paragraph children={`<p/> (WEB) & <Text/> (NATIVE)`}/>
+            <Button
+                type={"accept"}
+                onPress={toogleStyleTheme}
+                children={`Toogle Theme "accept" ${currentIconStyleTheme}`}
+            />
+            <Button
+                type={"decline"}
+                onPress={toogleStyleTheme}
+                children={`Toogle Theme "decline" ${currentIconStyleTheme}`}
+            />
+            <Button
+                onPress={toogleStyleTheme}
+                children={`Toogle Theme "default" ${currentIconStyleTheme}`}
+            />
+            <Button
+                disabled
+                onPress={toogleStyleTheme}
+                children={`<button/> (WEB) & <Pressable/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h1"}
+                children={`<h1/> (WEB) & <Text/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h2"}
+                children={`<h2/> (WEB) & <Text/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h3"}
+                children={`<h3/> (WEB) & <Text/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h4"}
+                children={`<h4/> (WEB) & <Text/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h5"}
+                children={`<h5/> (WEB) & <Text/> (NATIVE)`}
+            />
+            <Heading
+                variant={"h6"}
+                children={`<h6/> (WEB) & <Text/> (NATIVE)`}
+            />
+
+            <View role={"main"}>
+                <Paragraph/>
+            </View>
+        </View>
+    );
+}
+
+export default function App() {
+
     const {
         mainView,
         mainView__container,
     } = MainView();
 
 
-    // example for add semantic for DOM web platform output rendering
+    // example for add semantic for DOM WEB platform output rendering
     return (
         <SafeAreaView>
             <ScrollView
@@ -28,58 +88,7 @@ export default function App() {
                     mainView__container,
                 ]}
             >
-                <Heading children={`React Native & Web (CSR & SSR) & Semantic`}/>
-                <View role={"main"}>
-                    <Paragraph>
-                        {`This is a <main/> (web) and <View/> (native)`}
-                    </Paragraph>
-                </View>
-                <Paragraph>
-                    {`This is a <p/> (web) and <Text/> (native)`}
-                </Paragraph>
-                <Button
-                    type={"accept"}
-                    onPress={toogleStyleTheme}
-                    children={`Toogle Theme 1 ${currentIconStyleTheme}`}
-                />
-                <Button
-                    type={"decline"}
-                    onPress={toogleStyleTheme}
-                    children={`Toogle Theme 2 ${currentIconStyleTheme}`}
-                />
-                <Button
-                    onPress={toogleStyleTheme}
-                    children={`Toogle Theme 3 ${currentIconStyleTheme}`}
-                />
-                <Button
-                    disabled
-                    onPress={toogleStyleTheme}
-                    children={`Toogle Theme 4 ${currentIconStyleTheme}`}
-                />
-                <Heading
-                    variant={"h1"}
-                    children={`This is a <h1/> (web) and <Text/> (native)`}
-                />
-                <Heading
-                    variant={"h2"}
-                    children={`This is a <h2/> (web) and <Text/> (native)`}
-                />
-                <Heading
-                    variant={"h3"}
-                    children={`This is a <h3/> (web) and <Text/> (native)`}
-                />
-                <Heading
-                    variant={"h4"}
-                    children={`This is a <h4/> (web) and <Text/> (native)`}
-                />
-                <Heading
-                    variant={"h5"}
-                    children={`This is a <h5/> (web) and <Text/> (native)`}
-                />
-                <Heading
-                    variant={"h6"}
-                    children={`This is a <h6/> (web) and <Text/> (native)`}
-                />
+                <MySemantic/>
 
                 {/*{isWeb() ?
                     <WindowDimensionsWeb/> :
