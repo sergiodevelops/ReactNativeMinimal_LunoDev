@@ -3,7 +3,7 @@ import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 
 
 const MainView = () => {
-    const {height} = useWindowDimensions();
+    const {width ,height} = useWindowDimensions();
     const {currentStyleTheme} = useStyleThemeStore();
 
     const backgroundColorDark = '#2d2d2d';
@@ -19,6 +19,7 @@ const MainView = () => {
                 backgroundColor:  currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
                 userSelect: 'none',
                 height: height,
+                width: width,
             },
             mainView__container: {
                 padding: 10,
