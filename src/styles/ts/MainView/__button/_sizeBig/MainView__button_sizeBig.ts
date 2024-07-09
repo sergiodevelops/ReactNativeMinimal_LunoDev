@@ -7,14 +7,6 @@ const MainView__button = StyleSheet.create({
         backgroundColor: 'transparent',
         padding: `${2}%`,
     },
-    mainView__button_darkTheme: {
-        backgroundColor: '#232323',
-        padding: `${1}%`,
-    },
-    mainView__button_lightTheme: {
-        backgroundColor: '#6f92ff',
-        padding: `${1}%`,
-    },
 });
 
 

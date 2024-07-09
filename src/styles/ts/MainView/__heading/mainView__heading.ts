@@ -16,22 +16,22 @@ const MainView__heading = () => {
                 color: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
             mainView__heading_h1: {
-                fontSize: 44,
-            },
-            mainView__heading_h2: {
-                fontSize: 41,
-            },
-            mainView__heading_h3: {
-                fontSize: 38,
-            },
-            mainView__heading_h4: {
                 fontSize: 34,
             },
-            mainView__heading_h5: {
+            mainView__heading_h2: {
                 fontSize: 32,
             },
-            mainView__heading_h6: {
+            mainView__heading_h3: {
+                fontSize: 30,
+            },
+            mainView__heading_h4: {
                 fontSize: 28,
+            },
+            mainView__heading_h5: {
+                fontSize: 26,
+            },
+            mainView__heading_h6: {
+                fontSize: 24,
             },
         })
     );

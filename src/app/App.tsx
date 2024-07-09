@@ -5,8 +5,6 @@ import {Button} from "../components/semantic/Button/Button";
 import useStyleThemeStore from "../hooks/useStyleThemeStore";
 import Paragraph from "../components/semantic/Paragraph/Paragraph";
 import Heading from "../components/semantic/Heading/Heading";
-import mainView__text from "../styles/ts/MainView/__text/MainView__text";
-import MainView__text from "../styles/ts/MainView/__text/MainView__text";
 
 
 export default function App() {
@@ -35,7 +33,9 @@ export default function App() {
                         {`This is a <main/> (web) and <View/> (native)`}
                     </Paragraph>
                 </View>
-                <Paragraph>{`This is a <p/> (web) and <Text/> (native)`}</Paragraph>
+                <Paragraph>
+                    {`This is a <p/> (web) and <Text/> (native)`}
+                </Paragraph>
                 <Button
                     type={"accept"}
                     onPress={toogleStyleTheme}

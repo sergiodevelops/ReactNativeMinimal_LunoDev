@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__text/MainView__text.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ErrorBoundary/ErrorBoundary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/ErrorBoundary/ErrorBoundary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.web.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/WindowDimensions/WindowDimensions.web.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Heading/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Heading/Heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_decline/MainView__button_decline.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_decline/MainView__button_decline.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_default/MainView__button_default.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_default/MainView__button_default.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_sizeBig/MainView__button_sizeBig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_sizeBig/MainView__button_sizeBig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__text/MainView__text.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__paragraph/MainView__paragraph.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +65,7 @@
     "npm.mobile.executor": "Run",
     "npm.native.executor": "Run",
     "npm.native:reset:cache.executor": "Run",
+    "npm.native_reset.executor": "Run",
     "npm.reset.executor": "Run",
     "npm.server:ssr.executor": "Run",
     "npm.server:ssr2.executor": "Run",
@@ -106,7 +102,7 @@
       <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.1_native_android">
+  <component name="RunManager" selected="npm.2_web_csr">
     <configuration name="1_native_android" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />

@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import useStyleThemeStore from "../../../../hooks/useStyleThemeStore";
 
 
-const MainView__text = () => {
+const MainView__paragraph = () => {
     const {currentStyleTheme} = useStyleThemeStore();
 
     const colorDark = '#ffffff';
@@ -11,15 +11,19 @@ const MainView__text = () => {
 
     return (
         StyleSheet.create({
-            mainView__text: {
+            mainView__paragraph: {
+                margin: 0,
                 fontSize: 20, //TODO fare atenzione qui
             },
-            mainView__text_bold: {
+            mainView__paragraph_bold: {
                 fontWeight: "bold",
+            },
+            mainView__paragraph_default: {
+                color: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
         })
     );
 };
 
 
-export default MainView__text;
+export default MainView__paragraph;

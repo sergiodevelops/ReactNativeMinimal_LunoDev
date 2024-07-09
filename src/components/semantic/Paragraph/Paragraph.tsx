@@ -1,27 +1,36 @@
-import React, {HTMLAttributes, ReactElement} from "react";
+import React, {CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactElement} from "react";
 import {Text, TextProps} from "react-native";
 import {isWeb} from "../../../utils/platform";
-import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
+import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
 import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
-import {TextStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
+import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 
 
-const Paragraph = (props: HTMLAttributes<HTMLParagraphElement> & StyleProp<TextStyle>): ReactElement => {
-    const {mainView__text} = MainView__text();
+const Paragraph = (
+    props: TextProps & HTMLAttributes<HTMLParagraphElement>
+): ReactElement => {
+    const {
+        mainView__paragraph,
+        mainView__paragraph_default
+    } = MainView__paragraph();
 
-    const paragraphStyles = {
-        ...props.style,
-        ...mainView__text,
-    }
 
     return (isWeb() ?
             <p
-                style={paragraphStyles as HTMLAttributes<HTMLParagraphElement>}
                 {...props as HTMLAttributes<HTMLParagraphElement>}
+                style={{
+                    ...props.style as CSSProperties,
+                    ...mainView__paragraph,
+                    ...mainView__paragraph_default,
+                } as CSSProperties | undefined}
             /> :
             <Text
-                style={paragraphStyles as TextStyle}
                 {...props as TextProps}
+                style={{
+                    ...props.style as CSSProperties,
+                    ...mainView__paragraph,
+                    ...mainView__paragraph_default,
+                } as StyleProp<TextStyle | ViewStyle>}
             />
     );
 }
