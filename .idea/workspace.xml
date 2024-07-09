@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/csr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/csr/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ssr/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +276,7 @@
       <workItem from="1720384555174" duration="13254000" />
       <workItem from="1720438631715" duration="22687000" />
       <workItem from="1720521605629" duration="7255000" />
-      <workItem from="1720534226265" duration="492000" />
+      <workItem from="1720534226265" duration="2130000" />
     </task>
     <servers />
   </component>
