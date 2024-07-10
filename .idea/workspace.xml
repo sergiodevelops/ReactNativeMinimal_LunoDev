@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/documentation/il-mio-primo-dark-them-with-react-native_2024-07-09.gif",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/components/semantic",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,6 +63,7 @@
     "npm.mobile.executor": "Run",
     "npm.native.executor": "Run",
     "npm.native:reset:cache.executor": "Run",
+    "npm.native:start.executor": "Run",
     "npm.native_reset.executor": "Run",
     "npm.reset.executor": "Run",
     "npm.server:ssr.executor": "Run",
@@ -79,37 +86,25 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/semantic" />
+      <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__text" />
-      <recent name="$PROJECT_DIR$/src/components/utils/WindowDimensions" />
-      <recent name="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/styles/documentation" />
       <recent name="$PROJECT_DIR$/src/components/semantic" />
+      <recent name="$PROJECT_DIR$/src/styles/documentation" />
       <recent name="$PROJECT_DIR$/src/components/utils" />
       <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
       <recent name="$PROJECT_DIR$/src/platform" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/app/MySemantic/MySemantic.tsx" />
       <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.web:csr:start">
-    <configuration name="build" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
-      <package-manager value="yarn" />
-      <envs>
-        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
-      </envs>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.native:start">
     <configuration name="native:android:build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -154,6 +149,19 @@
       <command value="run" />
       <scripts>
         <script value="native:reset:cache:metro" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <package-manager value="yarn" />
+      <envs>
+        <env name="ANDROID_HOME" value="$USER_HOME$/Android/Sdk" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="native:start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="native:start" />
       </scripts>
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
       <package-manager value="yarn" />
@@ -218,7 +226,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.build" />
+      <item itemvalue="npm.native:start" />
       <item itemvalue="npm.native:android:bundle" />
       <item itemvalue="npm.native:android:build" />
       <item itemvalue="npm.web:csr:start" />
@@ -276,7 +284,7 @@
       <workItem from="1720384555174" duration="13254000" />
       <workItem from="1720438631715" duration="22687000" />
       <workItem from="1720521605629" duration="7255000" />
-      <workItem from="1720534226265" duration="2130000" />
+      <workItem from="1720534226265" duration="46349000" />
     </task>
     <servers />
   </component>

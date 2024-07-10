@@ -18,7 +18,7 @@ const MainView = () => {
                 color: currentStyleTheme === 'light' ? colorLight : colorDark,
                 backgroundColor:  currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
                 userSelect: 'none',
-                height: height,
+                minHeight: height,
                 width: width,
                 padding: 10,
             },

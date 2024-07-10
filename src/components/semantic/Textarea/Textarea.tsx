@@ -17,9 +17,12 @@ type TextareaProps = {maxOfLines?: number} & TextInputProps & HTMLAttributes<HTM
 
 export default function Textarea(props: TextareaProps): ReactElement {
 
-    const {mainView__input, mainView__placeholder_color} = MainView__input();
+    const {
+        mainView__input,
+        mainView__placeholder_color,
+    } = MainView__input();
     const minOfLines = props.numberOfLines || 2;
-    const maxOfLines = props.maxOfLines || 0;
+    // const maxOfLines = props.maxOfLines || 0;
 
     const handleOnChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         event.target.style.height = 'inherit';
@@ -39,7 +42,6 @@ export default function Textarea(props: TextareaProps): ReactElement {
                     style={{
                         ...mainView__input,
                         ...props.style as CSSProperties,
-                        height: 'auto',
                     }}
                 />
                 <style>

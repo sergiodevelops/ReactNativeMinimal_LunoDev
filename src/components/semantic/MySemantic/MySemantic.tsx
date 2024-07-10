@@ -12,6 +12,10 @@ import Textarea from "../Textarea/Textarea";
 import Anchor from "../Anchor/Anchor";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Nav from "../Nav/Nav";
+import Article from "../Article/Article";
+import Main from "../Main/Main";
+import {isWeb} from "../../../utils/platform";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -24,9 +28,10 @@ export default function MySemantic() {
 
 
     return (
-        <View id={`${id}-main`} role={"main"}>
+        <Main id={`${id}-main`}>
+
             <Anchor
-                href={`https://google.com`}
+                href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
                 target={"_self"}
                 children={`open URL in this page ⏳`}
             />
@@ -41,6 +46,7 @@ export default function MySemantic() {
                     />
                 }
             />
+
             <Paragraph children={`<main/> (WEB) / <View/> (NATIVE)`}/>
 
             <Heading
@@ -108,9 +114,10 @@ export default function MySemantic() {
                 id={`${id}-Paragraph-p`}
                 children={`<p/> (WEB) & <Text/> (NATIVE)`}
             />
-            <View id={`${id}-article`} role={"article"}>
+
+            <Article id={`${id}-article`} role={"article"}>
                 <Paragraph children={`<article/> (WEB) & <View/> (NATIVE)`}/>
-            </View>
+            </Article>
             <View id={`${id}-div`}>
                 <Paragraph children={`<div/> (WEB) & <View/> (NATIVE)`}/>
             </View>
@@ -149,16 +156,22 @@ export default function MySemantic() {
                 </Fieldset>
             </Form>
 
-            <View id={`${id}-nav`} role={"navigation"}>
-                <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-            </View>
+            <Nav children={<Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>}/>
 
             <Header id={`${id}-header`}>
                 <Paragraph children={`<header/> (WEB) & <View/> (NATIVE)`}/>
             </Header>
+
             <Footer id={`${id}-footer`}>
                 <Paragraph children={`<footer/> (WEB) & <View/> (NATIVE)`}/>
             </Footer>
-        </View>
+            {
+                isWeb() ? null :
+                    <View>
+                        <Text></Text>
+                        <Text></Text>
+                    </View>
+            }
+        </Main>
     );
 }

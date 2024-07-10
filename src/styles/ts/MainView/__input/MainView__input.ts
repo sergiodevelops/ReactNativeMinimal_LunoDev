@@ -11,7 +11,7 @@ const MainView__input = () => {
             mainView__input: {
                 width: `100%`,
                 fontSize: 18,
-                padding: 3,
+                padding: 5,
                 backgroundColor: "inherit",
                 color: "inherit",
                 borderColor: 'inherit',
