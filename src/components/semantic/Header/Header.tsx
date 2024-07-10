@@ -28,7 +28,8 @@ export default function Header(props: HeaderProps) {
                     props.style as ViewStyle
                 ]}
                 accessibilityRole={"header"}
-                accessibilityLabel={"header"}
+                // accessibilityLabel={"header"}
+                aria-label={"header"}
             />
     );
 }

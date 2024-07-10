@@ -10,7 +10,8 @@ export default function Main (props: MainProps){
         <View
             {...props}
             role={'main'}
-            accessibilityLabel={"main"}
+            // accessibilityLabel={"main"}
+            aria-label={"main"}
         />
     );
 }

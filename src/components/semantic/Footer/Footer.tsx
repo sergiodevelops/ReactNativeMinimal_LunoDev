@@ -26,7 +26,8 @@ export default function Footer(props: FooterProps) {
                     mainView__fieldset,
                     props.style as ViewStyle
                 ]}
-                accessibilityLabel={"footer"}
+                // accessibilityLabel={"footer"}
+                aria-label={"footer"}
             />
     );
 }

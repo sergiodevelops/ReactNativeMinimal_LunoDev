@@ -20,6 +20,7 @@ export default function Input(props: InputProps): ReactElement {
                     {...props as LabelHTMLAttributes<HTMLInputElement>}
                     style={{
                         ...mainView__input,
+                        display: 'block',
                         ...props.style as CSSProperties,
                     }}
                 />

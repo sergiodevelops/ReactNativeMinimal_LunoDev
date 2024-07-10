@@ -15,10 +15,6 @@ export default function MainView__fieldset(){
         StyleSheet.create({
             mainView__fieldset: {
                 padding: 5,
-                // fontSize: 20,
-                // color: currentStyleTheme === 'light' ? colorLight : colorDark,
-                // backgroundColor:  currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
-                // borderColor: currentStyleTheme === 'light' ? colorLight : colorDark,
                 borderWidth: 0,
             },
         })

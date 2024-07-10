@@ -1,5 +1,5 @@
-import React, {useId} from "react";
-import {View, Text} from "react-native";
+import React, {useEffect, useId, useState} from "react";
+import {View, Text, Switch} from "react-native";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Paragraph from "../Paragraph/Paragraph";
 import Heading from "../Heading/Heading";
@@ -16,15 +16,30 @@ import Nav from "../Nav/Nav";
 import Article from "../Article/Article";
 import Main from "../Main/Main";
 import {isWeb} from "../../../utils/platform";
+import {Picker} from "@react-native-picker/picker";
+import MainView__input from "../../../styles/ts/MainView/__input/MainView__input";
+import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
 
 
 // example for add semantic for DOM WEB platform output rendering
 export default function MySemantic() {
     const id = `MySemantic-${useId()}`;
-    const {
-        toogleStyleTheme,
-        currentIconStyleTheme,
-    } = useStyleThemeStore();
+    const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
+    const {mainView__input, mainView__placeholder_color} = MainView__input();
+    const {mainView__paragraph} = MainView__paragraph();
+    const [state, setState] = React.useState<boolean>(false)
+    const toogleState = () => setState(!state);
+    const languages: {lang: string, id: number}[] = [
+        {lang: "EN", id: 1},
+        {lang: "ES", id: 2},
+        {lang: "IT", id: 3},
+    ];
+    const [selectedLanguageId, setSelectedLanguageId] = useState<number>(-1)
+
+
+    useEffect(() => {
+        console.log(selectedLanguageId)
+    }, [selectedLanguageId]);
 
 
     return (
@@ -40,7 +55,7 @@ export default function MySemantic() {
                 target={"_blank"}
                 children={
                     <Button
-                        id={"button-accept"}
+                        id={`${id}-Anchor-button-accept`}
                         type={"accept"}
                         children={`open URL in a new tab 🔗🚀`}
                     />
@@ -56,24 +71,24 @@ export default function MySemantic() {
             />
 
             <Button
-                id={"button-accept"}
+                id={`${id}-button-accept`}
                 type={"accept"}
                 onPress={toogleStyleTheme}
                 children={`Toogle Theme "accept" ${currentIconStyleTheme}`}
             />
             <Button
-                id={"button-decline"}
+                id={`${id}-button-decline`}
                 type={"decline"}
                 onPress={toogleStyleTheme}
                 children={`Toogle Theme "decline" ${currentIconStyleTheme}`}
             />
             <Button
-                id={"button-default"}
+                id={`${id}-button-default`}
                 onPress={toogleStyleTheme}
                 children={`Toogle Theme "default" ${currentIconStyleTheme}`}
             />
             <Button
-                id={"button-disabled"}
+                id={`${id}-button-disabled`}
                 disabled
                 onPress={toogleStyleTheme}
                 children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
@@ -152,6 +167,47 @@ export default function MySemantic() {
                     <Textarea
                         id={`${id}-Textarea`}
                         placeholder={`placeholder for this <textarea/> (WEB) & <TextInput/> (NATIVE)`}
+                    />
+                </Fieldset>
+                <Fieldset id={`${id}-FieldsetSelectPicker`}>
+                    <Label
+                        htmlFor={`${id}-SelectPicker`}
+                        children={selectedLanguageId >= 0 ? languages[selectedLanguageId].lang : "Select one option"}
+                    />
+                    <Picker
+                        id={`${id}-SelectPicker`}
+                        style={mainView__input}
+                        placeholder={`Select one option`}
+                        selectedValue={selectedLanguageId || -1}
+                        onValueChange={(index: number) => setSelectedLanguageId(index)}
+                    >
+                        {/* TODO fix error unique key for items Picker */}
+                        <Picker.Item style={{color: "red"}} label={"Select one option"} value={-1}/>
+                        {languages.map((option, index) =>
+                            <Picker.Item
+                                label={option.lang}
+                                value={index}
+                            />
+                        )}
+                    </Picker>
+                    <style>
+                        {` 
+                    option { 
+                        color: ${mainView__placeholder_color.color}; 
+                        background: ${mainView__paragraph.color}; 
+                    }`}
+                    </style>
+                </Fieldset>
+                <Fieldset id={`${id}-FieldsetSwitch`}>
+                    <Label
+                        htmlFor={`${id}-Switch`}
+                        children={`<label/> textarea (WEB) & <Text/> (NATIVE) click me e vedrai!`}
+                    />
+                    <Switch
+                        id={`${id}-Switch`}
+                        value={state}
+                        onChange={toogleState} // for NATIVE
+                        onPointerDown={toogleState} // for WEB
                     />
                 </Fieldset>
             </Form>
