@@ -16,8 +16,7 @@ interface MainViewButtonParams {
     type?: 'accept' | 'decline' | undefined;
 }
 
-
-export function Button(props: MainViewButtonParams & PressableProps) {
+export default function Button(props: MainViewButtonParams & PressableProps) {
     const {mainView__button, mainView__button_container} = MainView__button();
     const {mainView__button_default} = MainView__button_default();
     const {mainView__button_disabled} = MainView__button_disabled();

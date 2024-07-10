@@ -1,4 +1,4 @@
-import React, {CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactElement} from "react";
+import React, {CSSProperties, HTMLAttributes, ReactElement} from "react";
 import {Text, TextProps} from "react-native";
 import {isWeb} from "../../../utils/platform";
 import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
@@ -6,9 +6,10 @@ import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 
 
-const Paragraph = (
+export default function Paragraph (
     props: TextProps & HTMLAttributes<HTMLParagraphElement>
-): ReactElement => {
+): ReactElement {
+
     const {
         mainView__paragraph,
         mainView__paragraph_default
@@ -19,21 +20,18 @@ const Paragraph = (
             <p
                 {...props as HTMLAttributes<HTMLParagraphElement>}
                 style={{
-                    ...props.style as CSSProperties,
                     ...mainView__paragraph,
                     ...mainView__paragraph_default,
+                    ...props.style as CSSProperties,
                 } as CSSProperties | undefined}
             /> :
             <Text
                 {...props as TextProps}
                 style={{
-                    ...props.style as CSSProperties,
                     ...mainView__paragraph,
                     ...mainView__paragraph_default,
+                    ...props.style as CSSProperties,
                 } as StyleProp<TextStyle | ViewStyle>}
             />
     );
 }
-
-
-export default Paragraph;

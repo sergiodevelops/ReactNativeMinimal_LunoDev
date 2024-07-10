@@ -20,8 +20,6 @@ const MainView = () => {
                 userSelect: 'none',
                 height: height,
                 width: width,
-            },
-            mainView__container: {
                 padding: 10,
             },
         })
