@@ -2,6 +2,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // rootPath is a project root directory and is
 // very important reference for the next paths definitions
@@ -20,6 +21,8 @@ const entrypointFilePach = path.resolve(webPath, 'csr/index.web.ts');
 const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
 
 const publicPath = path.resolve(rootPath, 'public');
+const imagesPath = path.resolve(publicPath, 'images');
+
 const htmlFileName = 'index.html';
 const webDistOutputFileName = 'bundle.js';
 const reactNativeUncompiledFilesPath = path.resolve(rootPath, 'node_modules/react-native-uncompiled')
@@ -137,6 +140,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management',
             template: htmlTemplateFilePath,
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: imagesPath, to: "images" },
+            ],
         }),
     ],
 

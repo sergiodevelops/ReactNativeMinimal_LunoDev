@@ -1,6 +1,8 @@
 // @rootProject/web/ssr.webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // rootPath is a project root directory and is
 // very important reference for the next paths definitions
@@ -139,5 +141,17 @@ module.exports = {
             title: 'Output Management',
             template: htmlTemplateFilePath,
         }),
+        new CopyPlugin({
+            patterns: [
+                { from: imagesPath, to: "images" },
+            ],
+        }),
     ],
+
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+            extractComments: false,
+        })],
+    },
 }

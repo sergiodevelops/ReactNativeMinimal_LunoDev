@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Aside/Aside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Aside/Aside.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ssr/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/components/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/utils" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
       <recent name="$PROJECT_DIR$/configs/android/app/src/debug" />
       <recent name="$PROJECT_DIR$/configs/android/app/src/main" />
       <recent name="$PROJECT_DIR$/src/components/semantic" />
-      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/semantic" />
@@ -280,7 +283,7 @@
       <workItem from="1720438631715" duration="22687000" />
       <workItem from="1720521605629" duration="7255000" />
       <workItem from="1720534226265" duration="61466000" />
-      <workItem from="1720682694213" duration="16654000" />
+      <workItem from="1720682694213" duration="21078000" />
     </task>
     <servers />
   </component>

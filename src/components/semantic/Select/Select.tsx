@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from "react";
-import {isWeb} from "../../../utils/platform";
-import {Picker, PickerProps} from "@react-native-picker/picker";
 import {View} from "react-native";
+import {Picker, PickerProps} from "@react-native-picker/picker";
 import MainView__input from "../../../styles/ts/MainView/__input/MainView__input";
 
 
 type SelectProps = {
     options: any[],
-    atrName?: string,
+    label?: string,
     onSelectedLanguage: (selectedLanguage: any | undefined) => void,
 } & PickerProps;
 export default function Select(props: SelectProps) {
     const {options, onSelectedLanguage} = props;
-    const atrName = props.atrName || "name";
+    const atribute = props.label || "name";
     const {
         mainView__selectOption_container,
         mainView__selectOption,
@@ -63,7 +62,7 @@ export default function Select(props: SelectProps) {
                         key={`${JSON.stringify(option)}-${index}-SelectPickerItem`}
                         style={mainView__selectOption}
                         value={`${JSON.stringify(option)}`}
-                        label={readProp(option, atrName) || option as string}
+                        label={readProp(option, atribute) || option as string}
                     />
                 )}
             </Picker>
