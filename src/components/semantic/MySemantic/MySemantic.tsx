@@ -183,7 +183,7 @@ export default function MySemantic() {
                     />
                     {/* SELECT */}
                     <Select
-                        label={'id'} // atribute identification to show (optional - by "name" by default)
+                        label={'name'} // atribute identification to show (optional - by "name" by default)
                         id={`${id}-SelectPicker`}
                         options={languages}
                         onSelectedLanguage={setSelectedLanguage}
