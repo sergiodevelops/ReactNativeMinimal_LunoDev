@@ -99,7 +99,7 @@ module.exports = {
         clean: true,
         path: webDistOutputPath,
         filename: webDistOutputFileName,
-        // publicPath: "/",
+        publicPath: "/",
     },
 
     resolve: {
