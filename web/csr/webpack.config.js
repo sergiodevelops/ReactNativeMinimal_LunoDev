@@ -1,6 +1,7 @@
 // @rootProject/web/csr.webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 // rootPath is a project root directory and is
 // very important reference for the next paths definitions
@@ -138,4 +139,11 @@ module.exports = {
             template: htmlTemplateFilePath,
         }),
     ],
+
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+            extractComments: false,
+        })],
+    },
 }

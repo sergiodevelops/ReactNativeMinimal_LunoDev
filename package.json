@@ -46,6 +46,7 @@
     "metro": "^0.80.9",
     "metro-core": "^0.80.9",
     "metro-react-native-babel-preset": "^0.77.0",
+    "terser-webpack-plugin": "^5.3.10",
     "typescript": "^5.5.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.92.1",

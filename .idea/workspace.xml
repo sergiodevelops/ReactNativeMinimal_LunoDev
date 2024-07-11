@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__footer/MainView__footer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__footer/MainView__footer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +81,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
       <recent name="$PROJECT_DIR$/configs/android/app/src/debug" />
       <recent name="$PROJECT_DIR$/configs/android/app/src/main" />
       <recent name="$PROJECT_DIR$/src/components/semantic" />
-      <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
       <recent name="$PROJECT_DIR$/src/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -291,7 +280,7 @@
       <workItem from="1720438631715" duration="22687000" />
       <workItem from="1720521605629" duration="7255000" />
       <workItem from="1720534226265" duration="61466000" />
-      <workItem from="1720682694213" duration="15918000" />
+      <workItem from="1720682694213" duration="16654000" />
     </task>
     <servers />
   </component>
