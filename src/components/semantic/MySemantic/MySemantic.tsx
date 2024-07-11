@@ -1,4 +1,4 @@
-import React, {useEffect, useId, useState} from "react";
+import React, {useId, useState} from "react";
 import {View, Text, Switch} from "react-native";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Paragraph from "../Paragraph/Paragraph";
@@ -16,35 +16,25 @@ import Nav from "../Nav/Nav";
 import Article from "../Article/Article";
 import Main from "../Main/Main";
 import {isWeb} from "../../../utils/platform";
-import {Picker} from "@react-native-picker/picker";
-import MainView__input from "../../../styles/ts/MainView/__input/MainView__input";
-import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
+import Select from "../Select/Select";
 
 
 // example for add semantic for DOM WEB platform output rendering
 export default function MySemantic() {
     const id = `MySemantic-${useId()}`;
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
-    const {mainView__input, mainView__placeholder_color} = MainView__input();
-    const {mainView__paragraph} = MainView__paragraph();
     const [state, setState] = React.useState<boolean>(false)
     const toogleState = () => setState(!state);
-    const languages: {lang: string, id: number}[] = [
-        {lang: "EN", id: 1},
-        {lang: "ES", id: 2},
-        {lang: "IT", id: 3},
+    type ILang = { lang: 'en-EN' | 'es-AR' | 'it-IT', name: string, id: number }
+    const languages: ILang[] = [
+        {lang: "en-EN", name: "ENGLISH", id: 1},
+        {lang: "es-AR", name: "ESPAÑOL", id: 2},
+        {lang: "it-IT", name: "ITALIANO", id: 3},
     ];
-    const [selectedLanguageId, setSelectedLanguageId] = useState<number>(-1)
-
-
-    useEffect(() => {
-        console.log(selectedLanguageId)
-    }, [selectedLanguageId]);
-
+    const [selectedLanguage, setSelectedLanguage] = useState<ILang | undefined>(undefined)
 
     return (
         <Main id={`${id}-main`}>
-
             <Anchor
                 href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
                 target={"_self"}
@@ -172,36 +162,18 @@ export default function MySemantic() {
                 <Fieldset id={`${id}-FieldsetSelectPicker`}>
                     <Label
                         htmlFor={`${id}-SelectPicker`}
-                        children={selectedLanguageId >= 0 ? languages[selectedLanguageId].lang : "Select one option"}
+                        children={selectedLanguage?.name || "Select one language"}
                     />
-                    <Picker
+                    <Select
                         id={`${id}-SelectPicker`}
-                        style={mainView__input}
-                        placeholder={`Select one option`}
-                        selectedValue={selectedLanguageId || -1}
-                        onValueChange={(index: number) => setSelectedLanguageId(index)}
-                    >
-                        {/* TODO fix error unique key for items Picker */}
-                        <Picker.Item style={{color: "red"}} label={"Select one option"} value={-1}/>
-                        {languages.map((option, index) =>
-                            <Picker.Item
-                                label={option.lang}
-                                value={index}
-                            />
-                        )}
-                    </Picker>
-                    <style>
-                        {` 
-                    option { 
-                        color: ${mainView__placeholder_color.color}; 
-                        background: ${mainView__paragraph.color}; 
-                    }`}
-                    </style>
+                        options={languages}
+                        onSelectedLanguage={setSelectedLanguage}
+                    />
                 </Fieldset>
                 <Fieldset id={`${id}-FieldsetSwitch`}>
                     <Label
                         htmlFor={`${id}-Switch`}
-                        children={`<label/> textarea (WEB) & <Text/> (NATIVE) click me e vedrai!`}
+                        children={`<button/> Switch (WEB) & <Switch/> (NATIVE) click me e vedrai!`}
                     />
                     <Switch
                         id={`${id}-Switch`}

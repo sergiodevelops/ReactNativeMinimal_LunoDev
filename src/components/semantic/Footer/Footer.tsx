@@ -2,13 +2,13 @@ import {View, ViewProps} from "react-native";
 import {CSSProperties, HTMLAttributes} from "react";
 import {isWeb} from "../../../utils/platform";
 import {ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
-import MainView__fieldset from "../../../styles/ts/MainView/__fieldset/MainView__fieldset";
+import MainView__footer from "../../../styles/ts/MainView/__footer/MainView__footer";
 
 
 type FooterProps = ViewProps & HTMLAttributes<HTMLElement>;
 export default function Footer(props: FooterProps) {
     // https://www.w3schools.com/tags/tag_footer.asp
-    const {mainView__fieldset} = MainView__fieldset();
+    const {mainView__footer} = MainView__footer();
 
 
     return (
@@ -16,17 +16,17 @@ export default function Footer(props: FooterProps) {
             <footer
                 {...props as HTMLAttributes<HTMLElement>}
                 style={{
-                    ...mainView__fieldset,
+                    ...mainView__footer,
                     ...props.style as CSSProperties,
                 }}
+                aria-label={"footer"}
             /> :
             <View
                 {...props as ViewProps}
                 style={[
-                    mainView__fieldset,
+                    mainView__footer,
                     props.style as ViewStyle
                 ]}
-                // accessibilityLabel={"footer"}
                 aria-label={"footer"}
             />
     );

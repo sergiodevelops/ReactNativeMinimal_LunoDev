@@ -17,14 +17,12 @@ export default function Header(props: HeaderProps) {
             <header
                 {...props as HTMLAttributes<HTMLElement>}
                 style={{
-                    ...mainView__fieldset,
                     ...props.style as CSSProperties,
                 }}
             /> :
             <View
                 {...props as ViewProps}
                 style={[
-                    mainView__fieldset,
                     props.style as ViewStyle
                 ]}
                 accessibilityRole={"header"}

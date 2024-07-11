@@ -5,6 +5,5 @@
     <application
         android:usesCleartextTraffic="true"
         tools:targetApi="28"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:supportsRtl="true"/> <!-- https://www.npmjs.com/package/@react-native-picker/picker -->
+        tools:ignore="GoogleAppIndexingWarning"/> <!-- https://www.npmjs.com/package/@react-native-picker/picker -->
 </manifest>

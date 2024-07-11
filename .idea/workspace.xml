@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/android/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Article/Article.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Article/Article.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Main/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__footer/MainView__footer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__footer/MainView__footer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__label/mainView__label.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__label/mainView__label.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/configs/android/app/src/debug",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +68,7 @@
     "npm.mobile.executor": "Run",
     "npm.native.executor": "Run",
     "npm.native:reset:cache.executor": "Run",
+    "npm.native:reset:cache:metro.executor": "Run",
     "npm.native:start.executor": "Run",
     "npm.native_reset.executor": "Run",
     "npm.reset.executor": "Run",
@@ -293,7 +290,8 @@
       <workItem from="1720384555174" duration="13254000" />
       <workItem from="1720438631715" duration="22687000" />
       <workItem from="1720521605629" duration="7255000" />
-      <workItem from="1720534226265" duration="59329000" />
+      <workItem from="1720534226265" duration="61466000" />
+      <workItem from="1720682694213" duration="15918000" />
     </task>
     <servers />
   </component>

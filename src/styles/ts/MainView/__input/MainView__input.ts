@@ -13,17 +13,34 @@ const MainView__input = () => {
     return (
         StyleSheet.create({
             mainView__input: {
-                width: `100%`,
                 fontSize: 18,
                 padding: 5,
                 backgroundColor: currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
                 color: currentStyleTheme === 'light' ? colorLight : colorDark,
                 borderColor: 'inherit',
-                borderRadius: 5,
+                borderWidth: 1,
+            },
+            mainView__textarea_container: {
+                width: `100%`,
+                padding: 5,
+            },
+            mainView__textarea: {
+                fontSize: 18,
+                backgroundColor: currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
+                color: currentStyleTheme === 'light' ? colorLight : colorDark,
+                borderColor: 'inherit',
                 borderWidth: 1,
             },
             mainView__placeholder_color: {
                 color: currentStyleTheme === 'light' ? '#333333' : '#b9b9b9',
+            },
+            mainView__selectOption_container: {
+                backgroundColor: currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
+                color: currentStyleTheme === 'light' ? colorLight : colorDark,
+                padding: 0,
+            },
+            mainView__selectOption: {
+                padding: 5,
             },
         })
     );

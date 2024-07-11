@@ -20,7 +20,6 @@ export default function MainView__form(){
                 backgroundColor:  currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
                 borderColor: currentStyleTheme === 'light' ? colorLight : colorDark,
                 borderWidth: 0,
-                borderRadius: 5,
             },
         })
     );

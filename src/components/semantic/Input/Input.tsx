@@ -1,5 +1,5 @@
 import React, {CSSProperties, HTMLAttributes, LabelHTMLAttributes, ReactElement, TextareaHTMLAttributes} from "react";
-import {TextInput, TextInputProps} from "react-native";
+import {TextInput, TextInputProps, View} from "react-native";
 import {isWeb} from "../../../utils/platform";
 import MainView__input from "../../../styles/ts/MainView/__input/MainView__input";
 
@@ -14,23 +14,23 @@ export default function Input(props: InputProps): ReactElement {
 
 
     return (isWeb() ?
-            <>
+            <View>
                 <input
                     name={`${props.id}-name`}
                     {...props as LabelHTMLAttributes<HTMLInputElement>}
                     style={{
                         ...mainView__input,
-                        display: 'block',
                         ...props.style as CSSProperties,
                     }}
                 />
+
                 <style>
-                    {` 
-                    ::placeholder { 
-                        color: ${mainView__placeholder_color.color}; 
-                    }`}
+                    {
+                        `textarea {resize: none;} 
+                        ::placeholder {color: ${mainView__placeholder_color.color};}`
+                    }
                 </style>
-            </> :
+            </View> :
             <TextInput
                 {...props as TextInputProps}
                 style={[

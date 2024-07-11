@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import useStyleThemeStore from "../../../../hooks/useStyleThemeStore";
 
 
-export default function MainView__fieldset() {
+export default function MainView__footer() {
     const backgroundColorDark = '#4b4b4b';
     const backgroundColorLight = '#E5E7E8A0';
     const colorLight = '#4b4b4b';
@@ -13,13 +13,10 @@ export default function MainView__fieldset() {
 
     return (
         StyleSheet.create({
-            mainView__fieldset_container: {
+            mainView__footer_container: {
                 padding: 5,
             },
-            mainView__fieldset: {
-                backgroundColor: currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
-                borderWidth: 0.5,
-                borderStyle: "solid",
+            mainView__footer: {
                 borderColor: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
         })
