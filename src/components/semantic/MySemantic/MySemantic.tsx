@@ -1,5 +1,5 @@
 import React, {useId, useState} from "react";
-import {Switch, Image, View} from "react-native";
+import {Switch} from "react-native";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Paragraph from "../Paragraph/Paragraph";
 import Heading from "../Heading/Heading";
@@ -19,7 +19,10 @@ import Select from "../Select/Select";
 import Aside from "../Aside/Aside";
 import FixMarginButtomProblem from "../../utils/FixMarginButtomProblem/FixMarginButtomProblem";
 import Div from "../Div/Div";
-import profileSrc from '../../../../public/images/profile.png';
+import Img from "../Img/Img";
+import profileSrc from "../../../../public/images/profile.png";
+import FlexResponsive from "../FlexResponsive/FlexResponsive";
+import Strong from "../Strong/Strong";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -38,219 +41,260 @@ export default function MySemantic() {
 
 
     return (
-        // MAIN <main/>
-        <Main id={`${id}-main`}>
-            <Paragraph children={`<main/> (WEB) / <View/> (NATIVE)`}/>
-            {/* ANCHOR <a/> target _self */}
-            <Anchor
-                href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
-                target={"_self"}
-                children={`open URL in this page ⏳`}
-            />
-            {/* ANCHOR <a/> target _blank */}
-            <Anchor
-                href={`https://google.com`}
-                target={"_blank"}
-                children={
-                    <Button
-                        id={`${id}-Anchor-button-accept`}
-                        type={"accept"}
-                        children={`open URL in a new tab 🔗🚀`}
-                    />
-                }
-            />
-            {/* Heading h1 */}
-            <Heading
-                id={`${id}-HeadingTitle`}
-                variant={"h1"}
-                children={`React Native & Web (CSR & SSR) & Semantic`}
-            />
-            {/* BUTTON accept */}
-            <Button
-                id={`${id}-button-accept`}
-                type={"accept"}
-                onPress={toogleStyleTheme}
-                children={`Toogle Theme "accept" ${currentIconStyleTheme}`}
-            />
-            {/* BUTTON decline */}
-            <Button
-                id={`${id}-button-decline`}
-                type={"decline"}
-                onPress={toogleStyleTheme}
-                children={`Toogle Theme "decline" ${currentIconStyleTheme}`}
-            />
-            {/* BUTTON default */}
-            <Button
-                id={`${id}-button-default`}
-                onPress={toogleStyleTheme}
-                children={`Toogle Theme "default" ${currentIconStyleTheme}`}
-            />
-            {/* BUTTON disabled */}
-            <Button
-                id={`${id}-button-disabled`}
-                disabled
-                onPress={toogleStyleTheme}
-                children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
-            />
-            {/* HEADING H1-H6 <p/> */}
-            {/* Heading h1 */}
-            <Heading
-                id={`${id}-Heading-h1`}
-                variant={"h1"}
-                children={`<h1/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* Heading h2 */}
-            <Heading
-                id={`${id}-Heading-h2`}
-                variant={"h2"}
-                children={`<h2/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* Heading h3 */}
-            <Heading
-                id={`${id}-Heading-h3`}
-                variant={"h3"}
-                children={`<h3/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* Heading h4 */}
-            <Heading
-                id={`${id}-Heading-h4`}
-                variant={"h4"}
-                children={`<h4/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* Heading h5 */}
-            <Heading
-                id={`${id}-Heading-h5`}
-                variant={"h5"}
-                children={`<h5/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* Heading h6 */}
-            <Heading
-                id={`${id}-Heading-h6`}
-                variant={"h6"}
-                children={`<h6/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* PARAGRAPH <p/> */}
-            <Paragraph
-                id={`${id}-Paragraph-p`}
-                children={`<p/> (WEB) & <Text/> (NATIVE)`}
-            />
-            {/* ARTICLE */}
-            <Article id={`${id}-article`} role={"article"}>
-                <Paragraph children={`<article/> (WEB) & <View/> (NATIVE)`}/>
-            </Article>
-            {/* DIV */}
-            <Div id={`${id}-div`}>
-                <Paragraph children={`<div/> (WEB) & <View/> (NATIVE)`}/>
-            </Div>
-            {/* FORM */}
-            <Form>
-                <Paragraph children={`<form/> (WEB) & <View/> (NATIVE)`}/>
-                {/* FIELDSET */}
-                <Fieldset id={`${id}-FieldsetInput`}>
-                    {/* LABEL */}
-                    <Label
-                        id={`${id}-LabelInput`}
-                        htmlFor={`${id}-Input`}
-                        children={`<label/> input (WEB) & <Text/> (NATIVE) click me e vedrai!`}
-                    />
-                    {/* INPUT */}
-                    <Input
-                        id={`${id}-Input`}
-                        placeholder={`placeholder for this <input/> (WEB) & <TextInput/> (NATIVE)`}
-                    />
-                </Fieldset>
-                {/* FIELDSET */}
-                <Fieldset id={`${id}-FieldsetTextarea`}>
-                    {/* LABEL */}
-                    <Label
-                        id={`${id}-LabelTextarea`}
-                        htmlFor={`${id}-Textarea`}
-                        children={`<label/> textarea (WEB) & <Text/> (NATIVE) click me e vedrai!`}
-                    />
-                    {/* INPUT */}
-                    <Textarea
-                        id={`${id}-Textarea`}
-                        placeholder={`placeholder for this <textarea/> (WEB) & <TextInput/> (NATIVE)`}
-                    />
-                </Fieldset>
-                {/* FIELDSET */}
-                <Fieldset id={`${id}-FieldsetSelectPicker`}>
-                    {/* LABEL */}
-                    <Label
-                        id={`${id}-LabelPicker`}
-                        htmlFor={`${id}-SelectPicker`}
-                        children={selectedLanguage?.name || "Select one language"}
-                    />
-                    {/* SELECT */}
-                    <Select
-                        label={'name'} // atribute identification to show (optional - by "name" by default)
-                        id={`${id}-SelectPicker`}
-                        options={languages}
-                        onSelectedLanguage={setSelectedLanguage}
-                    />
-                </Fieldset>
-                {/* FIELDSET */}
-                <Fieldset id={`${id}-FieldsetSwitch`}>
-                    {/* LABEL */}
-                    <Label
-                        id={`${id}-LabelSwitch`}
-                        htmlFor={`${id}-Switch`}
-                        children={`<button/> Switch (WEB) & <Switch/> (NATIVE) click me e vedrai!`}
-                    />
-                    {/* SWITCH */}
-                    <Switch
-                        id={`${id}-Switch`}
-                        value={state}
-                        onChange={toogleState} // for NATIVE
-                        onPointerDown={toogleState} // for WEB
-                    />
-                </Fieldset>
-            </Form>
-            {/* NAVIGATION */}
-            <Nav id={`${id}-Nav`}>
-                <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-            </Nav>
-            {/* HEADER */}
-            <Header id={`${id}-Header`}>
-                <Paragraph children={`<header/> (WEB) & <View/> (NATIVE)`}/>
-            </Header>
-            {/* FOOTER */}
-            <Footer id={`${id}-Footer`}>
-                <Paragraph children={`<footer/> (WEB) & <View/> (NATIVE)`}/>
-            </Footer>
-            {/* ASIDE */}
-            <Aside id={`${id}-Aside`}>
-                <Paragraph children={`<aside/> (WEB) & <View/> (NATIVE)`}/>
-            </Aside>
+        <FlexResponsive>
+            {/*MAIN <main/>*/}
+            <Main id={`${id}-main`} style={{padding: 10}}>
+                <Paragraph children={`<main/> (WEB) / <View/> (NATIVE)`}/>
+
+                {/* Heading h1 */}
+                <Heading
+                    id={`${id}-HeadingTitle`}
+                    variant={"h1"}
+                    children={`React Native Web (Semantic, Responsive, CSR, SSR, Redux)`}
+                />
+
+                {/*RESPONSIVE <FlexResponsive container/>*/}
+                <FlexResponsive container>
+                    {/*RESPONSIVE <FlexResponsive item/>*/}
+                    <FlexResponsive
+                        item
+                        xs={{colsNumber: 12}}
+                        md={{colsNumber: 9}}
+                    >
+                        <Paragraph>
+                            Benvenuti nel mio <Strong><Anchor
+                            href={'https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/'}>progetto "React Native
+                            Web (Semantic, CSR, SSR, Redux)"</Anchor></Strong>,
+                            che è "ancora in costruzione".
+                        </Paragraph>
+                        <Paragraph>
+                            Sono <Strong>LUNO⚛Dev</Strong> (Sergio Ariel Juarez)
+                            e questa visualizzazione mostra i
+                            componenti personalizzati da me, che sono multipiattaforma,
+                            compatibili sia per Web che per dispositivi mobili
+                            (Android e iOS), che saranno migliorati e che possono
+                            essere utilizzati con Redux.js per gestire gli stati
+                            globali della tua applicazione.
+                        </Paragraph>
+                    </FlexResponsive>
+                    {/*RESPONSIVE <FlexResponsive item/>*/}
+                    <FlexResponsive
+                        item
+                        style={{flexDirection: 'row'}}
+                        xs={{colsNumber: 12}}
+                        md={{colsNumber: 3}}
+                    >
+                        {/* IMAGE */}
+                        <Img
+                            id={`${id}-Img`}
+                            alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
+                            source={profileSrc}
+                            style={{width: 200, height: 150, resizeMode: 'contain'}}
+                        />
+                    </FlexResponsive>
+                    <FlexResponsive item xs={{colsNumber: 12}}>
+                        {/* ANCHOR <a/> target _self */}
+                        <Anchor
+                            href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
+                            target={"_self"}
+                            children={`🔗 open "URL web deploy" in this page ⏳`}
+                        />
+                        </FlexResponsive>
+                        <FlexResponsive item xs={{colsNumber: 12}}>
+                        {/* ANCHOR <a/> target _blank */}
+                        <Anchor
+                            style={{flexShrink: 1, flexWrap: 'wrap'}}
+                            href={`https://google.com`}
+                            target={"_blank"}
+                            children={ `🔗 open "URL web deploy" in a new tab 🚀`
+                                /*<Button
+                                    id={`${id}-Anchor-button-accept`}
+                                    type={"accept"}
+                                    children={`🔗 open "URL web deploy" in a new tab 🚀`}
+                                />*/
+                            }
+                        />
+                    </FlexResponsive>
+                </FlexResponsive>
 
 
 
-            {/* IMAGE */}
-            <Image
-                role={'img'}
-                id={`${id}-Image`}
-                source={{uri: profileSrc}}
-                style={{
-                    width: '20%',
-                    height: `20%`,
-                }}
-            />
+                {/* BUTTON accept */}
+                <Button
+                    asLink={{href: 'https://google.com', target: '_blank'}}
+                    id={`${id}-button-accept`}
+                    type={"accept"}
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme "accept" ${currentIconStyleTheme} tab tab tab tab tab tab tab tab tab tab tab tab tab tab`}
+                />
+                {/* BUTTON decline */}
+                <Button
+                    id={`${id}-button-decline`}
+                    type={"decline"}
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme "decline" ${currentIconStyleTheme}`}
+                />
+                {/* BUTTON default */}
+                <Button
+                    id={`${id}-button-default`}
+                    onPress={toogleStyleTheme}
+                    children={`Toogle Theme "default" ${currentIconStyleTheme}`}
+                />
+                {/* BUTTON disabled */}
+                <Button
+                    id={`${id}-button-disabled`}
+                    disabled
+                    onPress={toogleStyleTheme}
+                    children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
+                />
+                {/* HEADING H1-H6 <p/> */}
+                {/* Heading h1 */}
+                <Heading
+                    id={`${id}-Heading-h1`}
+                    variant={"h1"}
+                    children={`<h1/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* Heading h2 */}
+                <Heading
+                    id={`${id}-Heading-h2`}
+                    variant={"h2"}
+                    children={`<h2/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* Heading h3 */}
+                <Heading
+                    id={`${id}-Heading-h3`}
+                    variant={"h3"}
+                    children={`<h3/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* Heading h4 */}
+                <Heading
+                    id={`${id}-Heading-h4`}
+                    variant={"h4"}
+                    children={`<h4/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* Heading h5 */}
+                <Heading
+                    id={`${id}-Heading-h5`}
+                    variant={"h5"}
+                    children={`<h5/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* Heading h6 */}
+                <Heading
+                    id={`${id}-Heading-h6`}
+                    variant={"h6"}
+                    children={`<h6/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* PARAGRAPH <p/> */}
+                <Paragraph
+                    id={`${id}-Paragraph-p`}
+                    children={`<p/> (WEB) & <Text/> (NATIVE)`}
+                />
+                {/* ARTICLE */}
+                <Article id={`${id}-article`} role={"article"}>
+                    <Paragraph children={`<article/> (WEB) & <View/> (NATIVE)`}/>
+                </Article>
+                {/* DIV */}
+                <Div id={`${id}-div`}>
+                    <Paragraph children={`<div/> (WEB) & <View/> (NATIVE)`}/>
+                </Div>
+                {/* FORM */}
+                <Form>
+                    <Paragraph children={`<form/> (WEB) & <View/> (NATIVE)`}/>
+                    {/* FIELDSET */}
+                    <Fieldset id={`${id}-FieldsetInput`}>
+                        {/* LABEL */}
+                        <Label
+                            id={`${id}-LabelInput`}
+                            htmlFor={`${id}-Input`}
+                            children={`<label/> input (WEB) & <Text/> (NATIVE) click me e vedrai!`}
+                        />
+                        {/* INPUT */}
+                        <Input
+                            id={`${id}-Input`}
+                            placeholder={`placeholder for this <input/> (WEB) & <TextInput/> (NATIVE)`}
+                        />
+                    </Fieldset>
+                    {/* FIELDSET */}
+                    <Fieldset id={`${id}-FieldsetTextarea`}>
+                        {/* LABEL */}
+                        <Label
+                            id={`${id}-LabelTextarea`}
+                            htmlFor={`${id}-Textarea`}
+                            children={`<label/> textarea (WEB) & <Text/> (NATIVE) click me e vedrai!`}
+                        />
+                        {/* INPUT */}
+                        <Textarea
+                            id={`${id}-Textarea`}
+                            placeholder={`placeholder for this <textarea/> (WEB) & <TextInput/> (NATIVE)`}
+                        />
+                    </Fieldset>
+                    {/* FIELDSET */}
+                    <Fieldset id={`${id}-FieldsetSelectPicker`}>
+                        {/* LABEL */}
+                        <Label
+                            id={`${id}-LabelPicker`}
+                            htmlFor={`${id}-SelectPicker`}
+                            children={selectedLanguage?.name || "Select one language"}
+                        />
+                        {/* SELECT */}
+                        <Select
+                            label={'name'} // atribute identification to show (optional - by "name" by default)
+                            id={`${id}-SelectPicker`}
+                            options={languages}
+                            onSelectedLanguage={setSelectedLanguage}
+                        />
+                    </Fieldset>
+                    {/* FIELDSET */}
+                    <Fieldset id={`${id}-FieldsetSwitch`}>
+                        {/* LABEL */}
+                        <Label
+                            id={`${id}-LabelSwitch`}
+                            htmlFor={`${id}-Switch`}
+                            children={`<button/> Switch (WEB) & <Switch/> (NATIVE) click me e vedrai!`}
+                        />
+                        {/* SWITCH */}
+                        <Switch
+                            id={`${id}-Switch`}
+                            value={state}
+                            onChange={toogleState} // for NATIVE
+                            onPointerDown={toogleState} // for WEB
+                        />
+                    </Fieldset>
+                </Form>
+                {/* NAVIGATION */}
+                <Nav id={`${id}-Nav`}>
+                    <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
+                </Nav>
+                {/* HEADER */}
+                <Header id={`${id}-Header`}>
+                    <Paragraph children={`<header/> (WEB) & <View/> (NATIVE)`}/>
+                </Header>
+                {/* FOOTER */}
+                <Footer id={`${id}-Footer`}>
+                    <Paragraph children={`<footer/> (WEB) & <View/> (NATIVE)`}/>
+                </Footer>
+                {/* ASIDE */}
+                <Aside id={`${id}-Aside`}>
+                    <Paragraph children={`<aside/> (WEB) & <View/> (NATIVE)`}/>
+                </Aside>
 
-            {/* CODE <code/> */}
 
-            {/* CITE <cite/> */}
+                {/* CODE <code/> */}
 
-            {/* CANVAS <canvas/> */}
+                {/* CITE <cite/> */}
 
-            {/* MAP <map/> */}
-            {/* AREA <area/> */}
+                {/* CANVAS <canvas/> */}
 
-            {/* TABLE <table/>*/}
-            {/* TABLE <caption/> table title */}
-            {/* TABLE <tr/> row */}
-            {/* TABLE <th/> col*/}
+                {/* MAP <map/> */}
+                {/* AREA <area/> */}
 
-            <FixMarginButtomProblem/>
-        </Main>
+                {/* TABLE <table/>*/}
+                {/* TABLE <caption/> table title */}
+                {/* TABLE <tr/> row */}
+                {/* TABLE <th/> col*/}
+
+                <FixMarginButtomProblem/>
+            </Main>
+        </FlexResponsive>
     );
 }

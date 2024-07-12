@@ -9,8 +9,8 @@ export default function Main (props: MainProps){
     return (
         <View
             {...props}
+            style={[{overflow: 'hidden'}, props.style]}
             role={'main'}
-            // accessibilityLabel={"main"}
             aria-label={"main"}
         />
     );

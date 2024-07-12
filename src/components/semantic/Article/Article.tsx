@@ -10,7 +10,6 @@ export default function Article (props: ArticleProps){
         <View
             {...props}
             role={'article'}
-            // accessibilityLabel={"article"}
             aria-label={"article"}
         />
     );

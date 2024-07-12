@@ -21,6 +21,7 @@ const MainView__input = () => {
                 borderWidth: 1,
             },
             mainView__textarea_container: {
+                userSelect: 'none',
                 width: `100%`,
                 padding: 5,
             },

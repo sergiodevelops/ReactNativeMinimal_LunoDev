@@ -1,8 +1,14 @@
 import {View, ViewProps} from "react-native";
-import React from "react";
+import React, {HTMLAttributes} from "react";
 
 
-type DivProps = ViewProps;
+type DivProps = ViewProps & HTMLAttributes<HTMLElement>;
 export default function Div(props: DivProps){
-    return (<View {...props} aria-label={'div'} />);
+    return (
+        <View
+            style={{inlineSize: 'inherit'}}
+            {...props}
+            aria-label={'div'}
+        />
+    );
 }

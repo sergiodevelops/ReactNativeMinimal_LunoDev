@@ -1,22 +1,23 @@
-import {StyleSheet, useWindowDimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import useStyleThemeStore from "../../../../hooks/useStyleThemeStore";
 
 
-export default function MainView__anchor(){
-    const colorLight = '#2d2d2d';
-    const colorDark = '#ffffff';
-
+export default function MainView__anchor() {
     const {currentStyleTheme} = useStyleThemeStore();
 
 
     return (
         StyleSheet.create({
             mainView__anchor: {
-                color: currentStyleTheme === 'light' ? colorLight : colorDark,
+                width: '100%', textAlign: 'center', // TODO rivedere qui
+                color: currentStyleTheme === 'light' ? '#7100b4' : '#db9cff',
                 cursor: 'pointer',
                 textDecorationLine: 'none',
-                textDecorationColor: currentStyleTheme === 'light' ? colorLight : colorDark,
+                textDecorationColor: currentStyleTheme === 'light' ? '#db9cff' : '#7100b4',
                 textDecorationStyle: 'solid',
+            },
+            mainView__anchor_hover: {
+                color: currentStyleTheme === 'light' ? '#016428' : '#2eff82',
             },
         })
     );

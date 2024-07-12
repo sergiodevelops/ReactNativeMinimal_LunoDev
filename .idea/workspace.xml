@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/semantic/FlexResponsive/FlexResponsive.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__image/MainView__image.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__responsive/MainView__responsive.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Aside/Aside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Aside/Aside.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Anchor/Anchor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Anchor/Anchor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Article/Article.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Article/Article.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Div/Div.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Div/Div.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Main/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/ssr/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__anchor/MainView__anchor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__anchor/MainView__anchor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__paragraph/MainView__paragraph.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__paragraph/MainView__paragraph.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +95,7 @@
     "npm.web:ssr.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "Errors",
-    "ts.external.directory.path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib",
+    "ts.external.directory.path": "/home/sjuarez/zoomagri/tools/WebStorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -284,6 +301,8 @@
       <workItem from="1720521605629" duration="7255000" />
       <workItem from="1720534226265" duration="61466000" />
       <workItem from="1720682694213" duration="21078000" />
+      <workItem from="1720727986806" duration="23319000" />
+      <workItem from="1720792860414" duration="12141000" />
     </task>
     <servers />
   </component>
