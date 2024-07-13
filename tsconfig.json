@@ -20,7 +20,7 @@
     "emitDecoratorMetadata": true,
     // Ensure that Babel can safely transpile files in the TypeScript project
     "declaration": true,
-    "emitDeclarationOnly": true,
+//    "emitDeclarationOnly": true,
     // Ensure that Babel can safely transpile files in the TypeScript project
     "isolatedModules": true,
     "strictPropertyInitialization": false,
@@ -28,7 +28,7 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "noEmit": true,
+//    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src/"
   },

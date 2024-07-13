@@ -21,12 +21,12 @@ export default function MainView__responsive(props: {
     const defaultCols: number = 12;
 
 
-    function getWidthByCols(size: { colsNumber: IntRange<1, 13> } | undefined): number {
+    const getWidthByCols = (size: { colsNumber: IntRange<1, 13> } | undefined): number => {
         return ((size?.colsNumber || defaultCols) * totalWidth / totalCols)
     }
 
 
-    function getWidthBySizeProps(): number {
+    const getWidthBySizeProps = (): number => {
         if(xxl && width >= 1400) {
             return getWidthByCols(xxl);
         }
@@ -46,6 +46,7 @@ export default function MainView__responsive(props: {
         return getWidthByCols(xs); // width < 576
     }
 
+
     return (
         StyleSheet.create({
             mainView__responsive: {
@@ -59,9 +60,10 @@ export default function MainView__responsive(props: {
                 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
                 justifyContent: 'space-around',
                 alignContent: 'flex-start',
-                alignItems: 'center',
             },
             mainView__responsive_item: {
+                alignItems: 'flex-start',
+                flexDirection: 'row', // TODO rivedere qui
                 width: `${getWidthBySizeProps()}%`,
                 justifyContent: 'center',
             },

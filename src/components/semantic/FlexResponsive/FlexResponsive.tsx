@@ -1,4 +1,4 @@
-import {View, ViewProps} from "react-native";
+import {Animated, ViewProps} from "react-native";
 import MainView__responsive, {IntRange} from "../../../styles/ts/MainView/__responsive/MainView__responsive";
 
 
@@ -28,9 +28,9 @@ export default function FlexResponsive (props: FlexResponsiveProps){
 
 
     return (
-        <View
+        <Animated.View
             {...props}
-            aria-label={"responsive-"+(!isItem() ? "container" : "item")}
+            aria-label={(!isItem() ? "container" : "item")+"-responsive"}
             style={[
                 mainView__responsive,
                 !!container && mainView__responsive_container,

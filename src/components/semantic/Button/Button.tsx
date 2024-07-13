@@ -12,11 +12,12 @@ import {isWeb} from "../../../utils/platform";
 
 
 interface MainViewButtonParams {
-    asLink?: {href: string, target?: HTMLAttributeAnchorTarget} | undefined;
+    asLink?: { href: string, target?: HTMLAttributeAnchorTarget } | undefined;
     children?: ReactNode;
     style?: StyleProp<ViewStyle | TextStyle> | undefined;
-    type?: 'accept' | 'decline' | undefined;
+    type: 'accept' | 'decline' | 'default' | undefined;
 }
+
 export default function Button(props: MainViewButtonParams & PressableProps) {
     const {mainView__button, mainView__button_container} = MainView__button();
     const {mainView__button_default} = MainView__button_default();
@@ -26,7 +27,8 @@ export default function Button(props: MainViewButtonParams & PressableProps) {
 
 
     const handleOnPress = () => {
-        if (!props.asLink) return;
+        if (!props?.asLink) return;
+
         // https://stackoverflow.com/questions/61198982/how-can-i-open-an-external-link-in-new-tab-in-react-native
         isWeb() ?
             window.open(props.asLink.href, props.asLink.target || '_blank') :
@@ -38,14 +40,16 @@ export default function Button(props: MainViewButtonParams & PressableProps) {
         <View role={"button"} style={mainView__button}>
             <Pressable
                 {...props as PressableProps}
-                onPress={props?.asLink ? handleOnPress : props.onPress}
+                onPress={
+                    props?.asLink?.href ? handleOnPress : props.onPress
+                }
                 style={[
                     [
                         mainView__button_container,
-                        props.disabled && mainView__button_disabled,
-                        !props?.type && !props.disabled && mainView__button_default,
+                        props.type === 'default' && mainView__button_default,
                         props.type === 'decline' && mainView__button_decline,
                         props.type === 'accept' && mainView__button_accept,
+                        props.disabled && mainView__button_disabled,
                     ],
                     props.style,
                 ]}

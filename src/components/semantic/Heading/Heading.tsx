@@ -35,7 +35,8 @@ export default function Heading(props: {
                 variant === "h5" && mainView__heading_h5,
                 variant === "h6" && mainView__heading_h6,
             ]}
-            aria-level={variant.substr(1, 1)}
+            // aria-level={variant.substr(1, 1)} //TODO remove deprecated
+            aria-level={variant.slice(1, 2)}
         />
     );
 }

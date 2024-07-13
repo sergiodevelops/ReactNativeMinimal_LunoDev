@@ -14,7 +14,7 @@ export default function Input(props: InputProps): ReactElement {
 
 
     return (isWeb() ?
-            <View>
+            <div>
                 <input
                     name={`${props.id}-name`}
                     {...props as LabelHTMLAttributes<HTMLInputElement>}
@@ -30,7 +30,7 @@ export default function Input(props: InputProps): ReactElement {
                         ::placeholder {color: ${mainView__placeholder_color.color};}`
                     }
                 </style>
-            </View> :
+            </div> :
             <TextInput
                 {...props as TextInputProps}
                 style={[

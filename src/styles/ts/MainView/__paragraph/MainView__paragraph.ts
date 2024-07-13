@@ -14,7 +14,7 @@ const MainView__paragraph = () => {
             mainView__paragraph: {
                 textAlign: 'justify',
                 margin: 0,
-                fontSize: 20, //TODO fare atenzione qui
+                fontSize: 20,
             },
             mainView__paragraph_bold: {
                 fontWeight: "bold",

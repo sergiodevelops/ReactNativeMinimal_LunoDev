@@ -46,7 +46,7 @@ export default function Anchor(props: AnchorProps) {
                     ...mainView__paragraph,
                     ...mainView__anchor,
                     ...(isHover && mainView__anchor_hover),
-                    // inlineSize: 'fit-content',
+                    inlineSize: 'fit-content',
                     wordWrap: 'break-word',
                     ...props.style as CSSProperties,
                 }}
@@ -58,7 +58,7 @@ export default function Anchor(props: AnchorProps) {
                 style={[
                     mainView__anchor,
                     mainView__paragraph,
-                    {flexWrap: 'wrap', flexShrink: 1},
+                    // {flexWrap: 'wrap', flexShrink: 1}, // TODO rivedere qui
                     props.style as TextStyle,
                 ]}
                 role={'link'}

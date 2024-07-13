@@ -9,7 +9,9 @@ export default function MainView__anchor() {
     return (
         StyleSheet.create({
             mainView__anchor: {
-                width: '100%', textAlign: 'center', // TODO rivedere qui
+                width: '100%',
+                justifyContent: 'center',
+                // textAlign: 'center', // TODO rivedere qui
                 color: currentStyleTheme === 'light' ? '#7100b4' : '#db9cff',
                 cursor: 'pointer',
                 textDecorationLine: 'none',

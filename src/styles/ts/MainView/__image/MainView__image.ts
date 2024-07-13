@@ -13,14 +13,9 @@ const MainView__image = () => {
         StyleSheet.create({
             mainView__image_container: {
                 padding: 5,
-                // width: '100%',
-                // display: "flex",
-                // alignItems: 'flex-end',
             },
             mainView__image: {
-                resizeMode: 'contain',
                 width: '100%',
-                // height: 120,
             },
         })
     );

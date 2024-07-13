@@ -10,6 +10,8 @@ export default function FixMarginButtomProblem() {
             <View>
                 <Text></Text>
                 <Text></Text>
+                <Text></Text>
+                <Text></Text>
             </View>
         }
     </>;

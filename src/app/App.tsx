@@ -1,21 +1,33 @@
 import React from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
-import MainView from "../styles/ts/MainView/MainView"
-import MySemantic from "../components/semantic/MySemantic/MySemantic";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import {DetailsScreen} from "../components/screens/DetailsScreen/DetailsScreen";
+import {HomeScreen} from "../components/screens/HomeScreen/HomeScreen";
 
 
+export type NavigationProps = { navigation: { navigate(screen: string): void } }
 export default function App() {
 
-    const {
-        mainView,
-    } = MainView();
+    const Stack = createNativeStackNavigator();
 
 
     return (
-        <SafeAreaView>
-            <ScrollView style={[mainView]}>
-                <MySemantic/>
-            </ScrollView>
-        </SafeAreaView>
+        // https://reactnavigation.org/docs/hello-react-navigation/
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName={"home"}>
+                <Stack.Screen
+                    navigationKey={'details'}
+                    name={'details'}
+                    component={DetailsScreen}
+                    options={{title: 'DETAILS'}}
+                />
+                <Stack.Screen
+                    navigationKey={'home'}
+                    name={'home'}
+                    component={HomeScreen}
+                    options={{title: 'HOME'}}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 };
