@@ -1,6 +1,6 @@
-import React, {HTMLAttributeAnchorTarget, ReactNode} from "react";
+import React, {CSSProperties, HTMLAttributeAnchorTarget, ReactNode} from "react";
 import MainView__button from "../../../styles/ts/MainView/__button/MainView__button";
-import {Linking, Pressable, PressableProps, View} from "react-native";
+import {Linking, Pressable, PressableProps, TextProps, View} from "react-native";
 import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import MainView__button_disabled from "../../../styles/ts/MainView/__button/_disabled/MainView__button_disabled";
@@ -9,17 +9,19 @@ import MainView__button_decline from "../../../styles/ts/MainView/__button/_decl
 import Paragraph from "../Paragraph/Paragraph";
 import MainView__button_default from "../../../styles/ts/MainView/__button/_default/MainView__button_default";
 import {isWeb} from "../../../utils/platform";
+import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
 
 
-interface MainViewButtonParams {
+type ButtonProps = {
     asLink?: { href: string, target?: HTMLAttributeAnchorTarget } | undefined;
-    children?: ReactNode;
-    style?: StyleProp<ViewStyle | TextStyle> | undefined;
-    type: 'accept' | 'decline' | 'default' | undefined;
-}
-
-export default function Button(props: MainViewButtonParams & PressableProps) {
-    const {mainView__button, mainView__button_container} = MainView__button();
+    type: 'accept' | 'decline' | 'default';
+} & PressableProps;
+export default function Button(props: ButtonProps) {
+    const {
+        mainView__button_container,
+        mainView__button,
+    } = MainView__button();
+    const {mainView__text_color} = MainView__text();
     const {mainView__button_default} = MainView__button_default();
     const {mainView__button_disabled} = MainView__button_disabled();
     const {mainView__button_accept} = MainView__button_accept();
@@ -36,26 +38,45 @@ export default function Button(props: MainViewButtonParams & PressableProps) {
     }
 
 
+    function getButtonStylesByType(): {
+        color: string;
+        borderColor?: string;
+        backgroundColor?: string;
+    } {
+        if(props.disabled) return mainView__text_color;
+
+        switch (props.type) {
+            case 'accept':
+                return mainView__button_accept;
+            case 'decline':
+                return mainView__button_decline;
+            case 'default':
+                return mainView__button_default;
+            default:
+                return mainView__text_color;
+        }
+    }
+
+
     return (
-        <View role={"button"} style={mainView__button}>
+        <View role={"button"} style={mainView__button_container}>
             <Pressable
-                {...props as PressableProps}
+                {...props}
                 onPress={
                     props?.asLink?.href ? handleOnPress : props.onPress
                 }
                 style={[
-                    [
-                        mainView__button_container,
-                        props.type === 'default' && mainView__button_default,
-                        props.type === 'decline' && mainView__button_decline,
-                        props.type === 'accept' && mainView__button_accept,
-                        props.disabled && mainView__button_disabled,
-                    ],
-                    props.style,
+                    mainView__button,
+                    getButtonStylesByType(),
+                    props.disabled && mainView__button_disabled,
+                    props.style as TextStyle,
                 ]}
                 children={
-                    <Paragraph style={{textAlign: "center"}}>
-                        {props.children}
+                    <Paragraph style={{
+                        color: getButtonStylesByType().color,
+                        textAlign: 'center',
+                    }}>
+                        {(props as TextProps).children}
                     </Paragraph>
                 }
             />

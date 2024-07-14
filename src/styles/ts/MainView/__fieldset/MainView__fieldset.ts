@@ -14,7 +14,7 @@ export default function MainView__fieldset() {
     return (
         StyleSheet.create({
             mainView__fieldset_container: {
-                padding: 5,
+                padding: 3,
             },
             mainView__fieldset: {
                 backgroundColor: currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,

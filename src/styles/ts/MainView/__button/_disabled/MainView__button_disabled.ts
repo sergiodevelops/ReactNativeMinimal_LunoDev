@@ -11,8 +11,8 @@ const MainView__button_disabled = () => {
             mainView__button_disabled: {
                 cursor: 'auto',
                 color: currentStyleTheme === 'light' ? '#605e5e' : '#b4b1b1',
-                backgroundColor: currentStyleTheme === 'light' ? '#b4b1b1' : '#605e5e',
                 borderColor: currentStyleTheme === 'light' ? '#605e5e' : '#b4b1b1',
+                backgroundColor: currentStyleTheme === 'light' ? '#b4b1b1' : '#605e5e',
             },
         })
     );

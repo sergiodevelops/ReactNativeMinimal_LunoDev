@@ -6,15 +6,16 @@ const MainView__button = () => {
     return (
         StyleSheet.create({
             mainView__button_container: {
-                padding: 2,
-                borderStyle: "solid",
-                borderWidth: 2,
-            },
-            mainView__button: {
                 zIndex: -1,
                 width: '100%',
                 userSelect: 'none',
-                padding: 10,
+                padding: 8,
+            },
+            mainView__button: {
+                padding: 2,
+                borderStyle: "solid",
+                borderWidth: 1,
+                borderRadius: 8,
             },
         })
     );

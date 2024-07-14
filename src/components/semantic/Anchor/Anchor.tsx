@@ -4,6 +4,7 @@ import MainView__anchor from "../../../styles/ts/MainView/__anchor/MainView__anc
 import {isWeb} from "../../../utils/platform";
 import {TextStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
+import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
 
 
 type AnchorProps = { href: string } & TextProps & AnchorHTMLAttributes<HTMLAnchorElement>;
@@ -17,6 +18,7 @@ export default function Anchor(props: AnchorProps) {
     https://google.com/
      */
     const {mainView__anchor, mainView__anchor_hover} = MainView__anchor();
+    const {mainView__text_color} = MainView__text();
     const {mainView__paragraph} = MainView__paragraph();
     const [isHover, setIsHover] = useState(false);
 
@@ -43,6 +45,7 @@ export default function Anchor(props: AnchorProps) {
                 {...props as HTMLAttributes<HTMLAnchorElement>}
                 target={props.target || "_blank"}
                 style={{
+                    ...mainView__text_color,
                     ...mainView__paragraph,
                     ...mainView__anchor,
                     ...(isHover && mainView__anchor_hover),
@@ -56,9 +59,9 @@ export default function Anchor(props: AnchorProps) {
                 {...props as TextProps}
                 onPress={handleOnPress}
                 style={[
-                    mainView__anchor,
+                    mainView__text_color,
                     mainView__paragraph,
-                    // {flexWrap: 'wrap', flexShrink: 1}, // TODO rivedere qui
+                    mainView__anchor,
                     props.style as TextStyle,
                 ]}
                 role={'link'}

@@ -9,9 +9,9 @@ const MainView__button_accept = () => {
     return (
         StyleSheet.create({
             mainView__button_accept: {
-                color: currentStyleTheme === 'light' ? '#568525' : '#A5FE4C',
-                backgroundColor: currentStyleTheme === 'light' ? '#A5FE4C' : '#568525',
-                borderColor: currentStyleTheme === 'light' ? '#2d2d2d' : 'white',
+                color: currentStyleTheme === 'light' ? '#2d5901' : '#A5FE4C',
+                borderColor: currentStyleTheme === 'light' ? '#2d5901' : '#A5FE4C',
+                backgroundColor: currentStyleTheme === 'light' ? '#A5FE4C' : '#2d5901',
             },
         })
     );

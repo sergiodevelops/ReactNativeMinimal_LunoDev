@@ -1,20 +1,13 @@
 import {StyleSheet} from 'react-native';
-import useStyleThemeStore from "../../../../hooks/useStyleThemeStore";
 
 
 const MainView__heading = () => {
-    const {currentStyleTheme} = useStyleThemeStore();
-
-    const colorDark = '#ffffff';
-    const colorLight = '#000000';
-
 
     return (
         StyleSheet.create({
             mainView__heading: {
                 textAlign: "center",
                 fontWeight: "bold",
-                color: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
             mainView__heading_h1: {
                 fontSize: 34,

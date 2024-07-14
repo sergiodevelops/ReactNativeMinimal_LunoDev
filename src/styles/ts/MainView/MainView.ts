@@ -6,17 +6,13 @@ const MainView = () => {
     const {width ,height} = useWindowDimensions();
     const {currentStyleTheme} = useStyleThemeStore();
 
-    const backgroundColorDark = '#2d2d2d';
-    const backgroundColorLight = '#ffffff';
-    const colorLight = '#2d2d2d';
-    const colorDark = '#ffffff';
-
 
     return (
         StyleSheet.create({
+            mainView_container: {
+                backgroundColor:  currentStyleTheme === 'light' ? '#ffffff' : '#2d2d2d',
+            },
             mainView: {
-                color: currentStyleTheme === 'light' ? colorLight : colorDark,
-                backgroundColor:  currentStyleTheme === 'light' ? backgroundColorLight : backgroundColorDark,
                 minHeight: height,
                 width: width,
             },

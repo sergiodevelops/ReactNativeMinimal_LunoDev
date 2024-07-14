@@ -2,6 +2,9 @@ import React, {useEffect, useState} from "react";
 import {View} from "react-native";
 import {Picker, PickerProps} from "@react-native-picker/picker";
 import MainView__input from "../../../styles/ts/MainView/__input/MainView__input";
+import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
+import MainView__select from "../../../styles/ts/MainView/__select/MainView__select";
+import MainView from "../../../styles/ts/MainView/MainView";
 
 
 type SelectProps = {
@@ -12,11 +15,16 @@ type SelectProps = {
 export default function Select(props: SelectProps) {
     const {options, onSelectedLanguage} = props;
     const atribute = props.label || "name";
+
+    const {mainView_container} = MainView();
+    const {mainView__text_color} = MainView__text();
+    const {
+        mainView__input,
+    } = MainView__input();
     const {
         mainView__selectOption_container,
         mainView__selectOption,
-        mainView__input,
-    } = MainView__input();
+    } = MainView__select();
 
 
     const [selectedLanguageKey, setSelectedLanguageKey] = useState<`${number}-${string}` | 'default'>('default')
@@ -42,8 +50,10 @@ export default function Select(props: SelectProps) {
             <Picker
                 {...props}
                 style={[
+                    mainView_container,
                     mainView__selectOption_container,
                     mainView__input,
+                    mainView__text_color,
                     props.style,
                 ]}
                 placeholder={`Select one option`}

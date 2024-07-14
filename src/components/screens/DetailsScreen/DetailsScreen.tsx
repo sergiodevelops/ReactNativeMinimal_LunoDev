@@ -11,7 +11,7 @@ export function DetailsScreen(props: NavigationProps) {
     const {navigation} = props;
     const id = `MySemantic-${useId()}`;
 
-    const {mainView} = MainView();
+    const {mainView_container, mainView} = MainView();
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
 
     const handleOnPressButtonGoToHomeScreen = () => {
@@ -21,8 +21,13 @@ export function DetailsScreen(props: NavigationProps) {
 
     return (
         <View style={[
+            mainView_container,
             mainView,
-            {flex: 1, alignItems: 'center', justifyContent: 'center'}
+            {
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center',
+            }
         ]}>
             <Paragraph>🤩 Details Screen 🤝</Paragraph>
             {/* BUTTON default */}

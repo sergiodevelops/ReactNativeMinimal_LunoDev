@@ -9,9 +9,9 @@ const MainView__button_decline = () => {
     return (
         StyleSheet.create({
             mainView__button_decline: {
-                color: currentStyleTheme === 'light' ? '#ffffff' : '#000757',
-                backgroundColor: currentStyleTheme === 'light' ? '#FD6363' : '#ad1e1e',
-                borderColor: currentStyleTheme === 'light' ? '#2d2d2d' : 'white',
+                color: currentStyleTheme === 'light' ? '#ad1e1e' : '#f8c0c0',
+                borderColor: currentStyleTheme === 'light' ? '#ad1e1e' : '#f8c0c0',
+                backgroundColor: currentStyleTheme === 'light' ? '#f8c0c0' : '#ad1e1e',
             },
         })
     );

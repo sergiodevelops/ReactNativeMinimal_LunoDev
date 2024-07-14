@@ -1,13 +1,7 @@
 import {StyleSheet} from 'react-native';
-import useStyleThemeStore from "../../../../hooks/useStyleThemeStore";
 
 
 const MainView__paragraph = () => {
-    const {currentStyleTheme} = useStyleThemeStore();
-
-    const colorDark = '#ffffff';
-    const colorLight = '#000000';
-
 
     return (
         StyleSheet.create({
@@ -15,12 +9,6 @@ const MainView__paragraph = () => {
                 textAlign: 'justify',
                 margin: 0,
                 fontSize: 20,
-            },
-            mainView__paragraph_bold: {
-                fontWeight: "bold",
-            },
-            mainView__paragraph_default: {
-                color: currentStyleTheme === 'light' ? colorLight : colorDark,
             },
         })
     );

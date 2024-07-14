@@ -50,7 +50,7 @@ export default function MySemantic(props: NavigationProps) {
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
     // fadeAnim will be used as the value for "opacity". Initial Value: 0
     const fadeAnim = useRef(new Animated.Value(0)).current;
-    const {mainView} = MainView();
+    const {mainView_container, mainView} = MainView();
     const {fadeOpacity} = MainView__animation_fadeOpacity(fadeAnim);
 
 
@@ -68,7 +68,7 @@ export default function MySemantic(props: NavigationProps) {
     return (
         <SafeAreaView>
             <ScrollView>
-                <FlexResponsive style={[mainView, fadeOpacity]}>
+                <FlexResponsive style={[mainView_container, mainView, fadeOpacity]}>
                     {/*<ProgressBar/>*/}
                     {/*MAIN <main/>*/}
                     <Main id={`${id}-main`} style={{padding: 10}}>
@@ -146,20 +146,6 @@ export default function MySemantic(props: NavigationProps) {
                             </FlexResponsive>
                         </FlexResponsive>
 
-                        {/* BUTTON accept */}
-                        <Button
-                            id={`${id}-button-goToDetailsScreen`}
-                            type={"default"}
-                            onPress={handleOnPressButtonGoToDetailsScreen}
-                            children={`🚀 Go to "Details" screen 👉`}
-                        />
-                        {/* BUTTON accept */}
-                        <Button
-                            id={`${id}-button-accept`}
-                            type={"accept"}
-                            asLink={{href: 'https://google.com', target: '_blank'}}
-                            children={`asLink _blank to Google "accept" Button overflow text overflow text overflow text overflow text overflow text overflow text overflow text overflow text overflow text overflow text overflow text overflow text`}
-                        />
                         {/* BUTTON decline */}
                         <Button
                             id={`${id}-button-decline`}
@@ -182,6 +168,32 @@ export default function MySemantic(props: NavigationProps) {
                             onPress={toogleStyleTheme}
                             children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
                         />
+                        {/* Navigation Menu */}
+                        <Nav>
+                            <FlexResponsive container>
+                                <FlexResponsive item xs={{colsNumber: 3}}>
+                                    {/* BUTTON accept - navigation to "Details" screen */}
+                                    <Button
+                                        id={`${id}-button-goToDetailsScreen`}
+                                        type={"default"}
+                                        onPress={handleOnPressButtonGoToDetailsScreen}
+                                        children={`🚀 navigation to "Details" screen 👉`}
+                                    />
+                                </FlexResponsive>
+                                <FlexResponsive item xs={{colsNumber: 3}}>
+                                    {/* BUTTON accept - navigation to "google.com" screen */}
+                                    <Button
+                                        id={`${id}-button-accept`}
+                                        type={"accept"}
+                                        asLink={{href: 'https://google.com', target: '_blank'}}
+                                        children={`navigation to "google.com" - asLink _blank - test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, `}
+                                    />
+                                </FlexResponsive>
+                            </FlexResponsive>
+
+
+                        </Nav>
+
                         {/* HEADING H1-H6 <p/> */}
                         {/* Heading h1 */}
                         <Heading

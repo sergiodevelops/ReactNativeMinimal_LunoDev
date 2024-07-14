@@ -9,9 +9,9 @@ const MainView__button_default = () => {
     return (
         StyleSheet.create({
             mainView__button_default: {
-                color: currentStyleTheme === 'light' ? '#000000' : '#ffffff',
-                backgroundColor: currentStyleTheme === 'light' ? '#6f92ff' : '#0a2e9b',
-                borderColor: currentStyleTheme === 'light' ? '#000000' : '#ffffff',
+                color: currentStyleTheme === 'light' ? '#0a2e9b' : '#abbffd',
+                borderColor: currentStyleTheme === 'light' ? '#0a2e9b' : '#abbffd',
+                backgroundColor: currentStyleTheme === 'light' ? '#abbffd' : '#0a2e9b',
             },
         })
     );
