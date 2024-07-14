@@ -6,29 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Anchor/Anchor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Anchor/Anchor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Heading/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Heading/Heading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Label/Label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Nav/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Paragraph/Paragraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/MainView.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/MainView__button.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_accept/MainView__button_accept.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_accept/MainView__button_accept.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_decline/MainView__button_decline.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_decline/MainView__button_decline.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_default/MainView__button_default.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_default/MainView__button_default.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__button/_disabled/MainView__button_disabled.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__form/MainView__form.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__input/MainView__input.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__paragraph/MainView__paragraph.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__paragraph/MainView__paragraph.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/platform.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/platform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,55 +44,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "npm.1_native_android.executor": "Run",
-    "npm.2_web_csr.executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.bundle:android.executor": "Run",
-    "npm.check:tsc.executor": "Run",
-    "npm.client:mobile.executor": "Run",
-    "npm.client:web.executor": "Run",
-    "npm.csr.executor": "Run",
-    "npm.mobile.executor": "Run",
-    "npm.native.executor": "Run",
-    "npm.native:reset:cache.executor": "Run",
-    "npm.native:reset:cache:metro.executor": "Run",
-    "npm.native:start.executor": "Run",
-    "npm.native_reset.executor": "Run",
-    "npm.reset.executor": "Run",
-    "npm.server:ssr.executor": "Run",
-    "npm.server:ssr2.executor": "Run",
-    "npm.ssr.executor": "Run",
-    "npm.start $Sourcepath$.executor": "Run",
-    "npm.start --verbose.executor": "Run",
-    "npm.start.executor": "Run",
-    "npm.tsc.executor": "Run",
-    "npm.web.executor": "Run",
-    "npm.web:csr.executor": "Run",
-    "npm.web:csr:build.executor": "Run",
-    "npm.web:csr:start.executor": "Run",
-    "npm.web:ssr.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors",
-    "ts.external.directory.path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/hooks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;npm.1_native_android.executor&quot;: &quot;Run&quot;,
+    &quot;npm.2_web_csr.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.bundle:android.executor&quot;: &quot;Run&quot;,
+    &quot;npm.check:tsc.executor&quot;: &quot;Run&quot;,
+    &quot;npm.client:mobile.executor&quot;: &quot;Run&quot;,
+    &quot;npm.client:web.executor&quot;: &quot;Run&quot;,
+    &quot;npm.csr.executor&quot;: &quot;Run&quot;,
+    &quot;npm.mobile.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native:reset:cache.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native:reset:cache:metro.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native:start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.native_reset.executor&quot;: &quot;Run&quot;,
+    &quot;npm.reset.executor&quot;: &quot;Run&quot;,
+    &quot;npm.server:ssr.executor&quot;: &quot;Run&quot;,
+    &quot;npm.server:ssr2.executor&quot;: &quot;Run&quot;,
+    &quot;npm.ssr.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start $Sourcepath$.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start --verbose.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.tsc.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web:csr.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web:csr:build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web:csr:start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.web:ssr.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hooks" />
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
       <recent name="$PROJECT_DIR$/src/components/screens/HomeScreen" />
       <recent name="$PROJECT_DIR$/configs/android/app/src/main/java/com/reactnativeminimal_lunodev" />
       <recent name="$PROJECT_DIR$/src/components/utils" />
-      <recent name="$PROJECT_DIR$/configs/android/app/src/debug" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/semantic" />
@@ -306,7 +291,8 @@
       <workItem from="1720682694213" duration="21078000" />
       <workItem from="1720727986806" duration="23319000" />
       <workItem from="1720792860414" duration="46368000" />
-      <workItem from="1720892885044" duration="17404000" />
+      <workItem from="1720892885044" duration="35699000" />
+      <workItem from="1720978416138" duration="1695000" />
     </task>
     <servers />
   </component>

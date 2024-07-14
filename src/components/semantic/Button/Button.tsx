@@ -1,19 +1,21 @@
-import React, {CSSProperties, HTMLAttributeAnchorTarget, ReactNode} from "react";
+import React, {HTMLAttributeAnchorTarget} from "react";
+import {Linking, Pressable, PressableProps, TextProps, View, TouchableOpacity, Text} from "react-native";
+import {TextStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
+import {isWeb} from "../../../utils/platform";
+import Paragraph from "../Paragraph/Paragraph";
 import MainView__button from "../../../styles/ts/MainView/__button/MainView__button";
-import {Linking, Pressable, PressableProps, TextProps, View} from "react-native";
-import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
-import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import MainView__button_disabled from "../../../styles/ts/MainView/__button/_disabled/MainView__button_disabled";
 import MainView__button_accept from "../../../styles/ts/MainView/__button/_accept/MainView__button_accept";
 import MainView__button_decline from "../../../styles/ts/MainView/__button/_decline/MainView__button_decline";
-import Paragraph from "../Paragraph/Paragraph";
 import MainView__button_default from "../../../styles/ts/MainView/__button/_default/MainView__button_default";
-import {isWeb} from "../../../utils/platform";
 import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
 
 
 type ButtonProps = {
-    asLink?: { href: string, target?: HTMLAttributeAnchorTarget } | undefined;
+    asLink?: {
+        href: string,
+        target?: HTMLAttributeAnchorTarget
+    } | undefined;
     type: 'accept' | 'decline' | 'default';
 } & PressableProps;
 export default function Button(props: ButtonProps) {

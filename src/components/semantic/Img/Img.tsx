@@ -3,7 +3,10 @@ import {Image, ImageProps, View} from "react-native";
 import MainView__image from "../../../styles/ts/MainView/__image/MainView__image";
 
 
-type ImgProps = ImageProps;
+type ImgProps = {
+    onPointerEnter(): void,
+    onPointerLeave(): void,
+} & ImageProps;
 export default function Img(props: ImgProps): ReactElement {
 
     const {

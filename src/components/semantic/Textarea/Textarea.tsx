@@ -1,4 +1,4 @@
-import React, { ReactElement} from "react";
+import React, {ReactElement} from "react";
 import {TextInput, TextInputProps, View} from "react-native";
 import MainView__textarea from "../../../styles/ts/MainView/__textarea/MainView__textarea";
 import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
@@ -18,7 +18,7 @@ export default function Textarea(props: TextareaProps): ReactElement {
         mainView__textarea
     } = MainView__textarea();
     const minOfLines = props.numberOfLines || 2;
-
+    // if(isWeb()) (props as HTMLAttributes<HTMLTextAreaElement>).R =
     /*
     // const maxOfLines = props.maxOfLines || 0;
 
@@ -37,14 +37,16 @@ export default function Textarea(props: TextareaProps): ReactElement {
     return (
         <View style={mainView__textarea_container}>
             <TextInput
+                {...props}
                 aria-label={'textarea'}
                 multiline={true}
                 numberOfLines={minOfLines}
-                {...props as TextInputProps}
                 style={[
                     mainView__text_color,
                     mainView__input,
                     mainView__textarea,
+                    // {height: 35}, // TODO vedere auto expand
+                    // {minHeight: 1}, // TODO vedere auto expand
                     props.style,
                 ]}
                 placeholderTextColor={mainView__placeholder_color.color}

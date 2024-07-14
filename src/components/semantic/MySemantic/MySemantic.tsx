@@ -29,6 +29,7 @@ import MainView__animation_fadeOpacity, {
 import {isWeb} from "../../../utils/platform";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {NavigationProps} from "../../../app/App";
+import useRandomColor from "../../../hooks/useRandomColor";
 
 
 type ILang = { lang: 'en-EN' | 'es-AR' | 'it-IT', name: string, id: number }
@@ -48,6 +49,11 @@ export default function MySemantic(props: NavigationProps) {
     const [state, setState] = React.useState<boolean>(false)
 
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
+    const {randomColor, changeRandomColor, removeRandomColor} = useRandomColor();
+    const {
+        randomColor: randColor,
+        changeRandomColor: changColor,
+    } = useRandomColor();
     // fadeAnim will be used as the value for "opacity". Initial Value: 0
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const {mainView_container, mainView} = MainView();
@@ -64,11 +70,20 @@ export default function MySemantic(props: NavigationProps) {
         !!fadeAnim && fadeInOpacity({fadeAnim});
     }, [fadeAnim]);
 
+    useEffect(() => {
+        setInterval(changColor, 500);
+    }, [fadeAnim]);
+
 
     return (
         <SafeAreaView>
             <ScrollView>
-                <FlexResponsive style={[mainView_container, mainView, fadeOpacity]}>
+                <FlexResponsive style={[
+                    mainView_container,
+                    mainView,
+                    fadeOpacity,
+                    {backgroundColor: randomColor || mainView_container.backgroundColor},
+                ]}>
                     {/*<ProgressBar/>*/}
                     {/*MAIN <main/>*/}
                     <Main id={`${id}-main`} style={{padding: 10}}>
@@ -115,11 +130,13 @@ export default function MySemantic(props: NavigationProps) {
                             >
                                 {/* IMAGE */}
                                 <Img
+                                    onPointerEnter={changeRandomColor}
+                                    onPointerLeave={removeRandomColor}
                                     id={`${id}-Img`}
                                     alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
                                     source={profileSrc}
                                     resizeMode={'contain'}
-                                    style={{width: 200, height: 150}}
+                                    style={{width: 200, height: 150, cursor: 'pointer'}}
                                 />
                             </FlexResponsive>
                             <FlexResponsive
@@ -168,10 +185,14 @@ export default function MySemantic(props: NavigationProps) {
                             onPress={toogleStyleTheme}
                             children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
                         />
-                        {/* Navigation Menu */}
-                        <Nav>
+                        {/* NAVIGATION Menu */}
+                        <Nav id={`${id}-Nav`} style={{backgroundColor: randColor || '#000000'}}>
+                            <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
                             <FlexResponsive container>
-                                <FlexResponsive item xs={{colsNumber: 3}}>
+                                <FlexResponsive item
+                                                xs={{colsNumber: 10}}
+                                                md={{colsNumber: 3}}
+                                >
                                     {/* BUTTON accept - navigation to "Details" screen */}
                                     <Button
                                         id={`${id}-button-goToDetailsScreen`}
@@ -180,7 +201,10 @@ export default function MySemantic(props: NavigationProps) {
                                         children={`🚀 navigation to "Details" screen 👉`}
                                     />
                                 </FlexResponsive>
-                                <FlexResponsive item xs={{colsNumber: 3}}>
+                                <FlexResponsive item
+                                                xs={{colsNumber: 10}}
+                                                md={{colsNumber: 3}}
+                                >
                                     {/* BUTTON accept - navigation to "google.com" screen */}
                                     <Button
                                         id={`${id}-button-accept`}
@@ -258,7 +282,7 @@ export default function MySemantic(props: NavigationProps) {
                                 {/* INPUT */}
                                 <Input
                                     id={`${id}-Input`}
-                                    placeholder={`placeholder for this <input/> (WEB) & <TextInput/> (NATIVE)`}
+                                    placeholder={`placeholder <input/> (WEB) & <TextInput/> (NATIVE)`}
                                 />
                             </Fieldset>
                             {/* FIELDSET */}
@@ -272,7 +296,7 @@ export default function MySemantic(props: NavigationProps) {
                                 {/* INPUT */}
                                 <Textarea
                                     id={`${id}-Textarea`}
-                                    placeholder={`placeholder for this <textarea/> (WEB) & <TextInput/> (NATIVE)`}
+                                    placeholder={`placeholder <textarea/> (WEB) & <TextInput/> (NATIVE)`}
                                 />
                             </Fieldset>
                             {/* FIELDSET */}
@@ -308,10 +332,6 @@ export default function MySemantic(props: NavigationProps) {
                                 />
                             </Fieldset>
                         </Form>
-                        {/* NAVIGATION */}
-                        <Nav id={`${id}-Nav`}>
-                            <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-                        </Nav>
                         {/* HEADER */}
                         <Header id={`${id}-Header`}>
                             <Paragraph children={`<header/> (WEB) & <View/> (NATIVE)`}/>
@@ -350,7 +370,7 @@ export default function MySemantic(props: NavigationProps) {
                     {`
                 * {
                     transition: color 500ms linear;
-                    transition: background-color 500ms linear;
+                    transition: background-color 200ms linear;
                  }
                 `}
                 </style>}
