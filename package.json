@@ -1,7 +1,7 @@
 {
   "name": "ReactNativeMinimal_LunoDev",
   "author": "LUNO⚛Dev",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "packageManager": "yarn@3.6.4",
   "scripts": {
     "web:csr:start": "webpack serve --config web/csr/webpack.config.js --mode=development",
