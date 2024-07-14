@@ -1,7 +1,7 @@
 <h1 style="color: red; text-align: center; margin: 0; padding: 0;">React Native & Web Semantic (CSR & SSR)</h1>
 <h2 style="text-align: center; margin: 0; padding: 0;">by <strong style="color: blue">LUNO⚛Dev</strong></h2>
 
-[![React Native and Web Semantic with CSR & SSR tecniches](documentation/il-mio-primo-dark-them-with-react-native_2024-07-09.gif "React Native & Web Semantic (CSR & SSR)")](https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/)
+[![React Native and Web Semantic with CSR & SSR tecniches](documentation/react-navigation-native-web_v1.0.6_2024-07-14.gif "React Native & Web Semantic (CSR & SSR)")](https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/)
 
 [🔗⬆️ Click here for see this project deployed on web platform 🔗️⬆️](https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/)
 
