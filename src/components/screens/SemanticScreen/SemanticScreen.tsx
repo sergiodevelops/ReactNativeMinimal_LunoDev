@@ -52,7 +52,7 @@ export default function SemanticScreen(props: NavigationProps) {
         randomColor: randColor,
         changeRandomColor: changColor
     } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);
-    useMilisecondsInterval({callbackFn: changColor, interval: 3000, automatic: true});
+    useMilisecondsInterval({intervalCallback: changColor, interval: 3000, automatic: true});
 
 
     useEffect(() => {
@@ -82,10 +82,7 @@ export default function SemanticScreen(props: NavigationProps) {
 
                     {/*RESPONSIVE <FlexResponsive container/>*/}
                     <FlexResponsive container>
-                        <FlexResponsive
-                            item
-                            xs={{colsNumber: 12}}
-                        >
+                        <FlexResponsive item>
                             {/* ANCHOR <a/> target _self */}
                             <Anchor
                                 href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
@@ -93,10 +90,7 @@ export default function SemanticScreen(props: NavigationProps) {
                                 children={`🔗 open "URL web deploy" in this page ⏳`}
                             />
                         </FlexResponsive>
-                        <FlexResponsive
-                            item
-                            xs={{colsNumber: 12}}
-                        >
+                        <FlexResponsive item>
                             {/* ANCHOR <a/> target _blank */}
                             <Anchor
                                 href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
@@ -105,37 +99,50 @@ export default function SemanticScreen(props: NavigationProps) {
                             />
                         </FlexResponsive>
                     </FlexResponsive>
+                    <FlexResponsive container>
+                        <FlexResponsive item
+                                        xs={{colsNumber: 10}}
+                                        md={{colsNumber: 7}}
+                        >
+                            {/* BUTTON decline */}
+                            <Button
+                                id={`${id}-button-decline`}
+                                type={"decline"}
+                                onPress={toogleStyleTheme}
+                                children={`Toogle Theme "decline" Button ${currentIconStyleTheme}`}
+                            />
+                        </FlexResponsive>
+                        <FlexResponsive item
+                                        xs={{colsNumber: 10}}
+                                        md={{colsNumber: 7}}
+                        >
 
-                    {/* BUTTON decline */}
-                    <Button
-                        id={`${id}-button-decline`}
-                        type={"decline"}
-                        onPress={toogleStyleTheme}
-                        children={`Toogle Theme "decline" Button ${currentIconStyleTheme}`}
-                    />
-                    {/* BUTTON default */}
-                    <Button
-                        id={`${id}-button-default`}
-                        type={'default'}
-                        onPress={toogleStyleTheme}
-                        children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
-                    />
-                    {/* BUTTON accept */}
-                    <Button
-                        id={`${id}-button-disabled`}
-                        disabled
-                        type={'accept'}
-                        onPress={toogleStyleTheme}
-                        children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
-                    />
+                            {/* BUTTON default */}
+                            <Button
+                                id={`${id}-button-default`}
+                                type={'default'}
+                                onPress={toogleStyleTheme}
+                                children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                            />
+                        </FlexResponsive>
+                        <FlexResponsive item
+                                        xs={{colsNumber: 10}}
+                                        md={{colsNumber: 7}}
+                        >
+                            {/* BUTTON accept */}
+                            <Button
+                                id={`${id}-button-disabled`}
+                                disabled
+                                type={'accept'}
+                                onPress={toogleStyleTheme}
+                                children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
+                            />
+                        </FlexResponsive>
+                    </FlexResponsive>
+
                     {/* NAVIGATION Menu */}
-                    <Nav
-                        id={`${id}-Nav`}
-                        style={{
-                            backgroundColor: randColor || mainView_container.backgroundColor
-                        }}>
+                    <Nav id={`${id}-Nav`}>
                         <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-                        <Heading variant={'h2'} children={`Current random color is: ${randColor}`}/>
                         <FlexResponsive container>
                             <FlexResponsive item
                                             xs={{colsNumber: 10}}

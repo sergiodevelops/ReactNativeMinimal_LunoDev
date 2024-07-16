@@ -19,6 +19,7 @@ import MainView__animation_fadeOpacity, {
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
 import MainView__fieldset from "../../../styles/ts/MainView/__fieldset/MainView__fieldset";
+import Div from "../../semantic/Div/Div";
 
 
 export function HomeScreen(props: NavigationProps) {
@@ -40,11 +41,6 @@ export function HomeScreen(props: NavigationProps) {
 
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
     const {randomColor, changeRandomColor, resetRandomColor} = useRandomColor();
-    /*const {
-        randomColor: randColor,
-        changeRandomColor: changColor
-    } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);*/
-    // useMilisecondsInterval({callbackFn: changColor, interval: 3000, automatic: true});
 
 
     useEffect(() => {
@@ -105,18 +101,20 @@ export function HomeScreen(props: NavigationProps) {
                             xs={{colsNumber: 12}}
                             md={{colsNumber: 3}}
                         >
-                            {/* IMAGE */}
-                            <Img
-                                onPressIn={changeRandomColor}
-                                onPressOut={resetRandomColor}
-                                onPointerEnter={changeRandomColor}
-                                onPointerLeave={resetRandomColor}
-                                id={`${id}-Img`}
-                                alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
-                                source={profileSrc}
-                                resizeMode={'contain'}
-                                style={{width: 200, height: 150, cursor: 'pointer'}}
-                            />
+                            <Div style={{userSelect: 'none'}}>
+                                {/* IMAGE */}
+                                <Img
+                                    onPressIn={changeRandomColor}
+                                    onPressOut={resetRandomColor}
+                                    onPointerEnter={changeRandomColor}
+                                    onPointerLeave={resetRandomColor}
+                                    id={`${id}-Img`}
+                                    alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
+                                    source={profileSrc}
+                                    resizeMode={'contain'}
+                                    style={{width: 200, height: 150, cursor: 'pointer'}}
+                                />
+                            </Div>
                         </FlexResponsive>
                         <FlexResponsive
                             item
@@ -148,16 +146,14 @@ export function HomeScreen(props: NavigationProps) {
                     {/* NAVIGATION Menu */}
                     <Nav
                         id={`${id}-Nav`}
-                        // style={{
-                        //     backgroundColor: randColor || mainView_container.backgroundColor
-                        // }}
                     >
-                        {/*<Heading variant={'h5'} children={`Current random color is: ${randColor}`}/>*/}
                         <FlexResponsive
                             container
                             style={mainView__fieldset}
                         >
-                            <Heading variant={'h5'} children={`Navbar menu projects`}/>
+                            <FlexResponsive item>
+                                <Heading variant={'h5'} children={`Navbar menu projects`}/>
+                            </FlexResponsive>
                             <FlexResponsive item
                                             xs={{colsNumber: 10}}
                                             md={{colsNumber: 6}}

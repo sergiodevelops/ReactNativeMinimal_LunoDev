@@ -36,9 +36,9 @@ export function ReferencesScreen(props: NavigationProps) {
     } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);
     const handleOnPressButtonGoToHomeScreen = () => navigation.navigate("home");
     const {start, puase, reset} = useMilisecondsInterval({
-        callbackFn: changeRandomColor,
-        resetFn: resetRandomColor,
-        interval: 500
+        intervalCallback: changeRandomColor,
+        resetCallback: resetRandomColor,
+        interval: 500,
     })
 
 
@@ -70,24 +70,24 @@ export function ReferencesScreen(props: NavigationProps) {
                         <Heading variant={'h1'}>🤩 DOM manipulation in React 🤝</Heading>
                     </FlexResponsive>
                     <FlexResponsive item>
-                        <Heading variant={'h5'} children={`Current random color is: ${randomColor}`}/>
+                        <Paragraph children={`Current random color is: ${randomColor}`}/>
                     </FlexResponsive>
 
                     <FlexResponsive item
                                     xs={{colsNumber: 10}}
-                                    md={{colsNumber: 6}}
+                                    md={{colsNumber: 7}}
                     >
                         <Button type={'accept'} onPress={start}>🟢 START</Button>
                     </FlexResponsive>
                     <FlexResponsive item
                                     xs={{colsNumber: 10}}
-                                    md={{colsNumber: 6}}
+                                    md={{colsNumber: 7}}
                     >
                         <Button type={'default'} onPress={puase}>🟡 PAUSE</Button>
                     </FlexResponsive>
                     <FlexResponsive item
                                     xs={{colsNumber: 10}}
-                                    md={{colsNumber: 6}}
+                                    md={{colsNumber: 7}}
                     >
                         <Button type={'decline'} onPress={reset}>🛑 RESET</Button>
                     </FlexResponsive>
@@ -95,7 +95,7 @@ export function ReferencesScreen(props: NavigationProps) {
 
                 <FlexResponsive item
                                 xs={{colsNumber: 10}}
-                                md={{colsNumber: 6}}
+                                md={{colsNumber: 7}}
                 >
                     {/* BUTTON default */}
                     <Button
@@ -108,7 +108,7 @@ export function ReferencesScreen(props: NavigationProps) {
 
                 <FlexResponsive item
                                 xs={{colsNumber: 10}}
-                                md={{colsNumber: 6}}
+                                md={{colsNumber: 7}}
                 >
                     {/* BUTTON accept */}
                     <Button

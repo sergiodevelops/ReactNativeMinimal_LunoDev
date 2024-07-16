@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="" />
+    <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useMilisecondsInterval.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useMilisecondsInterval.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +105,7 @@
       <recent name="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.web:csr:build">
+  <component name="RunManager" selected="npm.native:start">
     <configuration name="native:android:build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -287,7 +293,10 @@
       <workItem from="1720978416138" duration="2772000" />
       <workItem from="1721021679348" duration="47988000" />
       <workItem from="1721129400690" duration="313000" />
-      <workItem from="1721129720834" duration="19873000" />
+      <workItem from="1721129720834" duration="21896000" />
+      <workItem from="1721163345186" duration="486000" />
+      <workItem from="1721163850080" duration="40000" />
+      <workItem from="1721163900918" duration="1880000" />
     </task>
     <servers />
   </component>

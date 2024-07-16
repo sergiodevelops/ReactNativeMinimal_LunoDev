@@ -8,24 +8,28 @@ type UseMilisecondsIntervalResponse = {
 }
 
 export default function useMilisecondsInterval(props: {
-    callbackFn(): void,
+    intervalCallback(): void,
     interval?: number | undefined,
     automatic?: boolean | undefined,
-    resetFn?: () => void,
+    resetCallback?: () => void,
 }): UseMilisecondsIntervalResponse {
-    const {callbackFn, resetFn, interval, automatic} = props;
+    const {intervalCallback, resetCallback, interval, automatic} = props;
     const intervalId = useRef<NodeJS.Timeout | undefined>(undefined);
 
 
     const start = (): void => {
-        if(!(intervalId.current === undefined)) return;
-        intervalId.current = setInterval(callbackFn, interval || 1000)
-    };
-    const puase = (): void => clearInterval(intervalId.current);
+        if(intervalId.current !== undefined) return;
+        intervalId.current = setInterval(intervalCallback, interval || 1000)
+    }
+
+    const puase = (): void => {
+        clearInterval(intervalId.current);
+        intervalId.current = undefined;
+    }
+
     const reset = (): void => {
         puase();
-        intervalId.current = undefined;
-        if (resetFn) resetFn();
+        if (resetCallback) resetCallback();
     }
 
 
