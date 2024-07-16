@@ -17,12 +17,8 @@ import Article from "../../semantic/Article/Article";
 import Main from "../../semantic/Main/Main";
 import Select from "../../semantic/Select/Select";
 import Aside from "../../semantic/Aside/Aside";
-import FixMarginButtomProblem from "../../utils/FixMarginButtomProblem/FixMarginButtomProblem";
 import Div from "../../semantic/Div/Div";
-import Img from "../../semantic/Img/Img";
-import profileSrc from "../../../../public/images/profile.png";
 import FlexResponsive from "../../semantic/FlexResponsive/FlexResponsive";
-import Strong from "../../semantic/Strong/Strong";
 import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
@@ -30,7 +26,6 @@ import MainView from "../../../styles/ts/MainView/MainView";
 import {NavigationProps} from "../../../app/App";
 import useRandomColor from "../../../hooks/useRandomColor";
 import {ILang, RandomColorProp} from "../../../constants/types";
-import useRefCountRenders from "../../../hooks/useRefCountRenders";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWraper from "../ScreenWraper/ScreenWraper";
 
@@ -53,8 +48,6 @@ export default function SemanticScreen(props: NavigationProps) {
     ];
 
     const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
-    const {randomColor, changeRandomColor, resetRandomColor} = useRandomColor();
-    const {count} = useRefCountRenders();
     const {
         randomColor: randColor,
         changeRandomColor: changColor
@@ -68,17 +61,13 @@ export default function SemanticScreen(props: NavigationProps) {
 
 
     return (
-        <ScreenWraper style={[fadeOpacity]}>
+        <ScreenWraper
+            style={mainView_container}
+            animatedStyle={fadeOpacity}
+        >
             <FlexResponsive style={[
-                mainView_container,
                 mainView,
-                {backgroundColor: randomColor || mainView_container.backgroundColor},
             ]}>
-                <Heading
-                    variant={"h1"}
-                    children={`Number of Renders: ${String(count)}`}
-                />
-
                 {/*<ProgressBar/>*/}
                 {/*MAIN <main/>*/}
                 <Main id={`${id}-main`} style={{padding: 10}}>
@@ -88,54 +77,11 @@ export default function SemanticScreen(props: NavigationProps) {
                     <Heading
                         id={`${id}-HeadingTitle`}
                         variant={"h1"}
-                        children={`React Native Web (Semantic, Responsive, CSR, SSR, Redux)`}
+                        children={`Semantic and Responsive elements`}
                     />
 
                     {/*RESPONSIVE <FlexResponsive container/>*/}
                     <FlexResponsive container>
-                        {/*RESPONSIVE <FlexResponsive item/>*/}
-                        <FlexResponsive
-                            style={{flexDirection: 'column'}}
-                            item
-                            xs={{colsNumber: 12}}
-                            md={{colsNumber: 9}}
-                        >
-                            <Paragraph>
-                                Benvenuti nel mio <Strong><Anchor
-                                href={'https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/'}>progetto
-                                "React Native
-                                Web (Semantic, CSR, SSR, Redux)"</Anchor></Strong>,
-                                che è "ancora in costruzione".
-                            </Paragraph>
-                            <Paragraph>
-                                Sono <Strong>LUNO⚛Dev</Strong> (Sergio Ariel Juarez)
-                                e questa visualizzazione mostra i
-                                componenti personalizzati da me, che sono multipiattaforma,
-                                compatibili sia per Web che per dispositivi mobili
-                                (Android e iOS), che saranno migliorati e che possono
-                                essere utilizzati con Redux.js per gestire gli stati
-                                globali della tua applicazione.
-                            </Paragraph>
-                        </FlexResponsive>
-                        {/*RESPONSIVE <FlexResponsive item/>*/}
-                        <FlexResponsive
-                            item
-                            xs={{colsNumber: 12}}
-                            md={{colsNumber: 3}}
-                        >
-                            {/* IMAGE */}
-                            <Img
-                                onPressIn={changeRandomColor}
-                                onPressOut={resetRandomColor}
-                                onPointerEnter={changeRandomColor}
-                                onPointerLeave={resetRandomColor}
-                                id={`${id}-Img`}
-                                alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
-                                source={profileSrc}
-                                resizeMode={'contain'}
-                                style={{width: 200, height: 150, cursor: 'pointer'}}
-                            />
-                        </FlexResponsive>
                         <FlexResponsive
                             item
                             xs={{colsNumber: 12}}
@@ -316,6 +262,7 @@ export default function SemanticScreen(props: NavigationProps) {
                             {/* SELECT */}
                             <Select
                                 id={`${id}-SelectPicker`}
+                                mode={'dialog'}
                                 defaultLabel={'name'} // atribute to show (optional - by "name" by default)
                                 options={languages}
                                 defaultOption={languages[0]}
@@ -330,13 +277,15 @@ export default function SemanticScreen(props: NavigationProps) {
                                 htmlFor={`${id}-Switch`}
                                 children={`<button/> Switch (WEB) & <Switch/> (NATIVE) click me e vedrai!`}
                             />
-                            {/* SWITCH */}
-                            <Switch
-                                id={`${id}-Switch`}
-                                value={currentStyleTheme === 'light'}
-                                onChange={toogleStyleTheme} // for NATIVE
-                                onPointerDown={toogleStyleTheme} // for WEB
-                            />
+                            <FlexResponsive item>
+                                {/* SWITCH */}
+                                <Switch
+                                    id={`${id}-Switch`}
+                                    value={currentStyleTheme === 'light'}
+                                    onChange={toogleStyleTheme} // for NATIVE
+                                    onPointerDown={toogleStyleTheme} // for WEB
+                                />
+                            </FlexResponsive>
                         </Fieldset>
                     </Form>
                     {/* HEADER */}

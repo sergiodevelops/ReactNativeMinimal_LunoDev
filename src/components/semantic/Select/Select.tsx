@@ -43,7 +43,7 @@ export default function Select(props: SelectProps) {
     return (
         <View>
             <Picker
-                mode={'dropdown'}
+                mode={'dialog'}
                 placeholder={`Select one option`}
                 {...props}
                 style={[

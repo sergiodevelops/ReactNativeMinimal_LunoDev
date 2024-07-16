@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/ScreenWraper/ScreenWraper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ScreenWraper/ScreenWraper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Fieldset/Fieldset.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRefCount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRefCount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__fieldset/MainView__fieldset.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +298,7 @@
       <workItem from="1720978416138" duration="2772000" />
       <workItem from="1721021679348" duration="47988000" />
       <workItem from="1721129400690" duration="313000" />
-      <workItem from="1721129720834" duration="13794000" />
+      <workItem from="1721129720834" duration="19365000" />
     </task>
     <servers />
   </component>

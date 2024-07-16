@@ -8,10 +8,11 @@ import {ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 export default function ScreenWraper(props: {
     children: ReactNode,
     style?: StyleProp<ViewStyle> | undefined,
+    animatedStyle?: StyleProp<ViewStyle> | undefined,
 }) {
     return (
-        <SafeAreaView>
-            <Animated.View {...{style: props.style}}>
+        <SafeAreaView {...{style: props.style}}>
+            <Animated.View {...{style: props.animatedStyle}}>
                 <ScrollView>
                     {props.children}
 
@@ -20,7 +21,7 @@ export default function ScreenWraper(props: {
                         <style>
                             {`
                 * {
-                    transition: color 500ms linear;
+                    transition: color 200ms linear;
                     transition: background-color 200ms linear;
                  }
                 `}

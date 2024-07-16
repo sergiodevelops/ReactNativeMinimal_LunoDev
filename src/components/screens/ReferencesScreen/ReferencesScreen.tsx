@@ -14,6 +14,7 @@ import {Animated} from "react-native";
 import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
+import Paragraph from "../../semantic/Paragraph/Paragraph";
 
 
 export function ReferencesScreen(props: NavigationProps) {
@@ -47,9 +48,11 @@ export function ReferencesScreen(props: NavigationProps) {
 
 
     return (
-        <ScreenWraper style={[fadeOpacity]}>
+        <ScreenWraper
+            style={mainView_container}
+            animatedStyle={fadeOpacity}
+        >
             <FlexResponsive style={[
-                mainView_container,
                 mainView,
                 {
                     flex: 1,
@@ -58,44 +61,66 @@ export function ReferencesScreen(props: NavigationProps) {
                     backgroundColor: randomColor || mainView_container.backgroundColor,
                 },
             ]}>
-                <Heading
-                    variant={"h1"}
+                <Paragraph
                     children={`Number of Renders: ${String(count)}`}
                 />
 
                 <FlexResponsive container>
                     <FlexResponsive item>
-                        <Heading variant={'h1'}>🤩 Details Screen 🤝</Heading>
+                        <Heading variant={'h1'}>🤩 DOM manipulation in React 🤝</Heading>
                     </FlexResponsive>
                     <FlexResponsive item>
-                        <Heading variant={'h2'} children={`Current random color is: ${randomColor}`}/>
+                        <Heading variant={'h5'} children={`Current random color is: ${randomColor}`}/>
                     </FlexResponsive>
 
-                    <FlexResponsive item md={{colsNumber: 4}}>
+                    <FlexResponsive item
+                                    xs={{colsNumber: 10}}
+                                    md={{colsNumber: 6}}
+                    >
                         <Button type={'accept'} onPress={start}>🟢 START</Button>
                     </FlexResponsive>
-                    <FlexResponsive item md={{colsNumber: 4}}>
+                    <FlexResponsive item
+                                    xs={{colsNumber: 10}}
+                                    md={{colsNumber: 6}}
+                    >
                         <Button type={'default'} onPress={puase}>🟡 PAUSE</Button>
                     </FlexResponsive>
-                    <FlexResponsive item md={{colsNumber: 4}}>
+                    <FlexResponsive item
+                                    xs={{colsNumber: 10}}
+                                    md={{colsNumber: 6}}
+                    >
                         <Button type={'decline'} onPress={reset}>🛑 RESET</Button>
                     </FlexResponsive>
                 </FlexResponsive>
 
-                {/* BUTTON default */}
-                <Button
-                    id={`${id}-button-default`}
-                    type={'accept'}
-                    onPress={toogleStyleTheme}
-                    children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
-                />
-                {/* BUTTON accept */}
-                <Button
-                    id={`${id}-button-goToDetailsScreen`}
-                    type={"default"}
-                    onPress={handleOnPressButtonGoToHomeScreen}
-                    children={`👈 Go back to "Home" screen`}
-                />
+                <FlexResponsive item
+                                xs={{colsNumber: 10}}
+                                md={{colsNumber: 6}}
+                >
+                    {/* BUTTON default */}
+                    <Button
+                        id={`${id}-button-default`}
+                        type={'accept'}
+                        onPress={toogleStyleTheme}
+                        children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                    />
+                </FlexResponsive>
+
+                <FlexResponsive item
+                                xs={{colsNumber: 10}}
+                                md={{colsNumber: 6}}
+                >
+                    {/* BUTTON accept */}
+                    <Button
+                        id={`${id}-button-goToDetailsScreen`}
+                        type={"default"}
+                        onPress={handleOnPressButtonGoToHomeScreen}
+                        children={`👈 Go back to "Home" screen`}
+                    />
+                </FlexResponsive>
+
+
+
             </FlexResponsive>
         </ScreenWraper>
     );

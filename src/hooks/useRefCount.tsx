@@ -13,6 +13,7 @@ export default function useRefCount(initValue?: number | undefined): UseRefCount
     const increase = (amount?: number | undefined) => count.current += amount || 1;
     const decrease = (amount?: number | undefined) => count.current -= amount || 1;
 
+
     return ({
         increase,
         decrease,

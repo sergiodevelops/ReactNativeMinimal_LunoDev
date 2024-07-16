@@ -16,14 +16,17 @@ import {Animated} from "react-native";
 import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
-import {RandomColorProp} from "../../../constants/types";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
-import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
+import MainView__fieldset from "../../../styles/ts/MainView/__fieldset/MainView__fieldset";
 
 
 export function HomeScreen(props: NavigationProps) {
     const {mainView_container, mainView} = MainView();
+    const {
+        mainView__fieldset,
+    } = MainView__fieldset();
+
     // fadeAnim will be used as the value for "opacity". Initial Value: 0
     const fadeAnim = useRef(new Animated.Value(0)).current;
     // fadeAnim will be used as the value for "opacity". Initial defaultValue: 1
@@ -37,22 +40,25 @@ export function HomeScreen(props: NavigationProps) {
 
     const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
     const {randomColor, changeRandomColor, resetRandomColor} = useRandomColor();
-    const {
+    /*const {
         randomColor: randColor,
         changeRandomColor: changColor
-    } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);
-    useMilisecondsInterval({callbackFn: changColor, interval: 3000, automatic: true});
+    } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);*/
+    // useMilisecondsInterval({callbackFn: changColor, interval: 3000, automatic: true});
 
 
     useEffect(() => {
         !!fadeAnim && fadeInOpacity({fadeAnim});
+        return () => fadeAnim.resetAnimation();
     }, [fadeAnim]);
 
 
     return (
-        <ScreenWraper style={[fadeOpacity]}>
+        <ScreenWraper
+            style={mainView_container}
+            animatedStyle={fadeOpacity}
+        >
             <FlexResponsive style={[
-                mainView_container,
                 mainView,
                 {backgroundColor: randomColor || mainView_container.backgroundColor},
             ]}>
@@ -92,6 +98,7 @@ export function HomeScreen(props: NavigationProps) {
                                 globali della tua applicazione.
                             </Paragraph>
                         </FlexResponsive>
+
                         {/*RESPONSIVE <FlexResponsive item/>*/}
                         <FlexResponsive
                             item
@@ -122,47 +129,57 @@ export function HomeScreen(props: NavigationProps) {
                                 children={`🔗 open "URL web deploy" in a new tab 🚀`}
                             />
                         </FlexResponsive>
+                        <FlexResponsive item
+                                        xs={{colsNumber: 10}}
+                                        md={{colsNumber: 6}}
+                        >
+                            {/* BUTTON default */}
+                            <Button
+                                id={`${id}-button-default`}
+                                type={'default'}
+                                onPress={toogleStyleTheme}
+                                children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                            />
+                        </FlexResponsive>
+
                     </FlexResponsive>
 
-                    {/* BUTTON default */}
-                    <Button
-                        id={`${id}-button-default`}
-                        type={'default'}
-                        onPress={toogleStyleTheme}
-                        children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
-                    />
 
                     {/* NAVIGATION Menu */}
                     <Nav
                         id={`${id}-Nav`}
-                        style={{
-                            backgroundColor: randColor || mainView_container.backgroundColor
-                        }}>
-                        <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-                        <Heading variant={'h2'} children={`Current random color is: ${randColor}`}/>
-                        <FlexResponsive container>
+                        // style={{
+                        //     backgroundColor: randColor || mainView_container.backgroundColor
+                        // }}
+                    >
+                        {/*<Heading variant={'h5'} children={`Current random color is: ${randColor}`}/>*/}
+                        <FlexResponsive
+                            container
+                            style={mainView__fieldset}
+                        >
+                            <Heading variant={'h5'} children={`Navbar menu projects`}/>
                             <FlexResponsive item
                                             xs={{colsNumber: 10}}
-                                            md={{colsNumber: 3}}
-                            >
-                                {/* BUTTON - navigation to "useRef hook" screen */}
-                                <Button
-                                    id={`${id}-BUTTON-REFERENCES`}
-                                    type={"default"}
-                                    onPress={handleOnPressButtonReferenceScreen}
-                                    children={`🚀 REFERENCES screen 👉`}
-                                />
-                            </FlexResponsive>
-                            <FlexResponsive item
-                                            xs={{colsNumber: 10}}
-                                            md={{colsNumber: 3}}
+                                            md={{colsNumber: 6}}
                             >
                                 {/* BUTTON - navigation to "Semantic Elements" screen */}
                                 <Button
                                     id={`${id}-BUTTON-SEMANTIC-ELEMENTS`}
-                                    type={"default"}
+                                    type={"accept"}
                                     onPress={handleOnPressButtonGoToSemanticScreen}
-                                    children={`🚀 SEMANTIC ELEMENTS screen 👉`}
+                                    children={`🌟 Semantic elements 🌟`}
+                                />
+                            </FlexResponsive>
+                            <FlexResponsive item
+                                            xs={{colsNumber: 10}}
+                                            md={{colsNumber: 6}}
+                            >
+                                 {/*BUTTON - navigation to "useRef hook" screen*/}
+                                <Button
+                                    id={`${id}-BUTTON-REFERENCES`}
+                                    type={"accept"}
+                                    onPress={handleOnPressButtonReferenceScreen}
+                                    children={`📌 DOM manipulation 📌`}
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
