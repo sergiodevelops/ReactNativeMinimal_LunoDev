@@ -7,6 +7,8 @@ const reducer = combineReducers({
     styleTheme: styleThemeReducer,
 });
 
+// TODO vedere error traspiler TypeScript
+// TS4023: Exported variable store has or is using name StyleThemeState from external module
 export const store = configureStore({reducer});
 
 // Get the type of our store variable
