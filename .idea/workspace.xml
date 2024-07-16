@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/platform/web/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/platform/web/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/FlexResponsive/FlexResponsive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/FlexResponsive/FlexResponsive.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/MySemantic/MySemantic.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Select/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Strong/Strong.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRandomColor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRandomColor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/others/exercises/functionalProgramming.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/others/exercises/functionalProgramming.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/styleTheme/styleThemeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__animation/MainView__animation_fadeOpacity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__animation/MainView__animation_fadeOpacity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/documentation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/constants/types.ts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,16 +107,18 @@
       <recent name="$PROJECT_DIR$/configs/android/app/src/main/java/com/reactnativeminimal_lunodev" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/screens" />
       <recent name="$PROJECT_DIR$/src/components/semantic" />
       <recent name="$PROJECT_DIR$/src/styles/documentation" />
       <recent name="$PROJECT_DIR$/src/components/utils" />
       <recent name="$PROJECT_DIR$/src/styles/ts/mainView/__text" />
-      <recent name="$PROJECT_DIR$/src/platform" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/constants/types.ts" />
+      <recent name="$PROJECT_DIR$/src/hooks/useRefCountRenders.tsx" />
+      <recent name="$PROJECT_DIR$/src/hooks/useRefCount.tsx" />
+      <recent name="$PROJECT_DIR$/src/hooks/useMilisecondsInterval.tsx" />
       <recent name="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" />
-      <recent name="$PROJECT_DIR$/src/app/MySemantic/MySemantic.tsx" />
-      <recent name="$PROJECT_DIR$/src/components/MainViewButton/MainViewButton.tsx" />
     </key>
   </component>
   <component name="RunManager" selected="npm.web:csr:build">
@@ -286,7 +307,9 @@
       <workItem from="1720792860414" duration="46368000" />
       <workItem from="1720892885044" duration="35699000" />
       <workItem from="1720978416138" duration="2772000" />
-      <workItem from="1721021679348" duration="1403000" />
+      <workItem from="1721021679348" duration="47988000" />
+      <workItem from="1721129400690" duration="313000" />
+      <workItem from="1721129720834" duration="11903000" />
     </task>
     <servers />
   </component>

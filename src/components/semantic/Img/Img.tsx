@@ -1,12 +1,12 @@
 import React, {ReactElement} from "react";
-import {Image, ImageProps, View} from "react-native";
+import {Image, ImageProps, Pressable, PressableProps, View} from "react-native";
 import MainView__image from "../../../styles/ts/MainView/__image/MainView__image";
 
 
 type ImgProps = {
     onPointerEnter(): void,
     onPointerLeave(): void,
-} & ImageProps;
+} & ImageProps & PressableProps;
 export default function Img(props: ImgProps): ReactElement {
 
     const {
@@ -17,14 +17,17 @@ export default function Img(props: ImgProps): ReactElement {
 
     return (
         <View style={mainView__image_container}>
-            <Image
-                {...props}
-                style={[
-                    mainView__image,
-                    props.style,
-                ]}
-                role={'img'}
-            />
+            <Pressable {...props as PressableProps}>
+                <Image
+                    {...props as ImageProps}
+                    style={[
+                        mainView__image,
+                        props.style,
+                    ]}
+                    role={'img'}
+                />
+            </Pressable>
         </View>
+
     );
 }

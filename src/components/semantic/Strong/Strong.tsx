@@ -10,7 +10,8 @@ type StrongProps = TextProps & DetailedHTMLProps<HTMLAttributes<HTMLElement>, HT
 export default function Strong(props: StrongProps) {
 
     // https://www.w3schools.com/tags/tag_aside.asp
-    const { mainView__text, mainView__text_bold } = MainView__text();
+    const { mainView__text_color } = MainView__text();
+    const { mainView__text_bold } = MainView__text();
     const { mainView__paragraph } = MainView__paragraph();
 
 
@@ -20,7 +21,7 @@ export default function Strong(props: StrongProps) {
                 {...props as DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>}
                 aria-label={"strong"}
                 style={{
-                    ...mainView__text,
+                    ...mainView__text_color,
                     ...mainView__paragraph,
                     inlineSize: 'fit-content',
                     ...props.style as CSSProperties,
@@ -30,7 +31,7 @@ export default function Strong(props: StrongProps) {
                 {...props as TextProps}
                 aria-label={"strong"}
                 style={[
-                    mainView__text,
+                    mainView__text_color,
                     mainView__text_bold,
                     mainView__paragraph,
                     props.style as TextStyle,

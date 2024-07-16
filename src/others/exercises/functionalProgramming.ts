@@ -15,8 +15,6 @@ export const fernetTypes: readonly FernetType[] = [
 export default function FunctionalProgramming(): void {
     console.log("executing FunctionalProgramming exercices");
 
-
-
     // First-class functions
     const showAlcoholContent = (fernetInfo: FernetType): void => {
         const {name, percentageOfAlcoholContent} = fernetInfo;

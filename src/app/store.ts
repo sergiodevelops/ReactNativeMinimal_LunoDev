@@ -1,16 +1,13 @@
 // store.ts
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../redux/features/counter/counterSlice';
+import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import styleThemeReducer from '../redux/features/styleTheme/styleThemeSlice';
 
 
-export const store = configureStore({
-    reducer: {
-        counter: counterReducer,
-        styleTheme: styleThemeReducer,
-    },
+const reducer = combineReducers({
+    styleTheme: styleThemeReducer,
 });
 
+export const store = configureStore({reducer});
 
 // Get the type of our store variable
 export type AppStore = typeof store;

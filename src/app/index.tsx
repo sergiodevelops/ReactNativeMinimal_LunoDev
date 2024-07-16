@@ -4,12 +4,10 @@ import {store} from "./store";
 import App from "./App";
 
 
-export default function Index(){
-
+export default function Index() {
     return (
-        <Provider
-            store={store}
-            children={<App/>}
-        />
+        <Provider {...{store}}>
+            <App/>
+        </Provider>
     );
 }

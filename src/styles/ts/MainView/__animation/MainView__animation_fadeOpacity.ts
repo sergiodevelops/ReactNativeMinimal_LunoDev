@@ -5,22 +5,7 @@ use this inside the functional component
 const fadeAnim = useRef(new Animated.Value(0)).current;
 */
 import {Animated, StyleSheet} from "react-native";
-import AnimatedValue = Animated.AnimatedValue;
-import AnimatedValueXY = Animated.AnimatedValueXY;
-import AnimatedInterpolation = Animated.AnimatedInterpolation;
-
-
-type AnimationConfigProps = {
-    toValue?:
-        | number
-        | AnimatedValue
-        | {x: number; y: number}
-        | AnimatedValueXY
-        | AnimatedInterpolation<number>;
-    duration?: number;
-    useNativeDriver?: boolean;
-};
-export type FadeInProps = {fadeAnim: Animated.Value, config?: AnimationConfigProps};
+import {FadeInProps} from "../../../../constants/types";
 
 
 export const fadeInOpacity = (props: FadeInProps) => {
@@ -48,7 +33,7 @@ export default function MainView__animation_fadeOpacity(fadeAnim?: Animated.Valu
     return(
         StyleSheet.create({
             fadeOpacity: {
-                opacity: fadeAnim || 1,
+                opacity: fadeAnim || new Animated.Value(1),
             },
         })
     )

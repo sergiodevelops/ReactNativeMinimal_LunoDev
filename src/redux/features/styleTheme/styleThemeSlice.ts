@@ -20,7 +20,7 @@ export const styleThemeSlice = createSlice({
     },
 });
 export const { toogle } = styleThemeSlice.actions;
-export const selectStyleTheme = (state: StyleThemeState) => state;
+// export const selectStyleTheme = (state: StyleThemeState) => state;
 
 
 export default styleThemeSlice.reducer;
