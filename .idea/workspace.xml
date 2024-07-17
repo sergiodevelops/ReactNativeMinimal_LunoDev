@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/screens/ScreenWraper/ScreenWraper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ScreenWrapper/ScreenWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Div/Div.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Div/Div.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/FlexResponsive/FlexResponsive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/FlexResponsive/FlexResponsive.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Img/Img.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/semantic/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Nav/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__heading/mainView__heading.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__image/MainView__image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__image/MainView__image.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ts/MainView/__responsive/MainView__responsive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ts/MainView/__responsive/MainView__responsive.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +295,7 @@
       <workItem from="1721129720834" duration="21896000" />
       <workItem from="1721163345186" duration="486000" />
       <workItem from="1721163850080" duration="40000" />
-      <workItem from="1721163900918" duration="27763000" />
+      <workItem from="1721163900918" duration="28320000" />
     </task>
     <servers />
   </component>
