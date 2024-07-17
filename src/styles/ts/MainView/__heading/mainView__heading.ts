@@ -10,22 +10,22 @@ const MainView__heading = () => {
                 fontWeight: "bold",
             },
             mainView__heading_h1: {
-                fontSize: 44,
+                fontSize: 33,
             },
             mainView__heading_h2: {
-                fontSize: 40,
+                fontSize: 30,
             },
             mainView__heading_h3: {
-                fontSize: 36,
-            },
-            mainView__heading_h4: {
-                fontSize: 32,
-            },
-            mainView__heading_h5: {
                 fontSize: 28,
             },
-            mainView__heading_h6: {
+            mainView__heading_h4: {
+                fontSize: 26,
+            },
+            mainView__heading_h5: {
                 fontSize: 24,
+            },
+            mainView__heading_h6: {
+                fontSize: 22,
             },
         })
     );

@@ -1,14 +1,16 @@
+import React, {HTMLProps} from "react";
 import {View, ViewProps} from "react-native";
-import React, {HTMLAttributes} from "react";
+import {isWeb} from "../../../utils/platform";
 
 
-type DivProps = ViewProps & HTMLAttributes<HTMLElement>;
-export default function Div(props: DivProps){
+
+type DivProps = ViewProps & HTMLProps<HTMLDivElement>;
+export default function Div(props: DivProps) {
     return (
-        <View
-            style={{inlineSize: 'inherit'}}
-            {...props}
-            aria-label={'div'}
-        />
+        <View>
+            {isWeb() ?
+                <div {...props as HTMLProps<HTMLDivElement>}/> :
+                <View {...props as ViewProps}/>}
+        </View>
     );
 }

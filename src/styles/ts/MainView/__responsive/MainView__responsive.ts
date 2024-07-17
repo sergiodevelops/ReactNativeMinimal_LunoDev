@@ -1,19 +1,8 @@
 import {StyleSheet, useWindowDimensions} from 'react-native';
+import {IntRange, ResponsiveProps} from "../../../../constants/types";
 
 
-// https://stackoverflow.com/questions/39494689/is-it-possible-to-restrict-number-to-a-certain-range
-type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
-    ? Acc[number]
-    : Enumerate<N, [...Acc, Acc['length']]>
-export type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>
-export default function MainView__responsive(props: {
-    xs?: { colsNumber: IntRange<1, 13> } | undefined; // < 576 px
-    sm?: { colsNumber: IntRange<1, 13> } | undefined; // >= 576 px
-    md?: { colsNumber: IntRange<1, 13> } | undefined; // >= 768 px
-    lg?: { colsNumber: IntRange<1, 13> } | undefined; // >= 992 px
-    xl?: { colsNumber: IntRange<1, 13> } | undefined; // >= 1200 px
-    xxl?: { colsNumber: IntRange<1, 13> } | undefined; // >= 1400 px
-}) {
+export default function MainView__responsive(props: ResponsiveProps) {
     const {width} = useWindowDimensions();
     const {xs, sm, md, lg, xl, xxl} = props;
     const totalWidth: number = 100;
@@ -21,8 +10,8 @@ export default function MainView__responsive(props: {
     const defaultCols: number = 12;
 
 
-    const getWidthByCols = (size: { colsNumber: IntRange<1, 13> } | undefined): number => {
-        return ((size?.colsNumber || defaultCols) * totalWidth / totalCols)
+    const getWidthByCols = (size: { part: IntRange<1, 13> } | undefined): number => {
+        return ((size?.part || defaultCols) * totalWidth / totalCols)
     }
 
 
@@ -47,25 +36,35 @@ export default function MainView__responsive(props: {
     }
 
 
+    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     return (
         StyleSheet.create({
-            mainView__responsive: {
+            mainView__responsive_flex: {
                 display: "flex",
                 width: `100%`,
+                flexWrap: 'wrap',
+                marginTop: 5,
+                marginBottom: 5,
             },
             mainView__responsive_container: {
-                padding: 10,
-                flexWrap: 'wrap',
+                padding: 15,
+            },
+            mainView__responsive_row: {
+                alignItems: 'flex-start',
                 flexDirection: 'row',
-                // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
                 justifyContent: 'space-around',
-                alignContent: 'flex-start',
+            },
+            mainView__responsive_col: {
+                alignItems: 'center',
+                flexDirection: 'column',
+                justifyContent: 'space-around',
             },
             mainView__responsive_item: {
-                alignItems: 'flex-start',
-                flexDirection: 'row', // TODO rivedere qui
+                alignContent: 'center', //TODO rivedere qui
+                alignItems: 'center',
                 width: `${getWidthBySizeProps()}%`,
-                justifyContent: 'center',
+                paddingLeft: 5,
+                paddingRight: 5,
             },
         })
     );

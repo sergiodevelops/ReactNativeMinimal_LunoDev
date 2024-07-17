@@ -10,14 +10,15 @@ type ImgProps = {
 export default function Img(props: ImgProps): ReactElement {
 
     const {
-        mainView__image_container,
         mainView__image,
     } = MainView__image();
 
 
     return (
-        <View style={mainView__image_container}>
-            <Pressable {...props as PressableProps}>
+        <View>
+            <Pressable
+                {...props as PressableProps}
+            >
                 <Image
                     {...props as ImageProps}
                     style={[

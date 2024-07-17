@@ -24,10 +24,8 @@ import MainView__animation_fadeOpacity, {
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {NavigationProps} from "../../../app/App";
-import useRandomColor from "../../../hooks/useRandomColor";
-import {ILang, RandomColorProp} from "../../../constants/types";
-import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
-import ScreenWraper from "../ScreenWraper/ScreenWraper";
+import {ILang} from "../../../constants/types";
+import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -48,11 +46,6 @@ export default function SemanticScreen(props: NavigationProps) {
     ];
 
     const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
-    const {
-        randomColor: randColor,
-        changeRandomColor: changColor
-    } = useRandomColor(mainView_container.backgroundColor as RandomColorProp);
-    useMilisecondsInterval({intervalCallback: changColor, interval: 3000, automatic: true});
 
 
     useEffect(() => {
@@ -61,16 +54,13 @@ export default function SemanticScreen(props: NavigationProps) {
 
 
     return (
-        <ScreenWraper
+        <ScreenWrapper
             style={mainView_container}
             animatedStyle={fadeOpacity}
         >
-            <FlexResponsive style={[
-                mainView,
-            ]}>
-                {/*<ProgressBar/>*/}
+            <FlexResponsive container style={mainView}>
                 {/*MAIN <main/>*/}
-                <Main id={`${id}-main`} style={{padding: 10}}>
+                <Main id={`${id}-main`}>
                     <Paragraph children={`<main/> (WEB) / <View/> (NATIVE)`}/>
 
                     {/* Heading h1 */}
@@ -81,28 +71,20 @@ export default function SemanticScreen(props: NavigationProps) {
                     />
 
                     {/*RESPONSIVE <FlexResponsive container/>*/}
-                    <FlexResponsive container>
+                    <FlexResponsive row>
                         <FlexResponsive item>
                             {/* ANCHOR <a/> target _self */}
                             <Anchor
-                                href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
-                                target={"_self"}
-                                children={`🔗 open "URL web deploy" in this page ⏳`}
-                            />
-                        </FlexResponsive>
-                        <FlexResponsive item>
-                            {/* ANCHOR <a/> target _blank */}
-                            <Anchor
-                                href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
+                                href={`https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.md`}
                                 target={"_blank"}
-                                children={`🔗 open "URL web deploy" in a new tab 🚀`}
+                                children={`🔗 open "URL project" on GitHub ⏳`}
                             />
                         </FlexResponsive>
                     </FlexResponsive>
-                    <FlexResponsive container>
+                    <FlexResponsive row>
                         <FlexResponsive item
-                                        xs={{colsNumber: 10}}
-                                        md={{colsNumber: 7}}
+                                        xs={{part: 10}}
+                                        md={{part: 7}}
                         >
                             {/* BUTTON decline */}
                             <Button
@@ -113,8 +95,8 @@ export default function SemanticScreen(props: NavigationProps) {
                             />
                         </FlexResponsive>
                         <FlexResponsive item
-                                        xs={{colsNumber: 10}}
-                                        md={{colsNumber: 7}}
+                                        xs={{part: 10}}
+                                        md={{part: 7}}
                         >
 
                             {/* BUTTON default */}
@@ -126,8 +108,8 @@ export default function SemanticScreen(props: NavigationProps) {
                             />
                         </FlexResponsive>
                         <FlexResponsive item
-                                        xs={{colsNumber: 10}}
-                                        md={{colsNumber: 7}}
+                                        xs={{part: 10}}
+                                        md={{part: 7}}
                         >
                             {/* BUTTON accept */}
                             <Button
@@ -139,37 +121,6 @@ export default function SemanticScreen(props: NavigationProps) {
                             />
                         </FlexResponsive>
                     </FlexResponsive>
-
-                    {/* NAVIGATION Menu */}
-                    <Nav id={`${id}-Nav`}>
-                        <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
-                        <FlexResponsive container>
-                            <FlexResponsive item
-                                            xs={{colsNumber: 10}}
-                                            md={{colsNumber: 3}}
-                            >
-                                {/* BUTTON accept */}
-                                <Button
-                                    id={`${id}-button-goToDetailsScreen`}
-                                    type={"default"}
-                                    onPress={handleOnPressButtonGoToHomeScreen}
-                                    children={`👈 Go back to "Home" screen`}
-                                />
-                            </FlexResponsive>
-                            <FlexResponsive item
-                                            xs={{colsNumber: 10}}
-                                            md={{colsNumber: 3}}
-                            >
-                                {/* BUTTON accept - navigation to "google.com" screen */}
-                                <Button
-                                    id={`${id}-button-accept`}
-                                    type={"accept"}
-                                    asLink={{href: 'https://google.com', target: '_blank'}}
-                                    children={`navigation to "google.com" - asLink _blank - test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, `}
-                                />
-                            </FlexResponsive>
-                        </FlexResponsive>
-                    </Nav>
 
                     {/* HEADING H1-H6 <p/> */}
                     {/* Heading h1 */}
@@ -323,9 +274,45 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* TABLE <tr/> row */}
                     {/* TABLE <th/> col*/}
 
-                    {/*<FixMarginButtomProblem/>*/}
+                    {/* NAVIGATION Menu */}
+                    <Nav id={`${id}-Nav`}>
+                        <FlexResponsive column>
+                            <FlexResponsive item
+                               style={{alignContent: 'center'}} // TODO rivedere qui
+                            >
+                                <Heading variant={'h5'} children={`Navbar menu projects`}/>
+                            </FlexResponsive>
+                            <Paragraph children={`<nav/> (WEB) & <View/> (NATIVE)`}/>
+                        </FlexResponsive>
+                        <FlexResponsive row>
+                            <FlexResponsive item
+                                            xs={{part: 10}}
+                                            md={{part: 3}}
+                            >
+                                {/* BUTTON accept */}
+                                <Button
+                                    id={`${id}-button-goToDetailsScreen`}
+                                    type={"default"}
+                                    onPress={handleOnPressButtonGoToHomeScreen}
+                                    children={`👈 Go back to "Home" screen`}
+                                />
+                            </FlexResponsive>
+                            <FlexResponsive item
+                                            xs={{part: 10}}
+                                            md={{part: 3}}
+                            >
+                                {/* BUTTON accept - navigation to "google.com" screen */}
+                                <Button
+                                    id={`${id}-button-accept`}
+                                    type={"accept"}
+                                    asLink={{href: 'https://google.com', target: '_blank'}}
+                                    children={`navigation to "google.com" - asLink _blank - test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, test overflow text, `}
+                                />
+                            </FlexResponsive>
+                        </FlexResponsive>
+                    </Nav>
                 </Main>
             </FlexResponsive>
-        </ScreenWraper>
+        </ScreenWrapper>
     );
 }

@@ -5,7 +5,7 @@ import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 import {ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 
 
-export default function ScreenWraper(props: {
+export default function ScreenWrapper(props: {
     children: ReactNode,
     style?: StyleProp<ViewStyle> | undefined,
     animatedStyle?: StyleProp<ViewStyle> | undefined,
@@ -22,7 +22,7 @@ export default function ScreenWraper(props: {
                             {`
                 * {
                     transition: color 200ms linear;
-                    transition: background-color 200ms linear;
+                    transition: background-color 100ms linear;
                  }
                 `}
                         </style>}

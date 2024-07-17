@@ -11,9 +11,6 @@ const MainView__image = () => {
 
     return (
         StyleSheet.create({
-            mainView__image_container: {
-                padding: 5,
-            },
             mainView__image: {
                 width: '100%',
             },
