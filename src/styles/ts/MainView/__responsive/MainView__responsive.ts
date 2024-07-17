@@ -43,8 +43,8 @@ export default function MainView__responsive(props: ResponsiveProps) {
                 display: "flex",
                 width: `100%`,
                 flexWrap: 'wrap',
-                marginTop: 5,
-                marginBottom: 5,
+                paddingTop: 5,
+                paddingBottom: 5,
             },
             mainView__responsive_container: {
                 padding: 15,
