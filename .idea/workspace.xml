@@ -118,7 +118,7 @@
       <recent name="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.web:csr:start">
+  <component name="RunManager" selected="npm.web:csr:build">
     <configuration name="native:android:build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
