@@ -21,6 +21,8 @@ const entrypointFilePach = path.resolve(webPath, 'ssr/index.web.tsx');
 const htmlTemplateFilePath = path.resolve(templatePath, 'index.html');
 
 const publicPath = path.resolve(rootPath, 'public');
+const imagesPath = path.resolve(publicPath, 'images');
+
 const htmlFileName = 'index.html';
 const webDistOutputFileName = 'bundle.js';
 const reactNativeUncompiledFilesPath = path.resolve(rootPath, 'node_modules/react-native-uncompiled')
