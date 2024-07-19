@@ -38,7 +38,7 @@ export default function HomeScreen(props: NavigationProps) {
     const {navigation} = props;
     const id = `MySemantic-${useId()}`;
 
-    const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
+    const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
     const {randomColor, changeRandomColor, resetRandomColor} = useRandomColor();
 
 
@@ -124,10 +124,11 @@ export default function HomeScreen(props: NavigationProps) {
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
                                 {/* BUTTON default */}
                                 <Button
+                                    style={{backgroundColor: mainView_container.backgroundColor}}
                                     id={`${id}-button-default`}
                                     type={'default'}
                                     onPress={toogleStyleTheme}
-                                    children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                                    children={`Toogle Theme ${currentIconStyleTheme} (${currentStyleTheme})`}
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
@@ -145,19 +146,28 @@ export default function HomeScreen(props: NavigationProps) {
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
                                 {/* BUTTON - navigation to "Semantic Elements" screen */}
                                 <Button
-                                    id={`${id}-BUTTON-SEMANTIC-ELEMENTS`}
+                                    id={`${id}-BUTTON_SEO-SEMANTIC-ELEMENTS`}
                                     type={"accept"}
                                     onPress={handleOnPressButtonGoToSemanticScreen}
-                                    children={`🌟 Semantic elements 🌟`}
+                                    children={`🌟 SEO Semantic elements 🌟`}
                                 />
                             </FlexResponsive>
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
                                 {/*BUTTON - navigation to "useRef hook" screen*/}
                                 <Button
-                                    id={`${id}-BUTTON-REFERENCES`}
+                                    id={`${id}-BUTTON_DOM-REFERENCES`}
                                     type={"accept"}
                                     onPress={handleOnPressButtonReferenceScreen}
                                     children={`📌 DOM manipulation 📌`}
+                                />
+                            </FlexResponsive>
+                            <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
+                                {/*BUTTON - navigation to "useRef hook" screen*/}
+                                <Button
+                                    id={`${id}-BUTTON_API-CONSUMPTION`}
+                                    type={"default"}
+                                    asLink={{href: 'https://sergiodevelops.github.io/weather-react-app/', target:'_blank'}}
+                                    children={`🌐 API weather App consumption 🌐`}
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
