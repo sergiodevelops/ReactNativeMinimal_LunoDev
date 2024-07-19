@@ -17,7 +17,7 @@ export type AnimationConfigProps = {
 };
 export type KeyProp = string | 'default';
 export type OptionProp = Object | string | undefined;
-export type ILang = { lang: 'en-EN' | 'es-AR' | 'it-IT', name: string, id: number }
+export type IOptionExample = { stringValue: `stringValueOption${number}`, name: string, id: number }
 export type RandomColorProp = `#${string}` | undefined;
 // https://stackoverflow.com/questions/39494689/is-it-possible-to-restrict-number-to-a-certain-range
 type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N

@@ -40,6 +40,7 @@ export default function MainView__responsive(props: ResponsiveProps) {
     return (
         StyleSheet.create({
             mainView__responsive_flex: {
+                textAlign: "center",
                 display: "flex",
                 width: `100%`,
                 flexWrap: 'wrap',
@@ -63,8 +64,8 @@ export default function MainView__responsive(props: ResponsiveProps) {
                 alignContent: 'center', //TODO rivedere qui
                 alignItems: 'center',
                 width: `${getWidthBySizeProps()}%`,
-                paddingLeft: 5,
-                paddingRight: 5,
+                paddingLeft: 1,
+                paddingRight: 1,
             },
         })
     );

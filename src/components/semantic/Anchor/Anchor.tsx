@@ -5,9 +5,10 @@ import {isWeb} from "../../../utils/platform";
 import {TextStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import MainView__paragraph from "../../../styles/ts/MainView/__paragraph/MainView__paragraph";
 import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
+import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 
 
-type AnchorProps = { href: string } & TextProps & AnchorHTMLAttributes<HTMLAnchorElement>;
+type AnchorProps = { href: string } & StyleProp<TextProps> & AnchorHTMLAttributes<HTMLAnchorElement>;
 export default function Anchor(props: AnchorProps) {
     // https://www.w3schools.com/tags/tag_a.asp
     // https://reactnative.dev/docs/linking?language=typescript

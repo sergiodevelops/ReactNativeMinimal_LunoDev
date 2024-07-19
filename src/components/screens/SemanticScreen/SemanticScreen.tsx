@@ -1,4 +1,4 @@
-import React, {useEffect, useId, useRef} from "react";
+import React, {useEffect, useId, useRef, useState} from "react";
 import {Animated, Switch} from "react-native";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Paragraph from "../../semantic/Paragraph/Paragraph";
@@ -24,7 +24,7 @@ import MainView__animation_fadeOpacity, {
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {NavigationProps} from "../../../app/App";
-import {ILang} from "../../../constants/types";
+import {IOptionExample} from "../../../constants/types";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 
 
@@ -39,10 +39,10 @@ export default function SemanticScreen(props: NavigationProps) {
 
     const {navigation} = props;
     const id = `MySemantic-${useId()}`;
-    const languages: ILang[] = [
-        {lang: "en-EN", name: "ENGLISH", id: 1},
-        {lang: "es-AR", name: "ESPAÑOL", id: 2},
-        {lang: "it-IT", name: "ITALIANO", id: 3},
+    const objectsExample: IOptionExample[] = [
+        {stringValue: "stringValueOption1", name: "EXAMPLE NAME OPTION 1", id: 1},
+        {stringValue: "stringValueOption2", name: "EXAMPLE NAME OPTION 2", id: 2},
+        {stringValue: "stringValueOption3", name: "EXAMPLE NAME OPTION 3", id: 3},
     ];
 
     const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
@@ -53,6 +53,7 @@ export default function SemanticScreen(props: NavigationProps) {
     }, [fadeAnim]);
 
 
+    const [selectedOptionExample, setSelectedOptionExample] = useState<IOptionExample>();
     return (
         <ScreenWrapper
             style={mainView_container}
@@ -215,16 +216,20 @@ export default function SemanticScreen(props: NavigationProps) {
                             <Label
                                 id={`${id}-LabelPicker`}
                                 htmlFor={`${id}-SelectPicker`}
-                                children={"Select one language"}
+                                children={
+                                    selectedOptionExample?.name ?
+                                        `${selectedOptionExample?.name} is selected` :
+                                        "Select one option"
+                                }
                             />
                             {/* SELECT */}
                             <Select
                                 id={`${id}-SelectPicker`}
                                 mode={'dialog'}
                                 defaultLabel={'name'} // atribute to show (optional - by "name" by default)
-                                options={languages}
-                                defaultOption={languages[0]}
-                                onOptionChange={console.log}
+                                options={objectsExample}
+                                // defaultOption={objectsExample[0]} // init selected option
+                                onOptionChange={setSelectedOptionExample as () => IOptionExample}
                             />
                         </Fieldset>
                         {/* FIELDSET */}
@@ -277,8 +282,9 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* NAVIGATION Menu */}
                     <Nav id={`${id}-Nav`}>
                         <FlexResponsive column>
-                            <FlexResponsive item
-                               style={{alignContent: 'center'}} // TODO rivedere qui
+                            <FlexResponsive
+                                item
+                                style={{alignContent: 'center'}} // TODO rivedere qui
                             >
                                 <Heading variant={'h5'} children={`Navbar menu projects`}/>
                             </FlexResponsive>

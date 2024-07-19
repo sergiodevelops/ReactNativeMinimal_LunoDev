@@ -18,8 +18,7 @@ import MainView__animation_fadeOpacity, {
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
-import Div from "../../semantic/Div/Div";
-import FixMarginButtomProblem from "../../utils/FixMarginButtomProblem/FixMarginButtomProblem";
+import BreakLine from "../../semantic/BreakLine/BreakLine";
 
 
 export default function HomeScreen(props: NavigationProps) {
@@ -75,25 +74,26 @@ export default function HomeScreen(props: NavigationProps) {
                         {/*RESPONSIVE <FlexResponsive itemCol/>*/}
                         <FlexResponsive item xs={{part: 10}} md={{part: 8}}>
                             <Paragraph>
-                                Benvenuti nel mio <Strong><Anchor
-                                href={'https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/'}>progetto
-                                "React Native
-                                Web (Semantic, CSR, SSR, Redux)"</Anchor></Strong>,
-                                che è "ancora in costruzione".
-                            </Paragraph>
-                            <Paragraph>
-                                Sono <Strong>LUNO⚛Dev</Strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>)
-                                e questa visualizzazione mostra i
-                                componenti personalizzati da me, che sono multipiattaforma,
-                                compatibili sia per Web che per dispositivi mobili
-                                (Android e iOS), che saranno migliorati e che possono
-                                essere utilizzati con Redux.js per gestire gli stati
-                                globali della tua applicazione.
+                                {`Benvenuti nel mio `}
+                                <Strong>
+                                    <Anchor href={'https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/'}>
+                                        {`progetto "React Native Web (Semantic, CSR, SSR, Redux)", `}
+                                    </Anchor>
+                                </Strong>
+                                {`che è "ancora in costruzione". `}
+                                <BreakLine/>{`Sono `}<Strong>{`LUNO⚛Dev `}</Strong>
+                                <Anchor
+                                    target={"_blank"}
+                                    href={"https://github.com/sergiodevelops"}>
+                                    {`sergiodevelops `}
+                                </Anchor>
+                                {"e questa visualizzazione mostra i componenti personalizzati da me, che sono multipiattaforma, compatibili sia per Web che per dispositivi mobili (Android e iOS), che saranno migliorati e che possono essere utilizzati con Redux.js per gestire gli stati globali della tua applicazione."}
                             </Paragraph>
                         </FlexResponsive>
 
                         {/*RESPONSIVE <FlexResponsive itemCol/>*/}
-                        <FlexResponsive item xs={{part: 12}} md={{part: 4}}
+                        <FlexResponsive
+                            item xs={{part: 12}} md={{part: 4}}
                             style={{alignContent: 'center'}} // TODO rivedere qui
                         >
                             {/*<Div style={{userSelect: 'none'}}>*/}
@@ -113,7 +113,7 @@ export default function HomeScreen(props: NavigationProps) {
                         </FlexResponsive>
 
                         <FlexResponsive column>
-                            <FlexResponsive item xs={{part: 12}}>
+                            <FlexResponsive item>
                                 {/* ANCHOR <a/> target _blank */}
                                 <Anchor
                                     href={`https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/`}
@@ -136,8 +136,9 @@ export default function HomeScreen(props: NavigationProps) {
                     {/* NAVIGATION Menu */}
                     <Nav id={`${id}-Nav`}>
                         <FlexResponsive column>
-                            <FlexResponsive item
-                               style={{alignContent: 'center'}} // TODO rivedere qui
+                            <FlexResponsive
+                                item
+                                style={{alignContent: 'center'}} // TODO rivedere qui
                             >
                                 <Heading variant={'h5'} children={`Navbar menu projects`}/>
                             </FlexResponsive>

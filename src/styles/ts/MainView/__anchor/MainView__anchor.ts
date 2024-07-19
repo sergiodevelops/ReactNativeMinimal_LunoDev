@@ -11,12 +11,12 @@ export default function MainView__anchor() {
             mainView__anchor: {
                 width: '100%',
                 justifyContent: 'center',
-                // textAlign: 'center', // TODO rivedere qui
                 color: currentStyleTheme === 'light' ? '#7100b4' : '#db9cff',
                 cursor: 'pointer',
                 textDecorationLine: 'none',
                 textDecorationColor: currentStyleTheme === 'light' ? '#db9cff' : '#7100b4',
                 textDecorationStyle: 'solid',
+                textAlign: 'center',
             },
             mainView__anchor_hover: {
                 color: currentStyleTheme === 'light' ? '#016428' : '#2eff82',

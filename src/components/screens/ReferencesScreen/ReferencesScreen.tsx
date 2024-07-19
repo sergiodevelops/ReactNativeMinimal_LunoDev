@@ -1,4 +1,4 @@
-import React, {useEffect, useId, useRef} from "react";
+import React, {ReactElement, useEffect, useId, useRef} from "react";
 import MainView from "../../../styles/ts/MainView/MainView";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Button from "../../semantic/Button/Button";
@@ -10,12 +10,13 @@ import {RandomColorProp} from "../../../constants/types";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import useRefCountRenders from "../../../hooks/useRefCountRenders";
-import {Animated} from "react-native";
+import {Animated, Text} from "react-native";
 import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import Paragraph from "../../semantic/Paragraph/Paragraph";
 import Nav from "../../semantic/Nav/Nav";
+import BreakLine from "../../semantic/BreakLine/BreakLine";
 
 
 export default function ReferencesScreen(props: NavigationProps) {
@@ -42,11 +43,25 @@ export default function ReferencesScreen(props: NavigationProps) {
         interval: 500,
     })
 
+    const {
+        randomColor: autoColor,
+        changeRandomColor: autoChangeColor,
+    } = useRandomColor();
+    useMilisecondsInterval({
+        automatic: true,
+        interval: 200,
+        intervalCallback: autoChangeColor,
+        resetCallback: resetRandomColor,
+    });
 
     useEffect(() => {
         !!fadeAnim && fadeInOpacity({fadeAnim});
     }, [fadeAnim]);
 
+
+    function getTextWithFlashColor(text: string): ReactElement {
+        return <Text style={{color: autoColor}} children={text}/>;
+    }
 
     return (
         <ScreenWrapper
@@ -64,10 +79,27 @@ export default function ReferencesScreen(props: NavigationProps) {
                     <Paragraph
                         children={`Number of Renders: ${String(count)}`}
                     />
-                    <Heading variant={'h1'}>🤩 DOM manipulation in React 🤝</Heading>
+                    <Heading variant={'h1'}>
+                        🤩 DOM manipulation in React 🤝
+                    </Heading>
                 </FlexResponsive>
                 <FlexResponsive item>
-                    <Paragraph children={`Current random color is: ${randomColor}`}/>
+                    <Heading
+                        variant={'h2'}
+                        style={{textAlign: "center"}}
+                    >
+                        {getTextWithFlashColor('{{')}
+                        {`Current random color is`}
+                        {getTextWithFlashColor('}}')}
+                        <BreakLine/>
+                        <Text
+                            style={{
+                                textDecorationLine: 'underline',
+                                textDecorationColor: autoColor
+                        }}>
+                            {randomColor}
+                        </Text>
+                    </Heading>
                 </FlexResponsive>
                 <FlexResponsive row>
                     <FlexResponsive item
@@ -104,7 +136,8 @@ export default function ReferencesScreen(props: NavigationProps) {
 
                 <Nav id={`${id}-Nav`}>
                     <FlexResponsive column>
-                        <FlexResponsive item
+                        <FlexResponsive
+                            item
                             style={{alignContent: 'center'}} // TODO rivedere qui
                         >
                             <Heading variant={'h5'} children={`Navbar menu projects`}/>
