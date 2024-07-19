@@ -1,34 +1,33 @@
 <h1 style="color: red; align: center; text-align: center;">
-    REACT NATIVE WEB SEMANTIC
+    REACT NATIVE WEB SEMÁNTICO
 </h1>
 
-## Multilanguage README
+## Multi lenguaje README
+
+[![en](https://img.shields.io/badge/lang-ENGLISH-orange.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.md)
 
 [![it](https://img.shields.io/badge/lang-ITALIANO-red.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.it.md)
-
-[![es](https://img.shields.io/badge/lang-ESPAÑOL-blue.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.es.md)
 
 [//]: # ([![React Native and Web Semantic with CSR & SSR tecniches]&#40;documentation/react-navigation-native-web_v1.0.6_2024-07-14.gif "React Native & Web Semantic &#40;CSR & SSR&#41;"&#41;]&#40;https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/&#41;)
 
 <div style="align: center; text-align: center;" >
     <code>ReactNativeMinimal_LunoDev</code>
     <img style="width: 100%" src="documentation/react-navigation-native-web_v1.0.6_2024-07-14.gif" type="gif">
-    <br/>
 </div>
 
 <div style="align: center; text-align: center;" >
     <p style="align: justify; text-align: justify;">
-        Welcome to my <strong>project "React Native Web (Semantic, CSR, SSR, Redux)"</strong>, which is "still under construction":
+        Bienvenidos a mi <strong>proyecto "React Native Web (Semantic, CSR, SSR, Redux)"</strong>, que "aún está en construcción":    
     </p>
     <a target="_blank" href="https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/">
         🔗 Click here for see this project deployed on web platform 🔗️
     </a>
     <p style="align: justify; text-align: justify;">
-        I'm <strong>LUNO⚛Dev</strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>) and this view shows custom components from me, which are cross-platform, compatible for both web and mobile devices (Android and iOS), which will be improved, and which can be used with Redux.js to manage the global states of your application.
+        Soy <strong>LUNO⚛Dev</strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>) y esta vista muestra imágenes personalizadas componentes míos, que son multiplataforma, compatibles tanto para dispositivos web como móviles (Android e iOS), que se mejorarán y que se pueden usar con Redux.js para administrar los estados globales de su aplicación.    
     </p>
 </div>
 
-Used in this project: 
+Utilizado en este proyecto:
 <ul>
     <li><strong>Node.js</strong> (cross-platform JavaScript runtime environment)</li>
     <li><strong>React & Native & Web & Navigation</strong></li>
@@ -41,8 +40,8 @@ Used in this project:
     by <strong style="color: blue">LUNO⚛Dev</strong>
 </h3>
 
-## Download and Execute this React Native Web project
-### Download this project
+## Descargue y ejecute este proyecto web React Native
+### Descargar este proyecto
 ```bash
 # Download by HTTPS
 git clone https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev.git
@@ -52,7 +51,7 @@ git clone https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev.git
 git clone git@github.com:sergiodevelops/ReactNativeMinimal_LunoDev.git
 ```
 
-### Install dependencies
+### Instalar dependencias
 ```bash
 # with YARN
 yarn
@@ -62,7 +61,7 @@ yarn
 npm install
 ```
 
-### Run for NATIVE (Android / iOS) platforms
+### Ejecutar para plataformas NATIVAS (Android/iOS)
 
 It can be a physical Android device or, more commonly, you can use an Android virtual device that allows you to emulate an Android device on your computer.
 
@@ -83,8 +82,8 @@ yarn native:start
 npm run native:start
 ```
 
-### Run for WEB platforms
-#### by server-side rendering (SSR)
+### Ejecutar para plataformas WEB (SSR / CSR)
+#### mediante 'server-side-rendering' (SSR)
 ```bash
 # with YARN
 yarn web:ssr:start
@@ -94,7 +93,7 @@ yarn web:ssr:start
 npm run web:ssr:start
 ```
 
-#### by client-side rendering (CSR)
+#### mediante 'client-side-rendering' (CSR)
 ```bash
 # with YARN
 yarn web:csr:start # web server CSR (Client Side Rendering)
@@ -104,7 +103,7 @@ yarn web:csr:start # web server CSR (Client Side Rendering)
 npm run web:csr:start
 ```
 
-## My additional system info Linux Ubuntu (dev environment)
+## Información adicional de mi sistema Linux Ubuntu (entorno de desarrollo)
 
 ```bash
 node -v

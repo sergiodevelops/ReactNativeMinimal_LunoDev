@@ -1,10 +1,10 @@
 <h1 style="color: red; align: center; text-align: center;">
-    REACT NATIVE WEB SEMANTIC
+    REACT NATIVE WEB SEMANTICO
 </h1>
 
-## Multilanguage README
+## Multi lingua README
 
-[![it](https://img.shields.io/badge/lang-ITALIANO-red.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.it.md)
+[![en](https://img.shields.io/badge/lang-ENGLISH-orange.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.md)
 
 [![es](https://img.shields.io/badge/lang-ESPAÑOL-blue.svg)](https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev/blob/master/README.es.md)
 
@@ -13,22 +13,21 @@
 <div style="align: center; text-align: center;" >
     <code>ReactNativeMinimal_LunoDev</code>
     <img style="width: 100%" src="documentation/react-navigation-native-web_v1.0.6_2024-07-14.gif" type="gif">
-    <br/>
 </div>
 
 <div style="align: center; text-align: center;" >
     <p style="align: justify; text-align: justify;">
-        Welcome to my <strong>project "React Native Web (Semantic, CSR, SSR, Redux)"</strong>, which is "still under construction":
+        Benvenuti nel mio <strong>progetto "React Native Web (Semantic, CSR, SSR, Redux)"</strong>, che è "ancora in costruzione":
     </p>
     <a target="_blank" href="https://sergiodevelops.github.io/ReactNativeMinimal_LunoDev/">
-        🔗 Click here for see this project deployed on web platform 🔗️
+        🔗 Clicca qui per vedere questo progetto distribuito sulla piattaforma web 🔗️
     </a>
     <p style="align: justify; text-align: justify;">
-        I'm <strong>LUNO⚛Dev</strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>) and this view shows custom components from me, which are cross-platform, compatible for both web and mobile devices (Android and iOS), which will be improved, and which can be used with Redux.js to manage the global states of your application.
+        Sono <strong>LUNO⚛Dev</strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>) e questa visualizzazione mostra componenti da me, che sono multipiattaforma, compatibili sia per dispositivi web che mobili (Android e iOS), che verranno migliorati e che possono essere utilizzati con Redux.js per gestire gli stati globali della tua applicazione.
     </p>
 </div>
 
-Used in this project: 
+Utilizzato in questo progetto:
 <ul>
     <li><strong>Node.js</strong> (cross-platform JavaScript runtime environment)</li>
     <li><strong>React & Native & Web & Navigation</strong></li>
@@ -41,8 +40,8 @@ Used in this project:
     by <strong style="color: blue">LUNO⚛Dev</strong>
 </h3>
 
-## Download and Execute this React Native Web project
-### Download this project
+## Scarica ed esegui questo progetto Web React Native
+### Scarica questo progetto
 ```bash
 # Download by HTTPS
 git clone https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev.git
@@ -52,7 +51,7 @@ git clone https://github.com/sergiodevelops/ReactNativeMinimal_LunoDev.git
 git clone git@github.com:sergiodevelops/ReactNativeMinimal_LunoDev.git
 ```
 
-### Install dependencies
+### Installa le dipendenze
 ```bash
 # with YARN
 yarn
@@ -62,16 +61,16 @@ yarn
 npm install
 ```
 
-### Run for NATIVE (Android / iOS) platforms
+### Corri per piattaforme NATIVE (Android / iOS).
 
-It can be a physical Android device or, more commonly, you can use an Android virtual device that allows you to emulate an Android device on your computer.
+Può essere un dispositivo Android fisico o, più comunemente, puoi utilizzare un dispositivo virtuale Android che ti consente di emulare un dispositivo Android sul tuo computer.
 
 <a target="_blank" href="https://reactnative.dev/docs/running-on-device">
-    🔗 Running On physical Android device 🔗
+    🔗 In esecuzione su dispositivo Android fisico 🔗
 </a>
 <br/>
 <a target="_blank" href="https://groovetechnology.com/blog/running-a-react-native-app-on-android-studio-a-step-by-step-guide/">
-    🔗 Running On virtual Android (emulator) device 🔗
+    🔗 In esecuzione su dispositivo Android virtuale (emulatore) 🔗
 </a>
 
 ```bash
@@ -83,7 +82,7 @@ yarn native:start
 npm run native:start
 ```
 
-### Run for WEB platforms
+### Corri per piattaforme WEB
 #### by server-side rendering (SSR)
 ```bash
 # with YARN
@@ -104,7 +103,7 @@ yarn web:csr:start # web server CSR (Client Side Rendering)
 npm run web:csr:start
 ```
 
-## My additional system info Linux Ubuntu (dev environment)
+## Le mie informazioni di sistema Linux Ubuntu aggiuntive (ambiente di sviluppo)
 
 ```bash
 node -v

@@ -82,7 +82,7 @@ export default function HomeScreen(props: NavigationProps) {
                                 che è "ancora in costruzione".
                             </Paragraph>
                             <Paragraph>
-                                Sono <Strong>LUNO⚛Dev</Strong> (Sergio Ariel Juarez)
+                                Sono <Strong>LUNO⚛Dev</Strong> (<a target={"_blank"} href={"https://github.com/sergiodevelops"}>sergiodevelops</a>)
                                 e questa visualizzazione mostra i
                                 componenti personalizzati da me, che sono multipiattaforma,
                                 compatibili sia per Web che per dispositivi mobili
