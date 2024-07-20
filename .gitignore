@@ -147,3 +147,4 @@ vendor/
 *.BKP
 /*.env
 /docs/bundle.js.LICENSE.txt
+.next

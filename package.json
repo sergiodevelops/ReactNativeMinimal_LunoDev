@@ -1,9 +1,14 @@
 {
   "name": "ReactNativeMinimal_LunoDev",
   "author": "LUNO⚛Dev",
-  "version": "1.0.9",
+  "version": "1.1.0",
+  "type": "commonjs",
   "packageManager": "yarn@3.6.4",
   "scripts": {
+    "next:dev": "next dev -p 8085",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
     "web:csr:start": "webpack serve --config web/csr/webpack.config.js --mode=development",
     "web:csr:build": "webpack build --config web/csr/webpack.config.js --mode=production",
     "web:ssr:start": "webpack serve --config web/ssr/webpack.config.js --mode=development",
@@ -23,6 +28,7 @@
     "@react-native-picker/picker": "^2.7.7",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.10.0",
+    "next": "14.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "^0.74.2",
