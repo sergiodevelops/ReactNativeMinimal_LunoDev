@@ -5,7 +5,7 @@ import Button from "../../semantic/Button/Button";
 import {NavigationProps} from "../../../app/App";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Heading from "../../semantic/Heading/Heading";
-import FlexResponsive from "../../semantic/FlexResponsive/FlexResponsive";
+import FlexResponsive from "../../FlexResponsive/FlexResponsive";
 import {RandomColorProp} from "../../../constants/types";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";

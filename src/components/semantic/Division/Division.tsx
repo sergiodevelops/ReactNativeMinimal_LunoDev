@@ -5,7 +5,7 @@ import {isWeb} from "../../../utils/platform";
 
 
 type DivProps = ViewProps & HTMLProps<HTMLDivElement>;
-export default function Div(props: DivProps) {
+export default function Division(props: DivProps) {
     return (
         <View>
             {isWeb() ?

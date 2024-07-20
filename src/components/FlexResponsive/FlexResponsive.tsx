@@ -1,6 +1,6 @@
 import {View, ViewProps} from "react-native";
-import MainView__responsive from "../../../styles/ts/MainView/__responsive/MainView__responsive";
-import {ResponsiveProps} from "../../../constants/types";
+import MainView__responsive from "../../styles/ts/MainView/__responsive/MainView__responsive";
+import {ResponsiveProps} from "../../constants/types";
 
 
 type FlexResponsiveProps = {

@@ -3,7 +3,7 @@ import {View, ViewProps} from "react-native";
 import MainView__navigation from "../../../styles/ts/MainView/__navigation/MainView__navigation";
 
 
-export default function Nav(props: ViewProps){
+export default function Navbar(props: ViewProps){
     const {
         mainView__navigation_container,
         mainView__navigation,

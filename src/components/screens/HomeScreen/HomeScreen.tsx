@@ -1,15 +1,15 @@
 import {NavigationProps} from "../../../app/App";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
-import FlexResponsive from "../../semantic/FlexResponsive/FlexResponsive";
+import FlexResponsive from "../../FlexResponsive/FlexResponsive";
 import Heading from "../../semantic/Heading/Heading";
 import Main from "../../semantic/Main/Main";
 import Paragraph from "../../semantic/Paragraph/Paragraph";
 import Strong from "../../semantic/Strong/Strong";
 import Anchor from "../../semantic/Anchor/Anchor";
-import Img from "../../semantic/Img/Img";
+import Image from "../../semantic/Image/Image";
 import profileSrc from "../../../../public/images/profile.png";
 import Button from "../../semantic/Button/Button";
-import Nav from "../../semantic/Nav/Nav";
+import Navbar from "../../semantic/Navbar/Navbar";
 import React, {useEffect, useId, useRef} from "react";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {Animated} from "react-native";
@@ -98,7 +98,7 @@ export default function HomeScreen(props: NavigationProps) {
                         >
                             {/*<Div style={{userSelect: 'none'}}>*/}
                             {/* IMAGE */}
-                            <Img
+                            <Image
                                 onPressIn={changeRandomColor}
                                 onPressOut={resetRandomColor}
                                 onPointerEnter={changeRandomColor}
@@ -135,7 +135,7 @@ export default function HomeScreen(props: NavigationProps) {
                     </FlexResponsive>
 
                     {/* NAVIGATION Menu */}
-                    <Nav id={`${id}-Nav`}>
+                    <Navbar id={`${id}-Nav`}>
                         <FlexResponsive column>
                             <FlexResponsive
                                 item
@@ -171,7 +171,7 @@ export default function HomeScreen(props: NavigationProps) {
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
-                    </Nav>
+                    </Navbar>
                 </Main>
             </FlexResponsive>
         </ScreenWrapper>

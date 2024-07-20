@@ -12,13 +12,13 @@ import Textarea from "../../semantic/Textarea/Textarea";
 import Anchor from "../../semantic/Anchor/Anchor";
 import Header from "../../semantic/Header/Header";
 import Footer from "../../semantic/Footer/Footer";
-import Nav from "../../semantic/Nav/Nav";
+import Navbar from "../../semantic/Navbar/Navbar";
 import Article from "../../semantic/Article/Article";
 import Main from "../../semantic/Main/Main";
 import Select from "../../semantic/Select/Select";
 import Aside from "../../semantic/Aside/Aside";
-import Div from "../../semantic/Div/Div";
-import FlexResponsive from "../../semantic/FlexResponsive/FlexResponsive";
+import Division from "../../semantic/Division/Division";
+import FlexResponsive from "../../FlexResponsive/FlexResponsive";
 import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
@@ -170,9 +170,9 @@ export default function SemanticScreen(props: NavigationProps) {
                         <Paragraph children={`<article/> (WEB) & <View/> (NATIVE)`}/>
                     </Article>
                     {/* DIV */}
-                    <Div id={`${id}-div`}>
+                    <Division id={`${id}-div`}>
                         <Paragraph children={`<div/> (WEB) & <View/> (NATIVE)`}/>
-                    </Div>
+                    </Division>
                     {/* FORM */}
                     <Form>
                         <Paragraph children={`<form/> (WEB) & <View/> (NATIVE)`}/>
@@ -280,7 +280,7 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* TABLE <th/> col*/}
 
                     {/* NAVIGATION Menu */}
-                    <Nav id={`${id}-Nav`}>
+                    <Navbar id={`${id}-Nav`}>
                         <FlexResponsive column>
                             <FlexResponsive
                                 item
@@ -316,7 +316,7 @@ export default function SemanticScreen(props: NavigationProps) {
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
-                    </Nav>
+                    </Navbar>
                 </Main>
             </FlexResponsive>
         </ScreenWrapper>

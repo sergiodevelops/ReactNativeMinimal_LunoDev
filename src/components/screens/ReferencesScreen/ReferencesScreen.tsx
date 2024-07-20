@@ -5,7 +5,7 @@ import Button from "../../semantic/Button/Button";
 import {NavigationProps} from "../../../app/App";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Heading from "../../semantic/Heading/Heading";
-import FlexResponsive from "../../semantic/FlexResponsive/FlexResponsive";
+import FlexResponsive from "../../FlexResponsive/FlexResponsive";
 import {RandomColorProp} from "../../../constants/types";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
@@ -15,7 +15,7 @@ import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import Paragraph from "../../semantic/Paragraph/Paragraph";
-import Nav from "../../semantic/Nav/Nav";
+import Navbar from "../../semantic/Navbar/Navbar";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
 
 
@@ -134,7 +134,7 @@ export default function ReferencesScreen(props: NavigationProps) {
                     </FlexResponsive>
                 </FlexResponsive>
 
-                <Nav id={`${id}-Nav`}>
+                <Navbar id={`${id}-Nav`}>
                     <FlexResponsive column>
                         <FlexResponsive
                             item
@@ -156,7 +156,7 @@ export default function ReferencesScreen(props: NavigationProps) {
                             />
                         </FlexResponsive>
                     </FlexResponsive>
-                </Nav>
+                </Navbar>
             </FlexResponsive>
         </ScreenWrapper>
     );
