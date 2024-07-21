@@ -18,7 +18,10 @@ export default function Anchor(props: AnchorProps) {
     sms:+123456789
     https://google.com/
      */
-    const {mainView__anchor, mainView__anchor_hover} = MainView__anchor();
+    const {
+        mainView__anchor,
+        mainView__anchor_hover,
+    } = MainView__anchor();
     const {mainView__text_color} = MainView__text();
     const {mainView__paragraph} = MainView__paragraph();
     const [isHover, setIsHover] = useState(false);

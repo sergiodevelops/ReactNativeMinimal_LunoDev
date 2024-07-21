@@ -15,13 +15,12 @@ export default function ScreenWrapper(props: {
             <Animated.View {...{style: props.animatedStyle}}>
                 <ScrollView>
                     {props.children}
-
                     {/* https://www.w3schools.com/css/css3_transitions.asp */}
                     {isWeb() &&
                         <style>
                             {`
                 * {
-                    transition: color 200ms linear;
+                    transition: color 100ms linear;
                     transition: background-color 100ms linear;
                  }
                 `}

@@ -2,11 +2,10 @@ import React, {ReactElement, useEffect, useId, useRef} from "react";
 import MainView from "../../../styles/ts/MainView/MainView";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Button from "../../semantic/Button/Button";
-import {NavigationProps} from "../../../app/App";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Heading from "../../semantic/Heading/Heading";
 import FlexResponsive from "../../FlexResponsive/FlexResponsive";
-import {RandomColorProp} from "../../../constants/types";
+import {NavigationProps, RandomColorProp} from "../../../constants/types";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import useRefCountRenders from "../../../hooks/useRefCountRenders";
@@ -40,7 +39,7 @@ export default function ReferencesScreen(props: NavigationProps) {
     const {start, puase, reset} = useMilisecondsInterval({
         intervalCallback: changeRandomColor,
         resetCallback: resetRandomColor,
-        interval: 500,
+        interval: 200,
     })
 
     const {

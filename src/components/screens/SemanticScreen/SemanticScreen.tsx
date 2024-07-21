@@ -23,8 +23,7 @@ import MainView__animation_fadeOpacity, {
     fadeInOpacity
 } from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import MainView from "../../../styles/ts/MainView/MainView";
-import {NavigationProps} from "../../../app/App";
-import {IOptionExample} from "../../../constants/types";
+import {IOptionExample, NavigationProps} from "../../../constants/types";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 
 
