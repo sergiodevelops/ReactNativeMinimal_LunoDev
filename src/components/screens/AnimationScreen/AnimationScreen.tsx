@@ -1,9 +1,9 @@
 import React, {useEffect, useId} from "react";
 import MainView from "../../../styles/ts/MainView/MainView";
-import {NavigationProps} from "../../../app/App";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import useRefCountRenders from "../../../hooks/useRefCountRenders";
 import {Text} from "react-native";
+import {NavigationProps} from "../../../constants/types";
 
 
 // TODO
@@ -27,7 +27,9 @@ export default function AnimationScreen(props: NavigationProps) {
 
 
     return (
-        <ScreenWrapper style={mainView_container}>
+        <ScreenWrapper
+            style={mainView_container}
+        >
             <Text>AnimationScreen</Text>
         </ScreenWrapper>
     );
