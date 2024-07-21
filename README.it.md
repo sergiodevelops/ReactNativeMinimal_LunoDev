@@ -34,6 +34,7 @@ Utilizzato in questo progetto:
     <li><strong>SSR & CSR</strong> (web techniques)</li>
     <li><strong>Redux.js</strong> (web store)</li>
     <li><strong>Java(TM) SE Runtime Environment & Android SDK</strong> (web store)</li>
+    <li><strong>Next.js</strong> (web framework)</li>
 </ul>
 
 <h3 style="align: center; text-align: center; margin: 0; padding: 0;">
