@@ -32,3 +32,4 @@ export type ResponsiveProps = {
     xl?: { part: IntRange<1, 13> } | undefined; // >= 1200 px
     xxl?: { part: IntRange<1, 13> } | undefined; // >= 1400 px
 }
+export type NavigationProps = { navigation: { navigate(screen: string): void } };
