@@ -1,4 +1,4 @@
-import React, {HTMLAttributeAnchorTarget} from "react";
+import React, {HTMLAttributeAnchorTarget, ReactNode} from "react";
 import {Linking, Pressable, PressableProps, TextProps, View, TouchableOpacity, Text} from "react-native";
 import {TextStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 import {isWeb} from "../../../utils/platform";
@@ -9,6 +9,7 @@ import MainView__button_accept from "../../../styles/ts/MainView/__button/_accep
 import MainView__button_decline from "../../../styles/ts/MainView/__button/_decline/MainView__button_decline";
 import MainView__button_default from "../../../styles/ts/MainView/__button/_default/MainView__button_default";
 import MainView__text from "../../../styles/ts/MainView/__text/MainView__text";
+import Anchor from "../Anchor/Anchor";
 
 
 type ButtonProps = {
@@ -17,6 +18,7 @@ type ButtonProps = {
         target?: HTMLAttributeAnchorTarget
     } | undefined;
     type: 'accept' | 'decline' | 'default';
+    children: ReactNode;
 } & PressableProps;
 export default function Button(props: ButtonProps) {
     const {
@@ -45,7 +47,7 @@ export default function Button(props: ButtonProps) {
         borderColor?: string;
         backgroundColor?: string;
     } {
-        if(props.disabled) return mainView__text_color;
+        if (props.disabled) return mainView__text_color;
 
         switch (props.type) {
             case 'accept':
@@ -78,7 +80,8 @@ export default function Button(props: ButtonProps) {
                         color: getButtonStylesByType().color,
                         textAlign: 'center',
                     }}>
-                        {(props as TextProps).children}
+                        {!props.asLink?.href ? props.children :
+                            <Anchor href={props.asLink?.href as string} children={props.children}/>}
                     </Paragraph>
                 }
             />
