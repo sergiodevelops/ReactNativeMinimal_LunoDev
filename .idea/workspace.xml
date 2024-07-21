@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="" />
+    <list default="true" id="75a37cad-396f-4493-ae15-1cc52f920dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/ReferencesScreen/ReferencesScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/SemanticScreen/SemanticScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/semantic/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,48 +45,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;npm.1_native_android.executor&quot;: &quot;Run&quot;,
-    &quot;npm.2_web_csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.bundle:android.executor&quot;: &quot;Run&quot;,
-    &quot;npm.check:tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.client:web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.mobile.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native:reset:cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native:reset:cache:metro.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.native_reset.executor&quot;: &quot;Run&quot;,
-    &quot;npm.reset.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server:ssr2.executor&quot;: &quot;Run&quot;,
-    &quot;npm.ssr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start $Sourcepath$.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start --verbose.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.tsc.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:csr.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:csr:build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:csr:start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.web:ssr.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/src/styles/ts/MainView",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "npm.1_native_android.executor": "Run",
+    "npm.2_web_csr.executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.bundle:android.executor": "Run",
+    "npm.check:tsc.executor": "Run",
+    "npm.client:mobile.executor": "Run",
+    "npm.client:web.executor": "Run",
+    "npm.csr.executor": "Run",
+    "npm.mobile.executor": "Run",
+    "npm.native.executor": "Run",
+    "npm.native:reset:cache.executor": "Run",
+    "npm.native:reset:cache:metro.executor": "Run",
+    "npm.native:start.executor": "Run",
+    "npm.native_reset.executor": "Run",
+    "npm.next:dev.executor": "Run",
+    "npm.reset.executor": "Run",
+    "npm.server:ssr.executor": "Run",
+    "npm.server:ssr2.executor": "Run",
+    "npm.ssr.executor": "Run",
+    "npm.start $Sourcepath$.executor": "Run",
+    "npm.start --verbose.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.tsc.executor": "Run",
+    "npm.web.executor": "Run",
+    "npm.web:csr.executor": "Run",
+    "npm.web:csr:build.executor": "Run",
+    "npm.web:csr:start.executor": "Run",
+    "npm.web:ssr.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/home/sjuarez/PROJECTS/CV-SERGIO/ReactNativeMinimal_LunoDev/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/styles/ts/MainView" />
@@ -102,7 +111,7 @@
       <recent name="$PROJECT_DIR$/src/components/screens/DetailsScreen/DetailsScreen.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.web:csr:build">
+  <component name="RunManager" selected="npm.web:csr:start">
     <configuration name="native:android:build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -168,6 +177,16 @@
       </envs>
       <method v="2" />
     </configuration>
+    <configuration name="next:dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="next:dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="tsc" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -231,6 +250,7 @@
       <item itemvalue="npm.native:start" />
       <item itemvalue="npm.tsc" />
       <item itemvalue="npm.web:csr:build" />
+      <item itemvalue="npm.next:dev" />
       <item itemvalue="npm.web:csr:start" />
       <item itemvalue="npm.web:ssr:build" />
       <item itemvalue="npm.web:ssr:start" />

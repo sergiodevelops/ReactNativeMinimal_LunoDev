@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const api = {
+const nextConfig = {
     experimental: {
         turbo: {
             resolveAlias: {
@@ -37,4 +37,4 @@ const api = {
     },
 };
 
-export default api;
+module.exports = nextConfig

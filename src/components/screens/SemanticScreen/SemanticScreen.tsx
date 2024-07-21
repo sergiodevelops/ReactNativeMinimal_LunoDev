@@ -25,6 +25,7 @@ import {IOptionExample, NavigationProps} from "../../../constants/types";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import Separator from "../../semantic/Separator/Separator";
 import {mockedOptions} from "../../../constants/mocks";
+import BreakLine from "../../semantic/BreakLine/BreakLine";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -96,7 +97,15 @@ export default function SemanticScreen(props: NavigationProps) {
                                 id={`${id}-button-decline`}
                                 type={"decline"}
                                 onPress={toogleStyleTheme}
-                                children={`Toogle Theme "decline" Button ${currentIconStyleTheme}`}
+                                children={
+                                    <Paragraph style={{textAlign: 'center'}}>
+                                        {`Toogle Theme`}
+                                        <BreakLine/>
+                                        {`"decline" Button`}
+                                        <BreakLine/>
+                                        {`${currentIconStyleTheme} ${currentStyleTheme.toUpperCase()} ${currentIconStyleTheme}`}
+                                    </Paragraph>
+                                }
                             />
                         </FlexResponsive>
                         <FlexResponsive item
@@ -109,7 +118,15 @@ export default function SemanticScreen(props: NavigationProps) {
                                 id={`${id}-button-default`}
                                 type={'default'}
                                 onPress={toogleStyleTheme}
-                                children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                                children={
+                                    <Paragraph style={{textAlign: 'center'}}>
+                                        {`Toogle Theme`}
+                                        <BreakLine/>
+                                        {`"default" Button`}
+                                        <BreakLine/>
+                                        {`${currentIconStyleTheme} ${currentStyleTheme.toUpperCase()} ${currentIconStyleTheme}`}
+                                    </Paragraph>
+                                }
                             />
                         </FlexResponsive>
                         <FlexResponsive item
@@ -122,7 +139,17 @@ export default function SemanticScreen(props: NavigationProps) {
                                 disabled
                                 type={'accept'}
                                 onPress={toogleStyleTheme}
-                                children={`disabled <button/> (WEB) & <Pressable/> (NATIVE)`}
+                                children={
+                                    <Paragraph style={{textAlign: 'center'}}>
+                                        {`is "accept" Button type`}
+                                        <BreakLine/>
+                                        {`but is disabled state`}
+                                        <BreakLine/>
+                                        {`<button/> (in WEB)`}
+                                        <BreakLine/>
+                                        {`<Pressable/> (in NATIVE)`}
+                                    </Paragraph>
+                                }
                             />
                         </FlexResponsive>
                     </FlexResponsive>
@@ -298,19 +325,24 @@ export default function SemanticScreen(props: NavigationProps) {
                         <FlexResponsive row>
                             <FlexResponsive item
                                             xs={{part: 10}}
-                                            md={{part: 3}}
+                                            md={{part: 5}}
                             >
                                 {/* BUTTON accept */}
                                 <Button
                                     id={`${id}-button-goToDetailsScreen`}
                                     type={"default"}
                                     onPress={handleOnPressButtonGoToHomeScreen}
-                                    children={`👈 Go back to "Home" screen`}
-                                />
+                                    children={
+                                        <Paragraph style={{textAlign: 'center'}}>
+                                            {`👈 Go back to 👈`}
+                                            <BreakLine/>
+                                            {`"Home" screen`}
+                                        </Paragraph>
+                                    }                                />
                             </FlexResponsive>
                             <FlexResponsive item
                                             xs={{part: 10}}
-                                            md={{part: 3}}
+                                            md={{part: 5}}
                             >
                                 {/* BUTTON accept - navigation to "google.com" screen */}
                                 <Button

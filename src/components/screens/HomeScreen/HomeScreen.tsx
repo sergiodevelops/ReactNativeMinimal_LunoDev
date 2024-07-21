@@ -124,7 +124,13 @@ export default function HomeScreen(props: NavigationProps) {
                                     id={`${id}-button-default`}
                                     type={'default'}
                                     onPress={toogleStyleTheme}
-                                    children={`Toogle Theme ${currentIconStyleTheme} (${currentStyleTheme})`}
+                                    children={
+                                        <Paragraph style={{textAlign: 'center'}}>
+                                            {`Toogle Theme`}
+                                            <BreakLine/>
+                                            {`${currentIconStyleTheme} ${currentStyleTheme.toUpperCase()} ${currentIconStyleTheme}`}
+                                        </Paragraph>
+                                    }
                                 />
                             </FlexResponsive>
                         </FlexResponsive>

@@ -68,8 +68,8 @@ export default function Button(props: ButtonProps) {
 
 
     return (
-        <View role={"button"} style={mainView__button_container}>
-            <Pressable
+        <View style={mainView__button_container}>
+            <Pressable role={'button'}
                 {...props}
                 onPress={
                     props?.asLink?.href ? handleOnPress : props.onPress
@@ -81,13 +81,24 @@ export default function Button(props: ButtonProps) {
                     props.style as TextStyle,
                 ]}
                 children={
-                    <Paragraph style={{
+                    !props.asLink?.href ? props.children :
+                        <Anchor
+                            style={{inlineSize: 'auto'}}
+                            href={props.asLink?.href as string}
+                            children={props.children}
+                        />
+
+                    /*<Paragraph style={{
                         color: getButtonStylesByType().color,
                         textAlign: 'center',
                     }}>
-                        {!props.asLink?.href ? props.children :
-                            <Anchor href={props.asLink?.href as string} children={props.children}/>}
-                    </Paragraph>
+                        {props.children}
+                        {/!*{!props.asLink?.href ? props.children :
+                            <Anchor
+                                href={props.asLink?.href as string}
+                                children={props.children}
+                            />}*!/}
+                    </Paragraph>*/
                 }
             />
         </View>

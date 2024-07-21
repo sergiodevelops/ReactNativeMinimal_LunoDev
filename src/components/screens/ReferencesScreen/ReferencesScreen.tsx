@@ -30,7 +30,7 @@ export default function ReferencesScreen(props: NavigationProps) {
     const {count} = useRefCountRenders();
 
     const {mainView_container, mainView} = MainView();
-    const {toogleStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
+    const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
     const {
         randomColor,
         resetRandomColor,
@@ -107,19 +107,43 @@ export default function ReferencesScreen(props: NavigationProps) {
                                     xs={{part: 10}}
                                     md={{part: 4}}
                     >
-                        <Button type={'accept'} onPress={start}>🟢 START</Button>
+                        <Button
+                            type={'accept'}
+                            onPress={start}
+                            children={
+                                <Paragraph style={{textAlign: 'center'}}>
+                                    {`🟢 START`}
+                                </Paragraph>
+                            }
+                        />
                     </FlexResponsive>
                     <FlexResponsive item
                                     xs={{part: 10}}
                                     md={{part: 4}}
                     >
-                        <Button type={'default'} onPress={puase}>🟡 PAUSE</Button>
+                        <Button
+                            type={'default'}
+                            onPress={puase}
+                            children={
+                                <Paragraph style={{textAlign: 'center'}}>
+                                    {`🟡 PAUSE`}
+                                </Paragraph>
+                            }
+                        />
                     </FlexResponsive>
                     <FlexResponsive item
                                     xs={{part: 10}}
                                     md={{part: 4}}
                     >
-                        <Button type={'decline'} onPress={reset}>🛑 RESET</Button>
+                        <Button
+                            type={'decline'}
+                            onPress={reset}
+                            children={
+                                <Paragraph style={{textAlign: 'center'}}>
+                                    {`🛑 RESET`}
+                                </Paragraph>
+                            }
+                        />
                     </FlexResponsive>
                     <FlexResponsive item
                                     xs={{part: 10}}
@@ -130,7 +154,15 @@ export default function ReferencesScreen(props: NavigationProps) {
                             id={`${id}-button-default`}
                             type={'accept'}
                             onPress={toogleStyleTheme}
-                            children={`Toogle Theme "default" Button ${currentIconStyleTheme}`}
+                            children={
+                                <Paragraph style={{textAlign: 'center'}}>
+                                    {`Toogle Theme`}
+                                    <BreakLine/>
+                                    {`"default" Button`}
+                                    <BreakLine/>
+                                    {`${currentIconStyleTheme} ${currentStyleTheme.toUpperCase()} ${currentIconStyleTheme}`}
+                                </Paragraph>
+                            }
                         />
                     </FlexResponsive>
                 </FlexResponsive>
@@ -153,7 +185,13 @@ export default function ReferencesScreen(props: NavigationProps) {
                                 id={`${id}-button-goToDetailsScreen`}
                                 type={"default"}
                                 onPress={handleOnPressButtonGoToHomeScreen}
-                                children={`👈 Go back to "Home" screen`}
+                                children={
+                                    <Paragraph style={{textAlign: 'center'}}>
+                                        {`👈 Go back to 👈`}
+                                        <BreakLine/>
+                                        {`"Home" screen`}
+                                    </Paragraph>
+                                }
                             />
                         </FlexResponsive>
                     </FlexResponsive>
