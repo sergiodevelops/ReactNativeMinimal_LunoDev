@@ -19,6 +19,7 @@ import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
 import {NavigationProps} from "../../../constants/types";
+import Separator from "../../semantic/Separator/Separator";
 
 
 export default function HomeScreen(props: NavigationProps) {
@@ -65,9 +66,10 @@ export default function HomeScreen(props: NavigationProps) {
                     {/* Heading h1 */}
                     <Heading
                         id={`${id}-HeadingTitle`}
-                        variant={"h1"}
+                        variant={'h1'}
                         children={`React Native Web (Semantic, Responsive, CSR, SSR, Redux)`}
                     />
+                    <Separator/>
 
                     {/*RESPONSIVE <FlexResponsive row/>*/}
                     <FlexResponsive row>

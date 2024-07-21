@@ -16,6 +16,7 @@ import MainView__animation_fadeOpacity, {
 import Paragraph from "../../semantic/Paragraph/Paragraph";
 import Navbar from "../../semantic/Navbar/Navbar";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
+import Separator from "../../semantic/Separator/Separator";
 
 
 export default function ReferencesScreen(props: NavigationProps) {
@@ -82,6 +83,7 @@ export default function ReferencesScreen(props: NavigationProps) {
                         🤩 DOM manipulation in React 🤝
                     </Heading>
                 </FlexResponsive>
+                <Separator/>
                 <FlexResponsive item>
                     <Heading
                         variant={'h2'}

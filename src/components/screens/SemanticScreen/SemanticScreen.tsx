@@ -25,6 +25,7 @@ import MainView__animation_fadeOpacity, {
 import MainView from "../../../styles/ts/MainView/MainView";
 import {IOptionExample, NavigationProps} from "../../../constants/types";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
+import Separator from "../../semantic/Separator/Separator";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -66,9 +67,10 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* Heading h1 */}
                     <Heading
                         id={`${id}-HeadingTitle`}
-                        variant={"h1"}
+                        variant={'h1'}
                         children={`Semantic and Responsive elements`}
                     />
+                    <Separator/>
 
                     {/*RESPONSIVE <FlexResponsive container/>*/}
                     <FlexResponsive row>
@@ -88,6 +90,10 @@ export default function SemanticScreen(props: NavigationProps) {
                         >
                             {/* BUTTON decline */}
                             <Button
+                                // onPointerEnter={}
+                                // onPointerLeave={}
+                                // onPressIn={}
+                                // onPressOut={}
                                 id={`${id}-button-decline`}
                                 type={"decline"}
                                 onPress={toogleStyleTheme}
@@ -126,37 +132,38 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* Heading h1 */}
                     <Heading
                         id={`${id}-Heading-h1`}
-                        variant={"h1"}
+                        variant={'h1'}
                         children={`<h1/> (WEB) & <Text/> (NATIVE)`}
                     />
+
                     {/* Heading h2 */}
                     <Heading
                         id={`${id}-Heading-h2`}
-                        variant={"h2"}
+                        variant={'h2'}
                         children={`<h2/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h3 */}
                     <Heading
                         id={`${id}-Heading-h3`}
-                        variant={"h3"}
+                        variant={'h3'}
                         children={`<h3/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h4 */}
                     <Heading
                         id={`${id}-Heading-h4`}
-                        variant={"h4"}
+                        variant={'h4'}
                         children={`<h4/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h5 */}
                     <Heading
                         id={`${id}-Heading-h5`}
-                        variant={"h5"}
+                        variant={'h5'}
                         children={`<h5/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h6 */}
                     <Heading
                         id={`${id}-Heading-h6`}
-                        variant={"h6"}
+                        variant={'h6'}
                         children={`<h6/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* PARAGRAPH <p/> */}

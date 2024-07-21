@@ -13,6 +13,11 @@ import Anchor from "../Anchor/Anchor";
 
 
 type ButtonProps = {
+    onPointerEnter?: () => void,
+    onPointerLeave?: () => void,
+    onPressIn?: () => void,
+    onPressOut?: () => void,
+
     asLink?: {
         href: string,
         target?: HTMLAttributeAnchorTarget

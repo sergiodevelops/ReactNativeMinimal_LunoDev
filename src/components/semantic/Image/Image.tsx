@@ -6,8 +6,10 @@ import {ImageSourcePropType} from "react-native/Libraries/Image/Image";
 
 type ImgProps = {
     source: ImageSourcePropType;
-    onPointerEnter(): void,
-    onPointerLeave(): void,
+    onPointerEnter?: () => void,
+    onPointerLeave?: () => void,
+    onPressIn?: () => void,
+    onPressOut?: () => void,
 } & HTMLAttributes<HTMLImageElement> & ImageProps & PressableProps;
 export default function Image(props: ImgProps): ReactElement {
 
@@ -21,20 +23,22 @@ export default function Image(props: ImgProps): ReactElement {
             style={undefined}
             // style={props.style as HTMLAttributes<HTMLDivElement>}
         >*/
-            <Pressable
-                onPointerEnter={props.onPointerEnter}
-                onPointerLeave={props.onPointerLeave}
-            >
-                <Img
-                    resizeMode={props.resizeMode || 'contain'}
-                    source={props.source}
-                    style={[
-                        mainView__image,
-                        props.style,
-                    ]}
-                    role={'img'}
-                />
-            </Pressable>
+        <Pressable
+            onPointerEnter={props.onPointerEnter}
+            onPointerLeave={props.onPointerLeave}
+            onPressIn={props.onPressIn}
+            onPressOut={props.onPressOut}
+        >
+            <Img
+                resizeMode={props.resizeMode || 'contain'}
+                source={props.source}
+                style={[
+                    mainView__image,
+                    props.style,
+                ]}
+                role={'img'}
+            />
+        </Pressable>
         // </Division>
     );
 }
