@@ -95,13 +95,23 @@ npm run web:ssr:start
 ```
 
 #### mediante 'client-side-rendering' (CSR)
+##### WEBPACK
 ```bash
-# with YARN
+# with YARN and WEBPACK
 yarn web:csr:start # web server CSR (Client Side Rendering)
 ```
 ```bash
-# or with NPM
+# or with NPM and WEBPACK
 npm run web:csr:start
+```
+##### Next.js
+```bash
+# with YARN and Next.js
+yarn next:dev # web server CSR (Client Side Rendering)
+```
+```bash
+# or with NPM and Next.js
+npm run next:dev
 ```
 
 ## Información adicional de mi sistema Linux Ubuntu (entorno de desarrollo)
