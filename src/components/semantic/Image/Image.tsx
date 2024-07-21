@@ -1,10 +1,11 @@
 import React, {HTMLAttributes, ReactElement} from "react";
-import {Image as Img, ImageProps, ImageStyle, Pressable, PressableProps} from "react-native";
+import {Image as Img, ImageProps, Pressable, PressableProps} from "react-native";
 import MainView__image from "../../../styles/ts/MainView/__image/MainView__image";
-import Division from "../Division/Division";
+import {ImageSourcePropType} from "react-native/Libraries/Image/Image";
 
 
 type ImgProps = {
+    source: ImageSourcePropType;
     onPointerEnter(): void,
     onPointerLeave(): void,
 } & HTMLAttributes<HTMLImageElement> & ImageProps & PressableProps;
@@ -14,22 +15,26 @@ export default function Image(props: ImgProps): ReactElement {
 
 
     return (
-        <Division
+        /*<Division
             className={'img-container'}
             {...props}
-            style={props.style as HTMLAttributes<HTMLDivElement>}
-        >
-            <Pressable {...props as PressableProps}>
+            style={undefined}
+            // style={props.style as HTMLAttributes<HTMLDivElement>}
+        >*/
+            <Pressable
+                onPointerEnter={props.onPointerEnter}
+                onPointerLeave={props.onPointerLeave}
+            >
                 <Img
-                    {...props as ImageProps}
+                    resizeMode={props.resizeMode || 'contain'}
+                    source={props.source}
                     style={[
                         mainView__image,
-                        {pointerEvents: 'none'} as ImageStyle,
                         props.style,
                     ]}
                     role={'img'}
                 />
             </Pressable>
-        </Division>
+        // </Division>
     );
 }

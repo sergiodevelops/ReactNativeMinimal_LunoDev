@@ -1,4 +1,3 @@
-import {NavigationProps} from "../../../app/App";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import FlexResponsive from "../../FlexResponsive/FlexResponsive";
 import Heading from "../../semantic/Heading/Heading";
@@ -19,7 +18,7 @@ import MainView__animation_fadeOpacity, {
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
-import Division from "../../semantic/Division/Division";
+import {NavigationProps} from "../../../constants/types";
 
 
 export default function HomeScreen(props: NavigationProps) {
@@ -99,15 +98,13 @@ export default function HomeScreen(props: NavigationProps) {
                         >
                             {/* IMAGE */}
                             <Image
+                                id={`${id}-Img`}
+                                alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
+                                source={profileSrc}
                                 onPressIn={changeRandomColor}
                                 onPressOut={resetRandomColor}
                                 onPointerEnter={changeRandomColor}
                                 onPointerLeave={resetRandomColor}
-                                id={`${id}-Img`}
-                                alt={'this is the image about LUNO Dev, il creatore di quest\'APP native and web con semantica'}
-                                source={profileSrc}
-                                resizeMode={'contain'}
-                                style={{width: 200, height: 150, cursor: 'pointer'}}
                             />
                         </FlexResponsive>
 
