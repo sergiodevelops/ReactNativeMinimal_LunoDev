@@ -3,7 +3,7 @@ import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 
 
 const MainView = () => {
-    const {width ,height} = useWindowDimensions();
+    const {width, height} = useWindowDimensions();
     const {currentStyleTheme} = useStyleThemeStore();
 
 
@@ -13,8 +13,8 @@ const MainView = () => {
                 backgroundColor:  currentStyleTheme === 'light' ? '#ffffff' : '#2d2d2d',
             },
             mainView: {
+                minWidth: width,
                 minHeight: height,
-                width: width,
             },
         })
     );
