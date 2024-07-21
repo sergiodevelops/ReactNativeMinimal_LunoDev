@@ -19,12 +19,13 @@ import MainView__animation_fadeOpacity, {
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
+import Division from "../../semantic/Division/Division";
 
 
 export default function HomeScreen(props: NavigationProps) {
     const {
-        mainView_container,
         mainView,
+        mainView_container,
     } = MainView();
 
     // fadeAnim will be used as the value for "opacity". Initial Value: 0
@@ -96,7 +97,6 @@ export default function HomeScreen(props: NavigationProps) {
                             item xs={{part: 12}} md={{part: 4}}
                             style={{alignContent: 'center'}} // TODO rivedere qui
                         >
-                            {/*<Div style={{userSelect: 'none'}}>*/}
                             {/* IMAGE */}
                             <Image
                                 onPressIn={changeRandomColor}
@@ -109,7 +109,6 @@ export default function HomeScreen(props: NavigationProps) {
                                 resizeMode={'contain'}
                                 style={{width: 200, height: 150, cursor: 'pointer'}}
                             />
-                            {/*</Div>*/}
                         </FlexResponsive>
 
                         <FlexResponsive column>
@@ -149,7 +148,13 @@ export default function HomeScreen(props: NavigationProps) {
                                     id={`${id}-BUTTON_SEO-SEMANTIC-ELEMENTS`}
                                     type={"accept"}
                                     onPress={handleOnPressButtonGoToSemanticScreen}
-                                    children={`🌟 SEO Semantic elements 🌟`}
+                                    children={
+                                        <Paragraph style={{textAlign: 'center'}}>
+                                            🌟 SEO 🌟
+                                            <BreakLine/>
+                                            Semantic elements
+                                        </Paragraph>
+                                    }
                                 />
                             </FlexResponsive>
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
@@ -158,7 +163,13 @@ export default function HomeScreen(props: NavigationProps) {
                                     id={`${id}-BUTTON_DOM-REFERENCES`}
                                     type={"accept"}
                                     onPress={handleOnPressButtonReferenceScreen}
-                                    children={`📌 DOM manipulation 📌`}
+                                    children={
+                                        <Paragraph style={{textAlign: 'center'}}>
+                                            📌 DOM 📌
+                                            <BreakLine/>
+                                            Manipulation
+                                        </Paragraph>
+                                    }
                                 />
                             </FlexResponsive>
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
@@ -166,8 +177,17 @@ export default function HomeScreen(props: NavigationProps) {
                                 <Button
                                     id={`${id}-BUTTON_API-CONSUMPTION`}
                                     type={"default"}
-                                    asLink={{href: 'https://sergiodevelops.github.io/weather-react-app/', target:'_blank'}}
-                                    children={`🌐 API weather App consumption 🌐`}
+                                    asLink={{
+                                        href: 'https://sergiodevelops.github.io/weather-react-app/',
+                                        target: '_blank'
+                                    }}
+                                    children={
+                                        <Paragraph style={{textAlign: 'center'}}>
+                                            🌐 API consumption 🌐
+                                            <BreakLine/>
+                                            Weather React App
+                                        </Paragraph>
+                                    }
                                 />
                             </FlexResponsive>
                         </FlexResponsive>
