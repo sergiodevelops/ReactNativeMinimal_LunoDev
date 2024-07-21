@@ -1,5 +1,5 @@
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
-import FlexResponsive from "../../FlexResponsive/FlexResponsive";
+import FlexResponsive from "../../utils/FlexResponsive/FlexResponsive";
 import Heading from "../../semantic/Heading/Heading";
 import Main from "../../semantic/Main/Main";
 import Paragraph from "../../semantic/Paragraph/Paragraph";
@@ -12,9 +12,7 @@ import Navbar from "../../semantic/Navbar/Navbar";
 import React, {useEffect, useId, useRef} from "react";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {Animated} from "react-native";
-import MainView__animation_fadeOpacity, {
-    fadeInOpacity
-} from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
+import MainView__animation_fadeOpacity, {fadeInOpacity} from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import useRandomColor from "../../../hooks/useRandomColor";
 import BreakLine from "../../semantic/BreakLine/BreakLine";
@@ -51,7 +49,7 @@ export default function HomeScreen(props: NavigationProps) {
 
     return (
         <ScreenWrapper
-            style={[mainView_container]}
+            style={mainView_container}
             animatedStyle={fadeOpacity}
         >
             <FlexResponsive
@@ -122,7 +120,7 @@ export default function HomeScreen(props: NavigationProps) {
                             <FlexResponsive item xs={{part: 10}} md={{part: 6}}>
                                 {/* BUTTON default */}
                                 <Button
-                                    style={{backgroundColor: mainView_container.backgroundColor}}
+                                    style={{backgroundColor: 'transparent'}}
                                     id={`${id}-button-default`}
                                     type={'default'}
                                     onPress={toogleStyleTheme}

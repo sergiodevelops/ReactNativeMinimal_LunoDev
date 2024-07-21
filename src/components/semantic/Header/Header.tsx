@@ -22,9 +22,7 @@ export default function Header(props: HeaderProps) {
             /> :
             <View
                 {...props as ViewProps}
-                style={[
-                    props.style as ViewStyle
-                ]}
+                style={props.style as ViewStyle}
                 aria-label={"header"}
             />
     );

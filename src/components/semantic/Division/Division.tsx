@@ -1,13 +1,13 @@
-import React, {HTMLAttributes} from "react";
+import React, {DetailedHTMLProps, HTMLAttributes} from "react";
 import {View, ViewProps} from "react-native";
 import {isWeb} from "../../../utils/platform";
 
 
-type DivisionProps = ViewProps & HTMLAttributes<HTMLDivElement>;
+type DivisionProps = HTMLAttributes<HTMLDivElement> & ViewProps;
 export default function Division(props: DivisionProps) {
     return (
         isWeb() ?
-            <div {...props as HTMLAttributes<HTMLDivElement>}/> :
+            <div {...props as DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>}/> :
             <View {...props as ViewProps}/>
     );
 }

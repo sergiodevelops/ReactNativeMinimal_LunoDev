@@ -18,14 +18,13 @@ import Main from "../../semantic/Main/Main";
 import Select from "../../semantic/Select/Select";
 import Aside from "../../semantic/Aside/Aside";
 import Division from "../../semantic/Division/Division";
-import FlexResponsive from "../../FlexResponsive/FlexResponsive";
-import MainView__animation_fadeOpacity, {
-    fadeInOpacity
-} from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
+import FlexResponsive from "../../utils/FlexResponsive/FlexResponsive";
+import MainView__animation_fadeOpacity, {fadeInOpacity} from "../../../styles/ts/MainView/__animation/MainView__animation_fadeOpacity";
 import MainView from "../../../styles/ts/MainView/MainView";
 import {IOptionExample, NavigationProps} from "../../../constants/types";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
 import Separator from "../../semantic/Separator/Separator";
+import {mockedOptions} from "../../../constants/mocks";
 
 
 // example for add semantic for DOM WEB platform output rendering
@@ -35,17 +34,18 @@ export default function SemanticScreen(props: NavigationProps) {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     // fadeAnim will be used as the value for "opacity". Initial defaultValue: 1
     const {fadeOpacity} = MainView__animation_fadeOpacity(fadeAnim);
-    const handleOnPressButtonGoToHomeScreen = () => navigation.navigate("home");
+    const [selectedOptionExample, setSelectedOptionExample] = useState<IOptionExample>();
+
 
     const {navigation} = props;
     const id = `MySemantic-${useId()}`;
-    const objectsExample: IOptionExample[] = [
-        {stringValue: "stringValueOption1", name: "EXAMPLE NAME OPTION 1", id: 1},
-        {stringValue: "stringValueOption2", name: "EXAMPLE NAME OPTION 2", id: 2},
-        {stringValue: "stringValueOption3", name: "EXAMPLE NAME OPTION 3", id: 3},
-    ];
+    const {
+        toogleStyleTheme,
+        currentStyleTheme,
+        currentIconStyleTheme,
+    } = useStyleThemeStore();
 
-    const {toogleStyleTheme, currentStyleTheme, currentIconStyleTheme} = useStyleThemeStore();
+    const handleOnPressButtonGoToHomeScreen = () => navigation.navigate("home");
 
 
     useEffect(() => {
@@ -53,7 +53,6 @@ export default function SemanticScreen(props: NavigationProps) {
     }, [fadeAnim]);
 
 
-    const [selectedOptionExample, setSelectedOptionExample] = useState<IOptionExample>();
     return (
         <ScreenWrapper
             style={mainView_container}
@@ -151,19 +150,19 @@ export default function SemanticScreen(props: NavigationProps) {
                     {/* Heading h4 */}
                     <Heading
                         id={`${id}-Heading-h4`}
-                        variant={'h4'}
+                        variant={"h4"}
                         children={`<h4/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h5 */}
                     <Heading
                         id={`${id}-Heading-h5`}
-                        variant={'h5'}
+                        variant={"h5"}
                         children={`<h5/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* Heading h6 */}
                     <Heading
                         id={`${id}-Heading-h6`}
-                        variant={'h6'}
+                        variant={"h6"}
                         children={`<h6/> (WEB) & <Text/> (NATIVE)`}
                     />
                     {/* PARAGRAPH <p/> */}
@@ -233,8 +232,8 @@ export default function SemanticScreen(props: NavigationProps) {
                                 id={`${id}-SelectPicker`}
                                 mode={'dialog'}
                                 defaultLabel={'name'} // atribute to show (optional - by "name" by default)
-                                options={objectsExample}
-                                // defaultOption={objectsExample[0]} // init selected option
+                                options={mockedOptions}
+                                // defaultOption={mockedOptions[0]} // init selected option
                                 onOptionChange={setSelectedOptionExample as () => IOptionExample}
                             />
                         </Fieldset>

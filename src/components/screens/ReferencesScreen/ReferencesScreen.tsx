@@ -4,7 +4,7 @@ import useStyleThemeStore from "../../../hooks/useStyleThemeStore";
 import Button from "../../semantic/Button/Button";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Heading from "../../semantic/Heading/Heading";
-import FlexResponsive from "../../FlexResponsive/FlexResponsive";
+import FlexResponsive from "../../utils/FlexResponsive/FlexResponsive";
 import {NavigationProps, RandomColorProp} from "../../../constants/types";
 import useMilisecondsInterval from "../../../hooks/useMilisecondsInterval";
 import ScreenWrapper from "../ScreenWrapper/ScreenWrapper";
