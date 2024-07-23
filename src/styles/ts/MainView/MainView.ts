@@ -12,6 +12,9 @@ const MainView = () => {
             mainView_container: {
                 backgroundColor:  currentStyleTheme === 'light' ? '#ffffff' : '#2d2d2d',
             },
+            mainView_header: {
+                backgroundColor:  currentStyleTheme === 'light' ? '#ffffff' : '#383838',
+            },
             mainView: {
                 minWidth: width,
                 minHeight: height,
