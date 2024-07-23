@@ -36,6 +36,14 @@ Used in this project:
     <li><strong>Redux.js</strong> (web store)</li>
     <li><strong>Java(TM) SE Runtime Environment & Android SDK</strong> (web store)</li>
     <li><strong>Next.js</strong> (web framework)</li>
+    <details open title="Next.js vs Express.js">
+        <summary><a href="https://www.saffrontech.net/blog/difference-between-nextjs-and-express" target="_blank">Next.js vs Express.js</a></summary>
+        <p>
+            Express remains a robust and flexible choice for building APIs and 
+            server-side logic, while Next. js excels in React-based applications 
+            with built-in SSR and SSG support
+        </p>
+    </details>
 </ul>
 
 <h3 style="align: center; text-align: center; margin: 0; padding: 0;">
